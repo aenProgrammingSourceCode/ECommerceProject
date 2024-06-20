@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "TempPractice";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+
+<script src="~/Scripts/angular.min.js"></script>
+
+
+
+
+
+
+<script>
+
+
+    var number = [1, 5, 18, 4, 5, 6, 7, 8];
+
+    var filterResult = number.filter(function (items, index,arr) {
+        return arr.indexOf(items) === index;
+    });
+
+    var mapResult = number.map(function (items, index) {
+        return (items *2)
+    });
+
+    var foreachResult = number.forEach(function (items, index, arr) {
+       return items;
+    });
+
+    alert(filterResult);
+
+  
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //  var categories =
+  //      [{
+  //          Id: 1, Name: "Mobile"
+  //      },
+  //      {
+  //          Id: 2, Name: "Computer"
+  //      },
+  //      {
+  //          Id: 3, Name: "TV"
+  //      }];
+
+  //  var Products = [{ Id: 1, Name: "Nokia", Category: "Mobile" },
+  //  { Id: 2, Name: "HP PC", Category: "Computer" },
+  //  { Id: 3, Name: "Walton", Category: "TV" },
+  //  { Id: 4, Name: "Nokia", Category: "Mobile" }];
+
+
+
+  //document.write(JSON.stringify(categories));
+</script>

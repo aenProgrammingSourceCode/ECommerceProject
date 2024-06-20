@@ -1,0 +1,54 @@
+﻿@model IdentitySample.Models.LoginViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+                <section id="loginForm">
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <h4>Login </h4>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter Email" })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter Password" })
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <div class="checkbox">
+                                    @Html.CheckBoxFor(m => m.RememberMe)
+                                    @Html.LabelFor(m => m.RememberMe)
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input type="submit" value="Log in" class="btn btn-nowoncare" />
+                            </div>
+                        </div>
+                        <p>
+                            @Html.ActionLink("Register a new user?", "Register")
+                        </p>
+                        <p>
+                            @Html.ActionLink("Forget your password?", "ForgotPassword")
+                        </p>
+                    }
+
+                
+
+                </section>
+         
+         
+
+

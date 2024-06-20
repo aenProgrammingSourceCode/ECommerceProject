@@ -1,0 +1,14 @@
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\bin\Debug\net7.0\IvtestConsole.exe
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\bin\Debug\net7.0\IvtestConsole.deps.json
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\bin\Debug\net7.0\IvtestConsole.runtimeconfig.json
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\bin\Debug\net7.0\IvtestConsole.dll
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\bin\Debug\net7.0\IvtestConsole.pdb
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\obj\Debug\net7.0\IvtestConsole.GeneratedMSBuildEditorConfig.editorconfig
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\obj\Debug\net7.0\IvtestConsole.AssemblyInfoInputs.cache
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\obj\Debug\net7.0\IvtestConsole.AssemblyInfo.cs
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\obj\Debug\net7.0\IvtestConsole.csproj.CoreCompileInputs.cache
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\obj\Debug\net7.0\IvtestConsole.dll
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\obj\Debug\net7.0\refint\IvtestConsole.dll
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\obj\Debug\net7.0\IvtestConsole.pdb
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\obj\Debug\net7.0\IvtestConsole.genruntimeconfig.cache
+D:\NowOnCare52\NowOnCare52\3db\IvtestConsole\obj\Debug\net7.0\ref\IvtestConsole.dll

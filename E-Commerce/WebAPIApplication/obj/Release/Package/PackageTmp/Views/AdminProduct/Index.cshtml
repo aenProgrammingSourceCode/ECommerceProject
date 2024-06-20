@@ -1,0 +1,1146 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@*Product form script*@
+<script type="text/javascript">
+    $(document).ready(function () {
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(20, pt);
+        ProductByCategoryAjax(Id);
+        ImagePreview();
+        ChangeImagePreview();
+        GetAllProductBrands();
+        GetAllProductManufature();
+        GetAllProductModels();
+        GetAllCategory();
+
+        GetAllProductBrandsForm();
+        GetAllProductManufatureForm();
+        GetAllProductModelsForm();
+        GetAllCategory();
+
+        // Show hide form and defualt button
+
+        hideFormElement("frmCreateProduct");
+
+        $("#btnCancelProductTitle").click(function () {
+            hideFormElement("frmCreateProduct");
+            showFormElement("btnForPopulateProductTitleForm");
+        });
+        $("#btnCreateProductWithAssign").click(function () {
+            $("#frmProductForm").submit(function (e) {
+                e.preventDefault();
+                imageUploadwithAssignProduct();
+                $(t)
+            });
+        });
+        $("#btnCreateProductWithoutAssign").click(function () {
+            $("#frmProductForm").submit(function (e) {
+                e.preventDefault();
+                imageUploadwithOutAssignProduct();
+            });
+        });
+        $("#btnForPopulateProductTitleForm").click(function () {
+            showFormElement("frmCreateProduct");
+            hideFormElement("btnForPopulateProductTitleForm");
+        });
+    })
+
+    function GetAllProductModels() {
+        $.ajax({
+            url: '/api/ProductModel/GetAllProductModel',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+
+                $("#productModelsHtml").setTemplate($("#ProductModelsTemp").html());
+                $("#productModelsHtml").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function GetAllProductBrands() {
+        $.ajax({
+            url: '/api/Brand/GetAllBrands',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+
+                $("#productBrandsHtml").setTemplate($("#brandsTemp").html());
+                $("#productBrandsHtml").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function GetAllProductManufature() {
+        $.ajax({
+            url: '/api/Manufacture/GetAllManufacture',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+
+                $("#productManufactureHtml").setTemplate($("#ManufacturesTemp").html());
+                $("#productManufactureHtml").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+    function GetAllProductModelsForm() {
+        $.ajax({
+            url: '/api/ProductModel/GetAllProductModel',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+
+                $("#productModels").setTemplate($("#ProductModelsTempInput").html());
+                $("#productModels").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function GetAllProductBrandsForm() {
+        $.ajax({
+            url: '/api/Brand/GetAllBrands',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+
+                $("#productBrands").setTemplate($("#brandsTempInput").html());
+                $("#productBrands").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function GetAllProductManufatureForm() {
+        $.ajax({
+            url: '/api/Manufacture/GetAllManufacture',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+
+                $("#productManufacture").setTemplate($("#ManufacturesTempInput").html());
+                $("#productManufacture").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+    function GetAllCategory() {
+        $.ajax({
+            url: '/api/Category/GetAllCategory',
+            type: 'GET',
+            cache: false,
+            async: true,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                //var jc = JSON.stringify(data);
+                //alert(jc);
+
+                $("#categoriesHtml").setTemplate($("#categoriesTemp").html());
+                $("#categoriesHtml").processTemplate(data);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+
+        });
+    }
+
+    function DeleteProductItems() {
+        var postArr = [];
+        var index = 0;
+        var deleteData;
+
+        $.each($("input[name='product']:checked"), function () {
+            postArr[index] = { ProductId: $(this).val() }
+            index++;
+        });
+        deleteData = { Products: postArr };
+        var jsonData = JSON.stringify(deleteData);
+        $.ajax({
+            url: '/api/Product/DeleteProducts',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: jsonData,
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                var paths = window.location.pathname;
+                var pt = paths.length;
+                var Id = paths.substring(20, pt);
+                ProductByCategoryAjax(Id);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function ProductTitleDetailsBy(Id) {
+        $.ajax({
+            url: '/api/Product/GetProductDetails?id=' + Id,
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+                $("#productDetailsHtml").setTemplate($("#productDetailsTemp").html());
+                $("#productDetailsHtml").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function ProductTitleDeleteBy() {
+
+        var Id = [];
+        var arr = [7135, 7136];
+
+        $.each(arr, function (key, value) {
+            Id.push(value);
+            alert(Id);
+        });
+
+
+        $.ajax({
+            url: '/api/Product/DeleteproductTitle?ProductTitleId=' + Id,
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            //data: ProductTitleId,
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+                //$("#productDetailsHtml").setTemplate($("#productDetailsTemp").html());
+                //$("#productDetailsHtml").processTemplate(data);
+                alert("Delete success");
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function ProductTitleDetailsForEditingBy(Id) {
+        $.ajax({
+            url: '/api/Product/GetProductDetails?id=' + Id,
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+                $("#productEditHtml").setTemplate($("#productTitlDetailsForEditingTemp").html());
+                $("#productEditHtml").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function ModifyProductTitleBy(Id) {
+        var jsonData =
+       {
+           Name: $("#txtEditTitleName").val(),
+           Price: $("#txtEditPrice").val(),
+           CategoryId: $("#ddlEditCategory").val(),
+           ManufactureId: $("#ddlEditManufacture").val(),
+           BrandId: $("#ddlEditBrand").val(),
+           ProductModelId: $("#ddlEditProductModel").val(),
+           Description: $("#txtEditDescription").val()
+       };
+
+        $.ajax({
+            url: '/api/Product/ModifyProductTitles?productTitleId=' + Id,
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: JSON.stringify(jsonData),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                ProductByCategoryAjax($("#ddlEditCategory").val());
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function imageUploadwithAssignProduct() {
+        var data = new FormData();
+        var files = $("#fileUpload").get(0).files;
+        // Add the uploaded image content to the form data collection
+        if (files.length > 0) {
+            data.append("UploadImage", files[0]);
+        }
+        // Make Ajax request with the contentType = false, and procesDate = false
+        var ajaxRequest = $.ajax({
+            type: "POST",
+            url: "/api/Product/AddProductImage",
+            contentType: false,
+            processData: false,
+            data: data
+        });
+        ajaxRequest.done(function (xhr, textStatus) {
+            CreateProductTitleWithAssign();
+            hideFormElement("frmCreateProduct");
+            showFormElement("btnForPopulateProductTitleForm");
+        });
+    }
+    function imageUploadwithOutAssignProduct() {
+        var data = new FormData();
+        var files = $("#fileUpload").get(0).files;
+        // Add the uploaded image content to the form data collection
+        if (files.length > 0) {
+            data.append("UploadImage", files[0]);
+        }
+        // Make Ajax request with the contentType = false, and procesDate = false
+        var ajaxRequest = $.ajax({
+            type: "POST",
+            url: "/api/Product/filUpload",
+            contentType: false,
+            processData: false,
+            data: data
+        });
+        ajaxRequest.done(function (xhr, textStatus) {
+            CreateProductTitleWithOutAssign();
+            hideFormElement("frmCreateProduct");
+        });
+    }
+    function CreateProductTitleWithAssign() {
+        var jsonData =
+         {
+             Name: $("#txtTitleName").val(),
+             Price: $("#txtPrice").val(),
+             CategoryId: $("#ddlCategory").val(),
+             ManufactureId: $("#ddlManufacture").val(),
+             BrandId: $("#ddlBrand").val(),
+             ProductModelId: $("#ddlProductModel").val(),
+             Description: $("#txtDescription").val()
+         };
+
+        $.ajax({
+            url: '/api/Product/CreateProductTitleWithAssign',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: JSON.stringify(jsonData),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                ProductByCategoryAjax($("#ddlCategory").val());
+                hideFormElement("frmCreateProduct");
+                showFormElement("#btnForPopulateProductTitleForm");
+                $('#frmProductForm').trigger('reset');
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function CreateProductTitleWithOutAssign() {
+        var jsonData =
+        {
+            Name: $("#txtTitleName").val(),
+            Price: $("#txtPrice").val(),
+            CategoryId: $("#ddlCategory").val(),
+            ManufactureId: $("#ddlManufacture").val(),
+            BrandId: $("#ddlBrand").val(),
+            ProductModelId: $("#ddlProductModel").val(),
+            Description: $("#txtDescription").val()
+        };
+
+        $.ajax({
+            url: '/api/Product/CreateProductTitles',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: JSON.stringify(jsonData),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                ProductByCategoryAjax($("#ddlCategory").val());
+                hideFormElement("frmCreateProduct");
+                showFormElement("#btnForPopulateProductTitleForm");
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+    function ProductAjax() {
+        //var jsonData =
+        // ({
+        //     Name: name,
+        //     Price: price,
+        //     CategoryId: categories,
+        //     ManufactureId: manufactures,
+        //     BrandId: brands,
+        //     ProductModelId: productModels,
+        //     Description: descriptions
+        // });
+
+
+        $.ajax({
+            url: '/api/Product/AssignProductTitleToProduct',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            //data: JSON.stringify(jsonData),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                alert("Product title assigned successfully");
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function ProductImageUpload() {
+        var data = new FormData();
+        var files = $("#fileUpload").get(0).files;
+        // Add the uploaded image content to the form data collection
+        if (files.length > 0) {
+            data.append("UploadImage", files[0]);
+        }
+        // Make Ajax request with the contentType = false, and procesDate = false
+        var ajaxRequest = $.ajax({
+            type: "POST",
+            url: "/api/Product/filUpload",
+            contentType: false,
+            processData: false,
+            data: data
+        });
+        ajaxRequest.done(function (xhr, textStatus) {
+            createProductTitle();
+        });
+    }
+    function ChangePicture(Id) {
+        var data = new FormData();
+        var files = $("#flChangePicture").get(0).files;
+        // Add the uploaded image content to the form data collection
+        if (files.length > 0) {
+            data.append("UploadImage", files[0]);
+        }
+        // Make Ajax request with the contentType = false, and procesDate = false
+        var ajaxRequest = $.ajax({
+            type: "POST",
+            url: "/api/Product/ChangePicture?ImageId=" + Id,
+            contentType: false,
+            processData: false,
+            data: data
+
+        });
+        ajaxRequest.done(function (xhr, textStatus) {
+            alert("Picture update success");
+            window.location.reload(true);
+        });
+    }
+    function ChangeImageId(Id) {
+        $.ajax({
+            url: '/api/Product/ModifyProductImages?imageId=' + Id,
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                ProductByCategoryAjax(categories)
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function ImagePreview() {
+        $("#fileUpload").on('change', function () {
+            //Get count of selected files
+            var countFiles = $(this)[0].files.length;
+            var imgPath = $(this)[0].value;
+            var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+            var image_holder = $("#image-holder");
+            image_holder.empty();
+            if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
+                if (typeof (FileReader) != "undefined") {
+                    //loop for each file selected for uploaded.
+                    for (var i = 0; i < countFiles; i++) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $("<img />", {
+                                "src": e.target.result,
+                                "class": "thumb-image"
+                            }).appendTo(image_holder);
+                        }
+                        image_holder.show();
+                        reader.readAsDataURL($(this)[0].files[i]);
+                    }
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            } else {
+                alert("Pls select only images");
+            }
+        });
+    }
+    function ChangeImagePreview() {
+        $("#flChangePicture").on('change', function () {
+            //Get count of selected files
+            var countFiles = $(this)[0].files.length;
+            var imgPath = $(this)[0].value;
+            var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+            var image_holder = $("#changeImage-holder");
+            image_holder.empty();
+            if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
+                if (typeof (FileReader) != "undefined") {
+                    //loop for each file selected for uploaded.
+                    for (var i = 0; i < countFiles; i++) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $("<img />", {
+                                "src": e.target.result,
+                                "class": "thumb-image"
+                            }).appendTo(image_holder);
+                        }
+                        image_holder.show();
+                        reader.readAsDataURL($(this)[0].files[i]);
+                    }
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            } else {
+                alert("Pls select only images");
+            }
+        });
+    }
+    function ProductTitleByCategoryAjax(Id) {
+        $.ajax({
+            url: '/api/Product/GetProductTitleByCategory?CategoryId=' + Id,
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $("#productsHtml").setTemplate($("#productsTemp").html());
+                $("#productsHtml").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function ProductByCategoryAjax(Id) {
+        showLoader('lg-Loader');
+        $.ajax({
+            url: '/api/Product/GetProductByCategory?CategoryId=' + Id,
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                hideLoader('lg-Loader');
+                $("#productsHtml").setTemplate($("#productsTemp").html());
+                $("#productsHtml").processTemplate(data);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function GetProductByItem() {
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(20, pt);
+
+        var Productmodels = $("#ddlProductModelCriteria").val();
+        var Manufactures = $("#ddlManufactureCriteria").val();
+        var Brands = $("#ddlBrandCriteria").val();
+        var Categorys = Id;
+        ProductByItemAjax(Productmodels, Manufactures, Brands, Categorys)
+    }
+    function ProductByItemAjax(productModel, manufacture, brand, category) {
+        var jsonData =
+            ({
+                ProductModelId: productModel,
+                ManufactureId: manufacture,
+                BrandId: brand,
+                CategoryId: category
+            });
+        $.ajax({
+            url: '/api/Product/GetProductByProductItems',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: JSON.stringify(jsonData),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $("#productsHtml").setTemplate($("#productsTemp").html());
+                $("#productsHtml").processTemplate(data);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+</script>
+
+<div class="row" id="btnForPopulateProductTitleForm">
+    <a href="#" class="btn btn-danger">New Product Title</a>
+</div>
+
+<div class="row">
+
+    
+    <form id="frmProductForm">
+       
+        <hr />
+        <div class="form-horizontal" id="frmCreateProduct" style="display:none">
+            <h4>Create New Product Title</h4>
+            <hr />
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">Title Name:</label>
+                <div class="col-md-10">
+                    <input id="txtTitleName" class="form-control" name="name" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">Price:</label>
+                <div class="col-md-10">
+                    <input id="txtPrice" class="form-control" name="name" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">  Category :</label>
+                <div class="col-md-10" id="categoriesHtml">
+                     
+                </div>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label"> Manufacture :</label>
+                <div class="col-md-10" id="productManufacture">
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">  Product Model :</label>
+                <div class="col-md-10" id="productModels">
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label"> Product Brand :</label>
+                <div class="col-md-10" id="productBrands">
+                    
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">  Description :</label>
+                <div class="col-md-10">
+                    <textarea id="txtDescription" class="form-control" name="name" required></textarea>
+</div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">  Product Picture:</label>
+                <div class="col-md-10">
+                    <input id="fileUpload" multiple="multiple" type="file" required><br />
+                    <div id="image-holder"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <button type="submit" id="btnCreateProductWithAssign" class="btn btn-success" data-dismiss="modal">Create and Publish Product</button>
+                    @*<button type="submit" id="btnCreateProductWithoutAssign" class="btn btn-success" data-dismiss="modal">Just Create Product</button>*@
+                    <a href="#" id="btnCancelProductTitle" class="btn btn-default">Cancel</a>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<div class="row">
+    <div id="productTitleEditModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Edit and Update Product</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="productEditHtml">
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="productTitleDetailsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Product description</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div id="productDetailsHtml">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div>
+
+
+</div>
+<div class="row">
+    <div class="panel panel-default filterable">
+        <table class="table table-hover">
+            <thead>
+                <tr class="filters">
+                    <th id="productModelsHtml">
+
+                    </th>
+
+                    <th id="productManufactureHtml">
+
+                    </th>
+                    <th id="productBrandsHtml">
+
+                    </th>
+
+                    <th><a href="#" class="btn btn-info" onclick="JavaScript: GetProductByItem();" id="btnSubmit">Submit</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4">
+                        <a href="#" class="btn btn-info" onclick="JavaScript:DeleteProductItems()">Remove Selected Items</a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div id="lg-Loader"></div>
+                        <div id="productsHtml">
+
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!----Start Get All Category Script--->
+<script type="text/html" id="productsTemp">
+     
+    <table class="table">
+        <tbody>
+            {#foreach $T.Products as record}
+            <tr>
+                <td colspan="4">
+                    <h3> {$T.record.Name}</h3>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="3">
+                    {#foreach $T.record.ProductImageViews as record1}
+                    <div class="row">
+                        <div id="changePictureModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Product description</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input id="flChangePicture" type="file" />
+                                        <div id="image-holder"></div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" onclick="JavaScript:ChangePicture('{$T.record1.Id}')" data-dismiss="modal">Save </button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="img-responsive" id="imgHolder">
+                        <img class="img-thumbnail" src="/Content/ProductImage/{$T.record1.Id}.jpg" width="75" height="75" />
+                    </div>
+
+                    {#/for}
+                </td>
+
+                <td>
+                    <h4 class="text-left">
+                        {$T.record.CategoryName} {$T.record.BrandName }  {$T.record.ProductModelName} {$T.record.ManufactureName}
+                    </h4>
+                    <hr />
+                    <p class="text-left">
+                        {$T.record.Description}
+                    </p>
+
+                    <!-- Trigger the modal with a button -->
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>
+                    <input id="chkProduct" value="{$T.record.Id}" name="product" type="checkbox" />
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-success dropdown-toggle" id="dropdownMenu1"
+                                data-toggle="dropdown">
+                            Action
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation">
+                                <button onclick="JavaScript:AddProductToBasket('{$T.record.Id}')" class="btn btn-link">Add To Cart</button>
+                            </li>
+                            <li role="presentation">
+                                <button type="button" class="btn btn-link" onclick="JavaScript: ProductTitleDetailsForEditingBy('{$T.record.Id}')" data-toggle="modal" data-target="#productTitleEditModal">Edit </button>
+
+                            </li>
+                            <li role="presentation">
+                                <button type="button" class="btn btn-link" onclick="JavaScript: ProductTitleDetailsBy('{$T.record.Id}')" data-toggle="modal" data-target="#productTitleDetailsModal">Details </button>
+                            </li>
+                            <li role="presentation">
+                                <button class="btn btn-link" id="btnChangPic" data-toggle="modal" data-target="#changePictureModal">Change picture</button>
+                            </li>
+                                                        <li role="presentation" class="divider"></li>
+                            <li role="presentation" class="dropdown-header">Choose action from the list</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            {#/for}
+        </tbody>
+    </table>
+
+</script>
+
+<script type="text/html" id="productDetailsTemp">
+    {#foreach $T as record}
+    <div class="panel panel-info">
+        <div class="panel panel-heading">
+            <h4> {$T.record.Name} details</h4>
+        </div>
+
+        <div class="panel-body">
+
+
+            <div class="col-md-6">
+                <div class="row">
+                    <img class="img-responsive"
+                         src="/Content/images/3dbimage/1004.jpg" />
+
+                </div>
+                <div class="row">
+                    <div class="col-md-2 img-thumbnail">
+                        <img class="img-responsive"
+                             src="/Content/images/3dbimage/1004.jpg" />
+                    </div>
+                    <div class="col-md-2 img-thumbnail">
+                        <img class="img-responsive"
+                             src="/Content/images/3dbimage/1004.jpg" />
+                    </div>
+                    <div class="col-md-2 img-thumbnail">
+                        <img class="img-responsive"
+                             src="/Content/images/3dbimage/1004.jpg" />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="row">
+                    <h3> {$T.record.Name}</h3>
+                    <ul>
+                        <li>
+                            {$T.record.CategoryName}
+                        </li>
+                        <li>
+                            {$T.record.ProductModelName}
+                        </li>
+                        <li>
+                            {$T.record.ManufactureName}
+                        </li>
+                    </ul>
+                    <hr />
+                    {$T.record.Description}
+                    <hr />
+                    <h2>Price - <strong>45000</strong><small> BDT</small></h2>
+                    <a href="#" onclick="JavaScript: AddProductToBasket('{$T.record.Id}')" class="btn btn-info">Add To Cart</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    {#/for}
+
+</script>
+
+<script type="text/html" id="productTitlDetailsForEditingTemp">
+    {#foreach $T as record}
+    <div id="frmProductTitle">
+
+        <form class="form" id="categoryForm" method="post" action="">
+            <div class="container">
+                <div class="row">
+                    <div class='col-sm-4 form-group'>
+                        <label for="name">Title Name:</label>
+                        <input id="txtEditTitleName" class="form-control" value="{$T.record.Name}" name="name" type="text" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class='col-sm-4 form-group'>
+                        <label for="name">Price:</label>
+                        <input id="txtEditPrice" value="{$T.record.Price}" class="form-control" name="name" type="text" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class='col-sm-4 form-group'>
+                        Category :<br />
+                        <select id="ddlEditCategory" class="dropdown dropdown-header">
+                            <option value="{$T.record.CategoryId}">{$T.record.CategoryName}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class='col-sm-4 form-group'>
+                        Manufactured by :<br />
+                        <select id="ddlEditManufacture" class="dropdown dropdown-header">
+                            <option value="{$T.record.ManufactureId}">{$T.record.ManufactureName}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class='col-sm-4 form-group'>
+                        Brand : <br />
+                        <select id="ddlEditBrand" class="dropdown dropdown-header">
+                            <option value="{$T.record.BrandId}">{$T.record.BrandName}</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class='col-sm-4 form-group'>
+                        Model :<br />
+                        <select id="ddlEditProductModel" class="dropdown dropdown-header">
+                            <option value="{$T.record.ProductModelId}">{$T.record.ProductModelName}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class='col-sm-4 form-group'>
+                        <label for="name">Description:</label>
+                        <input id="txtEditDescription" value="{$T.record.Description}" class="form-control" name="name" type="text" required multiple="multiple">
+                    </div>
+                </div>
+
+                <div class="row">
+                    {#foreach $T.record.ProductImageViews as record1}
+                    <div class='col-sm-4 form-group'>
+                        <img class="img-thumbnail" src="/Content/ProductImage/{$T.record1.Id}.jpg" width="200" height="200" />
+                    </div>
+                    {#/for}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="JavaScript: ModifyProductTitleBy('{$T.record.ProductTitleId}')" data-dismiss="modal">Update</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    {#/for}
+
+
+</script>
+
+
+<script type="text/html" id="categoriesTemp">
+    <div class='col-sm-4 form-group'>
+        <select id="ddlCategory" class="dropdown dropdown-header">
+           
+            <option value="0">Select Category</option>
+            {#foreach $T as record}
+            <option value="{$T.record.Id}">{$T.record.Name}</option>
+            {#/for}
+        </select>
+    </div>
+  
+</script>
+
+<script type="text/html" id="ProductModelsTemp">
+    <div class='col-sm-4 form-group'>
+        <select id="ddlProductModel" class="dropdown dropdown-header">
+            <option value="0">Select Model</option>
+            {#foreach $T.ProductModels as record}
+            <option value="{$T.record.Id}">{$T.record.Name}</option>
+            {#/for}
+        </select>
+    </div>
+
+</script>
+
+<script type="text/html" id="ManufacturesTemp">
+    <div class='col-sm-4 form-group'>
+        <select id="ddlManufacture" class="dropdown dropdown-header">
+            <option value="0">Select Origine</option>
+            {#foreach $T.Manufactures as record}
+            <option value="{$T.record.Id}">{$T.record.Name}</option>
+            {#/for}
+        </select>
+    </div>
+</script>
+
+<script type="text/html" id="brandsTemp">
+    <div class='col-sm-4 form-group'>
+        <select id="ddlBrand" class="dropdown dropdown-header">
+            <option value="0">Select Brand</option>
+            {#foreach $T.Brands as record}
+            <option value="{$T.record.Id}">{$T.record.Name}</option>
+            {#/for}
+        </select>
+    </div>
+
+</script>
+
+
+<script type="text/html" id="ProductModelsTempInput">
+    <div class='col-sm-4 form-group'>
+        <select id="ddlProductModel" class="dropdown dropdown-header">
+            <option value="0">Select Model</option>
+            {#foreach $T.ProductModels as record}
+            <option value="{$T.record.Id}">{$T.record.Name}</option>
+            {#/for}
+        </select>
+    </div>
+
+</script>
+
+<script type="text/html" id="ManufacturesTempInput">
+    <div class='col-sm-4 form-group'>
+        <select id="ddlManufacture" class="dropdown dropdown-header">
+            <option value="0">Select Origine</option>
+            {#foreach $T.Manufactures as record}
+            <option value="{$T.record.Id}">{$T.record.Name}</option>
+            {#/for}
+        </select>
+    </div>
+</script>
+
+<script type="text/html" id="brandsTempInput">
+    <div class='col-sm-4 form-group'>
+        <select id="ddlBrand" class="dropdown dropdown-header">
+            <option value="0">Select Brand</option>
+            {#foreach $T.Brands as record}
+            <option value="{$T.record.Id}">{$T.record.Name}</option>
+            {#/for}
+        </select>
+    </div>
+
+</script>
+

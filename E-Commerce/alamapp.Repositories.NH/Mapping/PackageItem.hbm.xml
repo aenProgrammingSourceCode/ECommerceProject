@@ -1,0 +1,29 @@
+﻿<hibernate-mapping assembly="alamapp.Model" namespace="alamapp.Model.Packages" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="PackageItem" table="PackageItems" lazy="false" >
+    <id  name="Id" column="PackageItemID"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property name="Quantity">
+      <column name="Quantity" sql-type="int" not-null="true" />
+    </property>
+
+    <many-to-one access="field.camelcase-underscore" name="Unit"
+                    class="alamapp.Model.Products.Unit"
+                    column="UnitID"
+                    cascade="none"
+                    not-null="true"/>
+    
+    <many-to-one access="field.camelcase-underscore" name="Package"
+                    class="alamapp.Model.Packages.Package"
+                    column="PackageID"
+                    cascade="none"
+                    not-null="true"/>
+
+    <many-to-one access="field.camelcase-underscore" name="Product"
+                     class="alamapp.Model.Products.Product"
+                     column="ProductID"
+                     cascade="none"
+                     not-null="true"/>
+  </class>
+</hibernate-mapping>
+

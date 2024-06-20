@@ -1,0 +1,702 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-jtemplates.js"></script>
+<style>
+    li {
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        padding-bottom: 2px;
+    }
+
+        li a.selectedItem {
+            background-image: url(/Content/images/Structure/refinement-selected.gif);
+            background-repeat: no-repeat;
+            background-position: 2px 2px;
+            padding-left: 16px;
+            cursor: pointer;
+        }
+
+        li a.selecteddisabledItem {
+            background-image: url(/Content/images/Structure/refinement-selecteddisabled.gif);
+            background-repeat: no-repeat;
+            background-position: 2px 2px;
+            padding-left: 16px;
+            cursor: pointer;
+            color: #DDDDDD;
+        }
+
+        li a.disabledItem {
+            background-image: url(/Content/images/Structure/refinement-disabled.gif);
+            background-repeat: no-repeat;
+            background-position: 2px 2px;
+            padding-left: 16px;
+            cursor: default;
+            color: #DDDDDD;
+        }
+
+        li a.availableItem {
+            background-image: url(/Content/images/Structure/refinement-available.gif);
+            background-repeat: no-repeat;
+            background-position: 2px 2px;
+            padding-left: 16px;
+            cursor: pointer;
+        }
+
+    .holder {
+    }
+
+    .visible {
+        display: inline-block;
+    }
+
+    .invisible {
+        display: none;
+        z-index: -1;
+        float: right;
+    }
+
+    /*.detailsCart {
+       display:none;
+    }
+
+    .productText {
+        display: block;
+    }
+
+    .active, #pl:hover .detailsCart {
+        display: block;
+    }
+
+    .active, #pl:hover .productText {
+        display: none;
+    }
+
+    .active, #pl:hover {
+        border: solid 1px #d8cfd2;
+    }*/
+
+    #ddlSortBy {
+        background-color: #ffffff;
+        border: solid 1px #e4bbbb;
+        width: 150px;
+    }
+
+    #btnSize {
+        border-radius: 60%;
+        border: solid 1px #d8cfd2;
+    }
+
+    .detailsPara {
+        border: solid 1px #d8cfd2;
+        background-color: #ffffff;
+    }
+
+    .detailsSize {
+        border: solid 1px #d8cfd2;
+        background-color: #ffffff;
+        display: none;
+    }
+    #sizeButton {
+        background-color: #ffffff;
+        border-radius: 40%;
+        border: solid 1px #d8cfd2;
+        margin:2px;
+    }
+
+    /*.active, #pl:hover .detailsButton {
+        display: block;
+    }
+
+    .active, #pl:hover .detailsPara {
+        display: none;
+    }*/
+</style>
+
+<script>
+    function AddProductToBasket(Id) {
+        $.ajax({
+            url: '/api/Basket/AddProductItemToBasket?ProductId=' + Id,
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                GetBasketSummary();
+                //window.location.href = "/Home/Basket";
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function GetProductByTitle(Id) {
+        $.ajax({
+            url: '/api/Product/GetAllProductByTitleId?id=' + Id,
+            type: 'Get',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+
+                //$.each(data, function (k, v) {
+                //    var SizeList = '<button type="button" onclick="JavaScript:AddProductToBasket(' + v.Id + ')" value="' + v.Id + '" class="btn btn-link">' + v.SizeName + '</button>'
+                //    $("#aBtnGroup").append(SizeList);
+                //})
+
+                $("#detailsSize").setTemplate($("#productSizeTemplate").html());
+                $("#detailsSize").processTemplate(data);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+</script>
+
+
+<script>
+    // Array to store the refinment selections made by a user.
+    var refinementSelections = [];
+    // Flag to stop user selecting doing anything while page is being reloaded.
+    var disallowUpdates = false;
+    // Vars to store data on the last refinement selection.
+    var lastSelectedRefinementItemId;
+    var lastSelectedRefinementGroupId;
+    // Flag to show if last action was a narrowing or critera widerning selection.
+    var lastActionWasToNarrowProductRefinement = false;
+
+    $(document).ready(function () {
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(15, pt);
+        GetRefinement(Id);
+        displayPage(1,Id)
+
+        $("#ddlSortBy").change(function () {
+            displayPage(1,Id);
+        })
+    });
+
+    $(document).ready(function () {
+        // Get click event, assign button to var, and get values from that var
+        $('#aBtnGroup button').on('click', function () {
+            var thisBtn = $(this);
+
+            thisBtn.addClass('active').siblings().removeClass('active');
+            var btnText = thisBtn.text();
+            var btnValue = thisBtn.val();
+
+            $('#selectedVal').text(btnValue);
+        });
+
+        // You can use this to set default value
+        // It will fire above click event which will do the updates for you
+        $('#aBtnGroup button[value="M"]').click();
+    });
+    function displayPage(index, categoryId) {
+        if (disallowUpdates == false) {
+           var sortBy = $("#ddlSortBy").val();
+           GetProductByCategory(index, sortBy,categoryId);
+        }
+    }
+    function GetRefinement(Id) {
+        var categoryId = Id;
+            var jsonData = {
+                CategoryId:categoryId,
+                SortBy: $("#ddlSortBy").val(),
+                Index: 1,
+                RefinementGroups: refinementSelections
+            };
+            $.ajax({
+                url: '/api/Product/GetProductsByAjax',
+                type: 'POST',
+                cache: false,
+                dataType: 'json',
+                data: JSON.stringify(jsonData),
+                contentType: 'application/json;charset-utf-8',
+                success: function (data) {
+                        $("#refn").setTemplate($("#refinementTemplate").html());
+                        $("#refn").processTemplate(data);
+
+
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+
+    }
+    function refineSearch(refinementGroupId, refinementItemId) {
+        if (disallowUpdates == false) {
+            itemRefinementElementId =
+                 buildRefinementItemElementIdForm(refinementGroupId, refinementItemId);
+
+            lastSelectedRefinementItemId = refinementItemId;
+            lastSelectedRefinementGroupId = refinementGroupId;
+
+            var paths = window.location.pathname;
+            var pt = paths.length;
+            var Id = paths.substring(15, pt);
+
+
+            if (!isDisabled(itemRefinementElementId)) {
+                if (isAvailable(itemRefinementElementId)) {
+                    setAsSelected(itemRefinementElementId);
+                    saveRefinementToFilterSelection(refinementGroupId, refinementItemId);
+                    lastActionWasToNarrowProductRefinement = true;
+                    displayPage(1,Id);
+                }
+                else if (isSelectedButDisabled(itemRefinementElementId)) {
+                    setAsDisabled(itemRefinementElementId);
+                    removeRefinementFromFilterSelection(refinementGroupId,
+                                                        refinementItemId);
+                }
+                else {
+                    setAsAvailable(itemRefinementElementId);
+                    removeRefinementFromFilterSelection(refinementGroupId,
+                                                        refinementItemId);
+                    lastActionWasToNarrowProductRefinement = false;
+                    displayPage(1,Id);
+                }
+            }
+        }
+    }
+    function GetProductByCategory(index, sortBy, categoryId) {
+        var Id=categoryId
+        if (disallowUpdates == false) {
+            disallowUpdates = true;
+            var jsonData = {
+                CategoryId:Id,
+                SortBy: sortBy,
+                Index: index,
+                RefinementGroups:refinementSelections
+            };
+            $.ajax({
+                url: '/api/Product/GetProductsByAjax',
+                type: 'POST',
+                cache: false,
+                dataType: 'json',
+                data: JSON.stringify(jsonData),
+                contentType: 'application/json;charset-utf-8',
+                success: function (data) {
+
+                    var mydata = { items: data.Products };
+
+
+                    //$.each(data.Products, function (k,v) {
+                    //    alert(JSON.stringify(v.Products));
+                    //})
+
+                    if (data.Products.length == 0) {
+
+                        showNoProductsFoundDialogBoxAndRevertSelection();
+                    }
+                    else {
+
+                        $("#items").setTemplate($("#productItemTemplate").html());
+                        $("#items").processTemplate(mydata);
+
+                       
+
+                        $('#numberOfProductsFound').text("Products found: " + data.NumberOfTitlesFound);
+
+                        //buildPageLinksFor("#pageLinksTop",
+                        //                      data.CurrentPage, data.TotalNumberOfPages);
+                        //buildPageLinksFor("#pageLinksBottom",
+                        //                      data.CurrentPage, data.TotalNumberOfPages);
+
+                        for (var i = data.RefinementGroups.length - 1; i >= 0; --i) {
+                            filterOutRefinements(data.RefinementGroups[i].GroupId,
+                                                   data.RefinementGroups[i].Refinements);
+                        }
+
+                        disallowUpdates = false;
+                    }
+
+                    //hideOverlay("overlay");
+
+                    //disallowUpdates = false;
+
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+        }
+    }
+
+    //  Method used to work out which refinements to mark as available/disabled/selected
+    //  based on the list of products taht matched the customers last selection.
+    // ===============================================================
+    function filterOutRefinements(refinementGroupId, availableProductRefinements) {
+
+        $("[id^='" + buildGroupRefinementElementIdForm(refinementGroupId) +
+                                                             "']").each(function () {
+
+                                                                 itemRefinementElementId = $(this).attr('id');
+
+                                                                 var refinementItemId = findRefinementItemIdFrom(itemRefinementElementId);
+
+                                                                 var refinementItemIdMatched = refinementItemIdIsInProductAvailableRefinements
+                                         (availableProductRefinements, refinementItemId);
+
+                                                                 if (!lastSelectionWasMadeIn(refinementGroupId)) {
+
+                                                                     if (lastActionWasToNarrowProductRefinement == true) {
+
+                                                                         if ((isSelected(itemRefinementElementId) ||
+                         isSelectedButDisabled(itemRefinementElementId)) &&
+                         !refinementItemIdMatched) {
+                                                                             setAsSelectedButDisabled(itemRefinementElementId);
+                                                                         }
+                                                                         else if (!refinementItemIdMatched) {
+                                                                             setAsDisabled(itemRefinementElementId);
+                                                                         }
+                                                                         else if (isDisabled(itemRefinementElementId) &&
+                             refinementItemIdMatched) {
+                                                                             setAsAvailable(itemRefinementElementId);
+                                                                         }
+                                                                         else if (isSelectedButDisabled(itemRefinementElementId) &&
+                             refinementItemIdMatched) {
+                                                                             setAsSelected(itemRefinementElementId);
+                                                                         }
+                                                                     }
+                                                                     else {
+
+                                                                         if ((isSelected(itemRefinementElementId) ||
+                         isSelectedButDisabled(itemRefinementElementId)) &&
+                         !refinementItemIdMatched) {
+                                                                             setAsSelectedButDisabled(itemRefinementElementId);
+                                                                         }
+                                                                         else if ((isSelected(itemRefinementElementId) ||
+                              isSelectedButDisabled(itemRefinementElementId)) &&
+                              refinementItemIdMatched) {
+                                                                             setAsSelected(itemRefinementElementId);
+                                                                         }
+                                                                         else if (isDisabled(itemRefinementElementId) &&
+                             refinementItemIdMatched) {
+                                                                             setAsAvailable(itemRefinementElementId);
+                                                                         }
+                                                                         else if (isDisabled(itemRefinementElementId) &&
+                            !refinementItemIdMatched &&
+                            !otherRefinementSelectionsExistApartFrom(refinementGroupId)) {
+                                                                             setAsAvailable(itemRefinementElementId);
+                                                                         }
+                                                                         else if (isAvailable(itemRefinementElementId) &&
+                             !refinementItemIdMatched) {
+                                                                             setAsDisabled(itemRefinementElementId);
+                                                                         }
+                                                                     }
+                                                                 }
+                                                                 else if (lastActionWasToNarrowProductRefinement == false) {
+
+                                                                     if (isSelected(itemRefinementElementId)) {
+                                                                         setAsSelected(itemRefinementElementId);
+                                                                     }
+                                                                     else if (!otherRefinementSelectionsExistApartFrom(refinementGroupId)) {
+                                                                         setAsAvailable(itemRefinementElementId);
+                                                                     }
+                                                                 }
+                                                                 else if (isDisabled(itemRefinementElementId) && refinementItemIdMatched) {
+                                                                     setAsAvailable(itemRefinementElementId);
+                                                                 }
+                                                             });
+    }
+
+    // Method called to short a dialog box and revert selection if user makes a selection
+    // that produces no results.
+    // ===============================================================
+    function showNoProductsFoundDialogBoxAndRevertSelection() {
+
+        itemRefinementElementId = buildRefinementItemElementIdForm
+                (lastSelectedRefinementGroupId, lastSelectedRefinementItemId);
+
+        setAsSelected(itemRefinementElementId);
+
+        saveRefinementToFilterSelection(lastSelectedRefinementGroupId,
+                                        lastSelectedRefinementItemId);
+
+        $("#dialog-noproducts").dialog('open');
+    }
+
+    // Method used to get the refinement item id from the element name.
+    // ===============================================================
+    function findRefinementItemIdFrom(itemRefinementElementId) {
+
+        var refinementItemId = 0;
+
+        refinementItemId = itemRefinementElementId.substring
+        (itemRefinementElementId.lastIndexOf("-") + 1, itemRefinementElementId.length);
+
+        return refinementItemId;
+    }
+
+    // Method used to determine if the given refinement group id is of the same group
+    // that the last selection was made.
+    // ===============================================================
+    function lastSelectionWasMadeIn(refinementGroupId) {
+        return lastSelectedRefinementGroupId == refinementGroupId;
+    }
+
+    // Method used to determine if the user has selected other refinements in other
+    // groups than the given refinement group id.
+    // ===============================================================
+    function otherRefinementSelectionsExistApartFrom(refinementGroupId) {
+
+        var refinementSelectionsCount = 0;
+
+        for (var i = refinementSelections.length - 1; i >= 0; --i) {
+
+            if (refinementSelections[i].GroupId != refinementGroupId) {
+                refinementSelectionsCount +=
+                     refinementSelections[i].SelectedRefinements.length;
+            }
+        }
+
+        return refinementSelectionsCount > 0;
+    }
+
+    // Method to determine if the given refinement item is in the list of matches for the
+    // last
+    // ===============================================================
+    function refinementItemIdIsInProductAvailableRefinements(availableProductRefinements,
+                                                             refinementItemId) {
+
+        for (var i = availableProductRefinements.length - 1; i >= 0; --i) {
+            if (availableProductRefinements[i].Id == refinementItemId)
+                return true;
+        }
+        return false;
+    }
+
+    // Helper methods
+    // ===============================================================
+    function buildGroupRefinementElementIdForm(refinementGroupId) {
+        return 'RefGrp-' + refinementGroupId;
+    }
+
+    function buildRefinementItemElementIdForm(refinementGroupId, refinementItemId) {
+        return 'RefGrp-' + refinementGroupId + '-' + refinementItemId;
+    }
+
+    function serviceFailed(result) {
+        alert('Service call failed: ' + result.status + '' + result.statusText);
+    }
+
+    // Methods to store, retrieve and update the refinement selections
+    // ===============================================================
+    function removeRefinementFromFilterSelection(refinementGroupId, refinementItemId) {
+
+        var refinementSelectionGroup;
+
+        for (var i = refinementSelections.length - 1; i >= 0; --i) {
+
+            if (refinementSelections[i].GroupId == refinementGroupId) {
+                refinementSelectionGroup = refinementSelections[i];
+            }
+        }
+
+        refinementSelectionGroup.SelectedRefinements.splice(
+               findIndexOf(refinementSelectionGroup.SelectedRefinements,
+                           refinementItemId), 1);
+
+    }
+
+    function findIndexOf(refinementGroupId, refinementItemId) {
+
+        for (var i = refinementGroupId.length - 1; i >= 0; --i) {
+            if (refinementGroupId[i] == refinementItemId)
+                return i;
+        }
+        return -1;
+    }
+
+    function saveRefinementToFilterSelection(refinementGroupId, refinementItemId) {
+
+        var refinementSelectionGroup = new Object();
+        var foundExistingGroup = false;
+
+        if (refinementSelections.length == 0) {
+
+            refinementSelectionGroup.GroupId = refinementGroupId;
+            refinementSelections[0] = refinementSelectionGroup;
+            refinementSelectionGroup.SelectedRefinements = [];
+        }
+        else {
+
+            for (var i = refinementSelections.length - 1; i >= 0; --i) {
+
+                if (refinementSelections[i].GroupId == refinementGroupId) {
+                    refinementSelectionGroup = refinementSelections[i];
+                    foundExistingGroup = true;
+                }
+
+            }
+            if (foundExistingGroup == false) {
+                refinementSelectionGroup.GroupId = refinementGroupId;
+                refinementSelections[refinementSelections.length] =
+                                                refinementSelectionGroup;
+                refinementSelectionGroup.SelectedRefinements = [];
+            }
+        }
+
+        refinementSelectionGroup.
+          SelectedRefinements[refinementSelectionGroup.SelectedRefinements.length] =
+                                                                        refinementItemId
+    }
+
+
+    // Method to build the paging links after a refine selection.
+    // ===============================================================
+    function buildPageLinksFor(spanId, index, totalPages) {
+
+        var i = 1;
+        var html = '';
+        for (i = 1; i <= totalPages; i++) {
+
+            if (i == index)
+                html = html + "<a class='selected' href='JavaScript:displayPage(" + i +
+                                                                ")'>" + i + "</a>&nbsp;";
+            else
+                html = html + "<a class='notselected' href='JavaScript:displayPage(" + i
+                                                             + ")'>" + i + "</a>&nbsp;";
+        }
+
+
+        $(spanId).html(html);
+    }
+
+    // Helper methods to determine the state of a refinment.
+    // ===============================================================
+    function setAsSelectedButDisabled(elementName) {
+        $('#' + elementName).removeClass().addClass('selecteddisabledItem');
+    }
+
+    function setAsSelected(elementName) {
+        $('#' + elementName).removeClass().addClass('selectedItem');
+    }
+
+    function setAsAvailable(elementName) {
+        $('#' + elementName).removeClass().addClass('availableItem');
+    }
+
+    function setAsDisabled(elementName) {
+        $('#' + elementName).removeClass().addClass('disabledItem');
+    }
+
+    function isSelected(elementName) {
+        return ($('#' + elementName).attr("class") == "selectedItem");
+    }
+
+    function isAvailable(elementName) {
+        return ($('#' + elementName).attr("class") == "availableItem");
+    }
+
+    function isDisabled(elementName) {
+        return ($('#' + elementName).attr("class") == "disabledItem");
+    }
+
+    function isSelectedButDisabled(elementName) {
+        return ($('#' + elementName).attr("class") == "selecteddisabledItem");
+    }
+
+
+
+
+
+</script>
+
+<script>
+    function ProductFooterActivity() {
+
+        $(".detailsSize").fadeToggle("slow");
+    }
+
+</script>
+<div class="col-md-2" id="refn">
+
+</div>
+
+<div class="col-md-10">
+    <p id="numberOfProductsFound" style="display:inline-block"></p>
+    <select id="ddlSortBy" style="display:inline-block; float:right">
+        <option value="1">Price Heigh to Low</option>
+        <option value="2">Price Low to Hight</option>
+    </select>
+    <hr />
+    <div id="items"></div>
+  
+        <div id="selectSizeModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="detailsSize">
+                        </div>
+                    </div>
+                     
+                </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="refinementTemplate">
+    <div class="productsTitle">
+        <h4>FILTER</h4>
+    </div>
+    {#foreach $T.RefinementGroups as record}
+    <h4>{$T.record.Name}</h4>
+    <ul class="list-group">
+        {#foreach $T.record.Refinements as record1}
+        <li class="list-group-item">
+            @*<input class="availableItem" id="RefGrp-{$T.record.GroupId}-{$T.record1.Id}" onclick="JavaScript:refineSearch('{$T.record.GroupId}','{$T.record1.Id}')" type="checkbox" /> {$T.record1.Name}*@
+            <a class="availableItem" id="RefGrp-{$T.record.GroupId}-{$T.record1.Id}" href="JavaScript:refineSearch({$T.record.GroupId},{$T.record1.Id})"> {$T.record1.Name}</a>
+        </li>
+        {#/for}
+    </ul>
+    {#/for}
+</script>
+<div id="aBtnGroup" class="btn-group"></div>
+<script type="text/html" id="productItemTemplate">
+    <div id="productList">
+        {#foreach $T.items as record}
+        <div style="display: inline-block; margin: auto; padding-right: 2px; padding: 4px" id="pl">
+            <div style="width: 200px; height:250px; display:block">
+                <a href="/Home/ProductDetails/{$T.record.Id}">
+                    <div id="sm-Loader"></div>
+                    <img src="/Content/ProductImage/{$T.record.ImageId}.jpg" width="200" height="250" />
+                </a>
+            </div>
+            <div style="width: 200px; height: 100px; display: block;" class="detailspara">
+                {$T.record.Name}<br /> {$T.record.BrandName}  {$T.record.ManufactureName}<br /> {$T.record.ProductModel}
+                <h4>{$T.record.Price} ৳ </h4>
+            </div>
+
+
+            <div style="width: 200px; height: 40px; display: block;" class="detailsButton">
+                <a href="/Home/ProductDetails/{$T.record.Id}" class="btn btn-sm btn-nowoncare">See details</a>
+                <button data-toggle="modal" data-target="#selectSizeModal" onclick="JavaScript: GetProductByTitle('{$T.record.Id}')" onmouseover="searchresultUp()" class="btn btn-sm btn-default">Add To basket</button>
+            </div>
+        </div>
+        {#/for}
+    </div>
+</script>
+
+
+<script type="text/html" id="productSizeTemplate"> Size:
+    {#foreach $T as record}
+    <button type="button" data-dismiss="modal" onclick="JavaScript: AddProductToBasket('{$T.record.Id}')" id="sizeButton" class="btn btn-link">{$T.record.SizeName}</button>
+    {#/for}
+</script>
+
+
+
+
+
+

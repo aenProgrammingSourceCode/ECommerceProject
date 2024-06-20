@@ -1,0 +1,243 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_LayoutHomeProduct.cshtml";
+}
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(21, pt);
+
+        BasketDetailsById()
+    });
+
+    function PlaceCustomerOrder()
+    {
+        var token = $('[name=__RequestVerificationToken]').val();
+        CallOrderProcess(token);
+    }
+
+    function CallOrderProcess(token) {
+        var jsonData =
+            ({
+                "IdentityToken": token
+            })
+
+        $.ajax({
+            url: '/api/Order/PlaceOrder',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data:JSON.stringify(jsonData),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                window.location.href = "/Home/Orders";
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+    function BasketDetailsById() {
+        $.ajax({
+            url: '/api/Basket/GetBasketDetails',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                //var myBasket = { Basket: data.Basket }
+                $("#basketDetailsHtml").setTemplate($("#basketDetailsTemp").html());
+                $("#basketDetailsHtml").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+
+    function UpdateItems() {
+        var postArr = [];
+        var index = 0;
+        var postData;
+
+        $("[id^='Qty-']").each(function () {
+            itemElementId = $(this).attr('id');
+            var productId = 0;
+            productId = itemElementId.replace("Qty-", "");
+
+            postArr[index] = { ProductId: productId, Qty: $(this).val() };
+            index++;
+        });
+
+        postData = { Items: postArr };
+
+        var jsonData = JSON.stringify(postData);
+
+        $.ajax({
+            url: '/api/Basket/UpdateBasketItem',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: jsonData,
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                GetBasketSummary();
+                BasketDetailsById()
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+    function DeleteItems() {
+        var postArr = [];
+        var index = 0;
+        var deleteData;
+
+        $.each($("input[name='product']:checked"), function () {
+            postArr[index] = { ProductId: $(this).val() }
+            index++;
+        });
+
+
+        deleteData = { Products: postArr };
+
+        var jsonData = JSON.stringify(deleteData);
+
+        $.ajax({
+            url: '/api/Basket/DeleteBasketItem',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: jsonData,
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                GetBasketSummary();
+                BasketDetailsById()
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+</script>
+
+<h2>Basket</h2>
+<hr />
+<div id="basketDetailsHtml">
+
+</div>
+<script type="text/html" id="basketDetailsTemp">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+
+            <h3> Basket Item Details</h3>
+
+        </div>
+        <div class="panel-body">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>
+                            <strong> Number of Items : {$T.Basket.NumberOfItem}</strong>
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Item No</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Item Total</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {#foreach $T.Basket.BasketItemViews as record}
+                    <tr>
+                        <td> <input id="chkDelete" value="{$T.record.ProductId}" name="product" type="checkbox" /></td>
+                        <td> 1</td>
+                        <td> {$T.record.ProductName}</td>
+                        <td>
+                            {$T.record.ProductPrice}
+                        </td>
+                        <td>
+                            <input id="Qty-{$T.record.ProductId}" class="form-control" value="{$T.record.Qty}" type="text" />
+                        </td>
+                        <td>
+                            {$T.record.LineTotal}
+                        </td>
+
+                    </tr>
+                    {#/for}
+                    <tr>
+                        <td><a href="#" class="btb btn-link" onclick="JavaScript:DeleteItems()">Remove</a></td>
+                        <td></td>
+                        <td></td>
+                        <td> </td>
+                        <td><a href="#" class="btb btn-link" onclick="JavaScript:UpdateItems()">Update</a></td>
+                        <td></td>
+
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h4> Basket Total : </h4>
+
+                        </td>
+                        <td>
+                            <h4> {$T.Basket.BasketTotal} BDT </h4>
+                        </td>
+
+                    </tr>
+                   
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            @if (Request.IsAuthenticated)
+                            {
+                               <a href="#" class="btn btn-info" onclick="JavaScript:PlaceCustomerOrder()">Check Out</a>
+                            }
+                            else
+                            {
+                                <a href="/Account/Login" class="btn btn-info">Check Out</a>
+                            }
+                         
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+
+            </table>
+        </div>
+    </div>
+</script>

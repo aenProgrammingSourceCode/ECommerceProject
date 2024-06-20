@@ -1,0 +1,250 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://kit.fontawesome.com/34a59c0339.js" crossorigin="anonymous"></script>
+    <title>Dashboard2</title>
+   
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .leftBar {
+            flex: 1.5;
+            background-color: #633636;
+            height: 100vh;
+        }
+
+        .dashboard {
+            flex: 7;
+            background-color: #f7f3f3;
+            height: 100vh;
+        }
+
+        .rightBar {
+            flex: 2.5;
+            background-color: #ffffff;
+            height: 100vh;
+        }
+
+        .leftBarWrapper {
+            /* border: 2px solid #633636;*/
+            height: 95%;
+            margin: 8px;
+        }
+
+        .leftBarTop {
+            /*border: 2px solid black;*/
+            height: 12%;
+            margin: 5px;
+        }
+
+        .leftBarFeature {
+            height: 88%;
+            margin-top: 20px;
+            margin-right: 5px;
+            margin-left: 5px;
+            /*border: 2px solid #808080;*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px 0px;
+        }
+
+        .logoImg {
+            width: 50px;
+            object-fit: fill;
+            height: 50px;
+        }
+
+
+        .featureIcon {
+            color: white;
+        }
+
+        .featureTitle {
+            color: white;
+        }
+
+        .atag {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 10px 0px;
+            gap: 8px;
+            /*border: 2px solid #ffffff;*/
+            width: 150px;
+            padding: 5px;
+            transition: 0.4s all ease-in-out;
+            position: relative;
+        }
+
+            .atag.active {
+                background-color: lightblue;
+                margin-left: -8px;
+            }
+
+        .logout {
+            position: absolute;
+            bottom: 2px;
+        }
+
+        .messageCount {
+            background-color: rgb(177 206 123);
+            color: black;
+            width: 30px;
+            height: 15px;
+            position: absolute;
+            font: bold;
+            text-align: center;
+            border-radius: 8px;
+            font-size: small;
+            margin-left: 4px;
+        }
+
+        .dahsboardWrapper {
+            margin: 8px;
+            border: 1px solid black;
+            height: 95%;
+        }
+
+        .dahsboardTop {
+            margin: 4px;
+            border: 1px solid black;
+            height: 12%;
+        }
+
+        .dahsboardMiddle {
+            margin: 4px;
+            border: 1px solid black;
+            height: 35%;
+        }
+
+        .dahsboardBottom {
+            margin: 4px;
+            border: 1px solid black;
+            height: 40%;
+        }
+
+        .dashboardHeading {
+            padding: 5px;
+        }
+
+        .date {
+            margin: 4px 0px;
+            padding: 5px;
+        }
+
+        .cardWrapper {
+            height: 95%;
+            border: 1px solid #db0b0b;
+            padding: 5px;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .card {
+            width: 35%;
+            height: 95%;
+            border: 1px solid #3639eb;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const featureList = document.querySelectorAll('.atag');
+            featureList.forEach((item, i) => {
+                item.addEventListener('mouseover', function () {
+                    item.classList.add('active');
+                })
+                item.addEventListener('mouseout', function () {
+                    item.classList.remove('active');
+                })
+            })
+
+        }
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <section class="leftBar">
+            <div class="leftBarWrapper">
+                <div class="leftBarTop">
+                    <img src="~/Content/img/paris.jpg" class="logoImg" />
+                </div>
+                <div class="leftBarFeature">
+                    <a href="#" class="atag">
+                        <span class="featureIcon"><i class="fa-sharp fa-solid fa-gauge"></i></span>
+                        <span class="featureTitle">Dashboard</span>
+                    </a>
+                    <a href="#" class="atag">
+                        <span class="featureIcon"><i class="fa-sharp fa-solid fa-gauge"></i></span>
+                        <span class="featureTitle">Customers</span>
+                    </a>
+                    <a href="#" class="atag">
+                        <span class="featureIcon"><i class="fa-sharp fa-solid fa-gauge"></i></span>
+                        <span class="featureTitle">Orders</span>
+                    </a>
+                    <a href="#" class="atag">
+                        <span class="featureIcon"><i class="fa-sharp fa-solid fa-gauge"></i></span>
+                        <span class="featureTitle">Analytics</span>
+                    </a>
+                    <a href="#" class="atag">
+                        <span class="featureIcon"><i class="fa-sharp fa-solid fa-gauge"></i></span>
+                        <span class="featureTitle">Messages <span class="messageCount">23</span></span>
+                    </a>
+                    <a href="#" class="atag">
+                        <span class="featureIcon"><i class="fa-sharp fa-solid fa-gauge"></i></span>
+                        <span class="featureTitle">Products</span>
+                    </a>
+                    <a href="#" class="atag">
+                        <span class="featureIcon"><i class="fa-sharp fa-solid fa-gauge"></i></span>
+                        <span class="featureTitle">Reports</span>
+                    </a>
+                    <a href="#" class="atag logout">
+                        <span class="featureIcon"><i class="fa-sharp fa-solid fa-gauge"></i></span>
+                        <span class="featureTitle">Logout</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="dashboard">
+            <div class="dahsboardWrapper">
+                <div class="dahsboardTop">
+                    <h1 class="dashboardHeading">Dashboard</h1>
+                    <input type="date">
+                </div>
+                <div class="dahsboardMiddle">
+                    <div class="cardWrapper">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+
+                    </div>
+                </div>
+                <div class="dahsboardBottom"></div>
+
+            </div>
+
+        </section>
+        <section class="rightBar"></section>
+    </div>
+
+</body>
+</html>
+ 

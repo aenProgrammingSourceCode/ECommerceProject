@@ -1,0 +1,12 @@
+﻿<hibernate-mapping assembly="alamapp.Model" namespace="alamapp.Model.UserAuthentication" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="AspUser" table="AspNetUsers" lazy="false" >
+    <id  name="Id" column="Id" unsaved-value="0">
+      <generator class="uuid.hex" />
+    </id>
+    <property name="UserEmail">
+      <column name="Email" sql-type="nvarchar(256)" not-null="false" />
+    </property>
+
+    
+  </class>
+</hibernate-mapping>

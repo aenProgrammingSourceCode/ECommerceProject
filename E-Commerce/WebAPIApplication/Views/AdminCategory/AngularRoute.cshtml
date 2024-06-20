@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "AngularRoute";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AngularRoute</h2>
+<script src="~/Scripts/_references.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-route.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.0/ui-bootstrap-tpls.js"></script>
+
+<script type="text/javascript">
+
+    var app = angular.module('myAppp', ['ui.bootstrap']);
+app.controller('myController', function($scope, $filter,$http) {
+    
+    $http({
+        method: 'GET',
+        url: '/api/Category/GetAll'
+    }).then(function (result) {
+        $scope.getCategories = result.data;
+
+        $scope.currentPage = 1;
+        $scope.pageSize = 8; // Number of items per page
+
+        $scope.updateDisplayedItems = function () {
+            var filteredData = $filter('filter')($scope.getCategories, $scope.searchText);
+            $scope.totalItems = filteredData.length;
+            $scope.totalPages = Math.ceil($scope.totalItems / $scope.pageSize);
+
+            var startIndex = $scope.currentPage * $scope.pageSize;
+            $scope.displayedItems = filteredData.slice(startIndex, startIndex + $scope.pageSize);
+ 
+
+
+        };
+
+        $scope.prevPage = function () {
+            if ($scope.currentPage > 1) {
+                $scope.currentPage--;
+                $scope.updateDisplayedItems();
+            }
+        };
+
+        $scope.nextPage = function () {
+            if ($scope.currentPage < $scope.totalPages - 1) {
+                $scope.currentPage++;
+                $scope.updateDisplayedItems();
+            }
+        };
+
+        $scope.$watchGroup(['searchText', 'currentPage'], function (newValues, oldValues) {
+            if (newValues[0] !== oldValues[0] || newValues[1] !== oldValues[1]) {
+                $scope.updateDisplayedItems();
+            }
+        });
+
+        $scope.updateDisplayedItems();
+
+    });
+  
+});
+</script>
+
+<div class="col-lg-2 col-sm-2">
+
+</div>
+<div class="col-lg-10 col-sm-10">
+    <div ng-controller="myController" ng-app="myAppp">
+
+
+        <input type="text" ng-model="searchText" placeholder="Search...">
+
+        <table class="table table-hover">
+            <tr ng-repeat="item in displayedItems">
+                <td>{{item.Id}}</td>
+                <td>{{item.Name}}</td>
+                <td>{{item.Description}}</td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <ul><li ng-repeat="x in totalItems">{{x}}</li> </ul>
+
+                    <pagination total-items="totalItems" items-per-page="pageSize" ng-model="currentPage" ng-change="pageChanged()"></pagination>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+ 
+
+
+
+
+

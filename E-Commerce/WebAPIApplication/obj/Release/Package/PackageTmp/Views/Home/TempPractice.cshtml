@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "TempPractice";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h2>TempPractice</h2>
+
+
+<script type="text/javascript">
+   
+    $(document).ready(function () {
+        var products = [
+     { Name: "Rubel", Address: "Chittagong" },
+        {Name:"Mamun", Address:"Dhaka"}
+        ];
+
+        $.each(products, function (index, Item) {
+            alert("Index:" + index + " Item:" + formateItem(Item));
+        });
+    });
+
+    function formateItem(item)
+    {
+       return item.Name+": "+item.Address
+    }
+
+
+
+    $("#clickSubmit").click(function () {
+        var swmeList = [];
+        $.each($("input[name='pool']:checked"), function () {
+            swmeList.push($(this).val());
+        })
+    });
+
+
+
+    
+    //function UpdateCheckValue() {
+    //    var allvalue = [];
+    //    $("#ItemDiv:checkbox").each(function () {
+    //        allvalue.push($(this).val());
+    //    });
+    //};
+    //$("#ItemDiv input").click(UpdateCheckValue);
+    //UpdateCheckValue();
+
+    
+    
+</script>
+
+
+
+<div id="ItemDiv">
+    <input type="checkbox" name="pool1" id="swimmingpool" value="1" />
+    <input type="checkbox" name="swimmingpool" id="swimmingpool" value="1" />
+    <input type="checkbox" name="swimmingpool" id="swimmingpool" value="1" />
+   
+</div>

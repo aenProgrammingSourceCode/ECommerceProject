@@ -1,0 +1,21 @@
+﻿<hibernate-mapping assembly="alamapp.Model" namespace="alamapp.Model.Categories" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Category" table="Categories" lazy="false" >
+    <id  name="Id" column="CategoryID"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="Name">
+      <column name="CategoryName" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="Description">
+      <column name="Description" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="ImageId">
+      <column name="ImageID" sql-type="uniqueidentifier" not-null="false" />
+    </property>
+
+  
+  </class>
+</hibernate-mapping>

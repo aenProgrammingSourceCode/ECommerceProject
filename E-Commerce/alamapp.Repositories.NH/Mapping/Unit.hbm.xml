@@ -1,0 +1,13 @@
+﻿<hibernate-mapping assembly="alamapp.Model" namespace="alamapp.Model.Products" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Unit" table="ProductUnits" lazy="false" >
+    <id  name="Id" column="UnitID"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="Name">
+      <column name="UnitName" sql-type="nvarchar" not-null="false" />
+    </property>
+
+
+  </class>
+</hibernate-mapping>

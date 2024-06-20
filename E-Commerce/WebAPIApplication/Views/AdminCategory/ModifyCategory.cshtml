@@ -1,0 +1,147 @@
+﻿@{
+    ViewBag.Title = "ModifyCategory";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(30, pt);
+        getCategoryDetails(Id);
+      
+    });
+    /* Statrt edit category details */
+    function getCategoryDetails(Id) {
+        $.ajax({
+            url: '/api/Category/GetCategory?id=' + Id,
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $("#categoryUpdateHtml").setTemplate($("#categoryUpdateTemp").html());
+                $("#categoryUpdateHtml").processTemplate(data);
+            },
+            error: function (er) {
+                var errorSycronim = JSON.stringify(er);
+                alert("eoorr" + errorSycronim);
+            }
+        });
+    }
+
+   
+
+    /* End edit category details */
+    // Category method
+    function modifyCategory() {
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(30, pt);
+
+        var categoryName = $("#txtCategoryName").val();
+        var description = $("#txtDescription").val();
+
+        if (categoryName != "" && description != "") {
+            categoryAjax(Id, categoryName, description);
+        }
+
+        imageUpload();
+
+    }
+    function categoryAjax(Id, name, description) {
+        var jsonData =
+         ({
+             Name: name,
+             Description: description
+         });
+
+        $.ajax({
+            url: '/api/Category/ModifyCategory?id='+ Id,
+            type: 'PUT',
+            cache: false,
+            dataType: 'json',
+            data: JSON.stringify(jsonData),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                submitNotification();
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+    function imageUpload() {
+
+        var data = new FormData();
+
+        var files = $("#fileUpload").get(0).files;
+
+        // Add the uploaded image content to the form data collection
+        if (files.length > 0) {
+            data.append("UploadImage", files[0]);
+        }
+
+        // Make Ajax request with the contentType = false, and procesDate = false
+        var ajaxRequest = $.ajax({
+            type: "POST",
+            url: "/api/Category/filUpload",
+            contentType: false,
+            processData: false,
+            data: data
+        });
+
+        ajaxRequest.done(function (xhr, textStatus) {
+            // Do other operation
+        });
+    }
+
+</script>
+<div class="col-md-9">
+    <br />
+
+    <div id="categoryUpdateHtml">
+
+    </div>
+</div>
+<script type="text/html" id="categoryUpdateTemp">
+    {#foreach $T as record}
+    <form class="form" id="categoryForm" method="post" action="">
+        <div class="container">
+            <ul class="list-group">
+                <li class="list-group-item">
+                  
+                    <div class="row">
+                        <div class='col-sm-4 form-group'>
+                            <label for="name">Name:</label>
+                            <input id="txtCategoryName" class="form-control" value="{$T.record.Name}" name="name" type="text" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col-sm-4 form-group'>
+                            <label for="name">Description:</label>
+                            <input id="txtDescription" class="form-control" value=" {$T.record.Description}" name="description" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col-sm-4 form-group'>
+                            <label for="name">Category picture:</label>
+                            <input id="fileUpload" multiple="multiple" type="file" required><br />
+                            <div id="image-holder"></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <a href="/AdminCategory/Index" class="btn btn-info btn-sm" onclick="javaScript: modifyCategory();">Update Category</a> <a href="/AdminCategory/Index" class="btn btn-info btn-sm">Cancel</a>  
+                </li>
+            </ul>
+            {#/for}
+        </div>
+    </form>
+</script> 
+
+
+
+

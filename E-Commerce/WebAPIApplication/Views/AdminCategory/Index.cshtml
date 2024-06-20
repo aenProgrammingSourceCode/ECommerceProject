@@ -1,0 +1,505 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+  
+ <script src="~/Scripts/jquery-jtemplates.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#frmCategoryCreate').bootstrapValidator({
+            // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                name: {
+                    validators: {
+                        stringLength: {
+                            min: 2,
+                        },
+                        notEmpty: {
+                            message: 'Please supply your first name'
+                        }
+                    }
+                },
+
+                description: {
+                    validators: {
+                        stringLength: {
+                            min: 10,
+                            max: 200,
+                            message: 'Please enter at least 10 characters and no more than 200'
+                        },
+                        notEmpty: {
+                            message: 'Please enter at least 10 characters and no more than 200'
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+ 
+
+<script type="text/javascript">
+    $(document).ready(function () {
+         
+
+        $("#btnCreateCategory").click(function () {
+            $("#frmCategoryCreate").show();
+        })
+        $("#btnCancelForm").click(function () {
+            $("#frmCategoryCreate").hide();
+        })
+        
+        GetAllCategory();
+        ImagePreview();
+        ImagePreviewForEdit();
+        $("#checkedAll").change(function () {
+            if (this.checked) {
+                $(".checkSingle").each(function () {
+                    this.checked = true;
+                })
+            } else {
+                $(".checkSingle").each(function () {
+                    this.checked = false;
+                })
+            }
+        });
+        $(".checkSingle").click(function () {
+            if ($(this).is(":checked")) {
+                var isAllChecked = 0;
+                $(".checkSingle").each(function () {
+                    if (!this.checked)
+                        isAllChecked = 1;
+                })
+                if (isAllChecked == 0) { $("#checkedAll").prop("checked", true); }
+            }
+            else {
+                $("#checkedAll").prop("checked", false);
+            }
+        });
+     
+    });
+    function DeleteCategory() {
+        var chkChecked = $("input[name='category']:checked").length;
+
+        if (chkChecked >= 1) {
+            var postArr = [];
+            var index = 0;
+            var deleteData;
+
+            $.each($("input[name='category']:checked"), function () {
+                postArr[index] = { CategoryId: $(this).val() }
+                index++;
+            });
+            deleteData = { Categories: postArr };
+            var jsonData = JSON.stringify(deleteData);
+            $.ajax({
+                url: '/api/Category/Delete',
+                type: 'POST',
+                cache: false,
+                dataType: 'json',
+                data: jsonData,
+                contentType: 'application/json;charset-utf-8',
+                success: function (data) {
+                    GetAllCategory();
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+        }
+        else {
+            alert("Please select category to remove!");
+        }
+    }
+   
+
+    function SaveCategory() {
+        if (($("#txtName").val() != "") && ($("#txtDescription").val() != "")) {
+            var jsonData =
+                {
+                    Name: $("#txtName").val(),
+                    Description: $("#txtDescription").val()
+                };
+            $.ajax({
+                url: '/api/Category/Save',
+                type: 'POST',
+                dataType: 'json',
+                data: jsonData,
+                success: function (data) {
+                    alert(data);
+                    var fileUpload = $("#fileUpload").val();
+                    var data = new FormData();
+                    var files = $("#fileUpload").get(0).files;
+                    // Add the uploaded image content to the form data collection
+                    if (files.length > 0) {
+                        data.append("UploadImage", files[0]);
+                    }
+                    // Make Ajax request with the contentType = false, and procesDate = false
+                    var ajaxRequest = $.ajax({
+                        type: "POST",
+                        url: "/api/Category/UploadPic?imgId="+JSON.stringify(data),
+                        contentType: false,
+                        processData: false,
+                        data: data,
+                        success: function (data) {
+                            alert("Success");
+                        }
+                    });
+
+
+                    //document.getElementById("frmCategoryForm").reset();
+                    //var image_holder = $("#image-holder");
+                    //image_holder.empty();
+                    //hideLoader('sm-Loader');
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+        }
+        else
+        {
+            alert("All field value required");
+        }
+    }
+    function CreateCategory() {
+        if (($("#txtName").val() != "") && ($("#txtDescription").val() != "") && ($("#fileUpload").val() != "")) {
+            var Image;
+            var fileUpload = $("#fileUpload").val();
+            var data = new FormData();
+            var files = $("#fileUpload").get(0).files;
+            // Add the uploaded image content to the form data collection
+            if (files.length > 0) {
+                data.append("UploadImage", files[0]);
+            }
+            // Make Ajax request with the contentType = false, and procesDate = false
+            var ajaxRequest = $.ajax({
+                type: "POST",
+                url: "/api/Category/UploadPic",
+                contentType: false,
+                processData: false,
+                data: data,
+                success: function (data) {
+                    var jsonData =
+                        {
+                            Name: $("#txtName").val(),
+                            Description: $("#txtDescription").val(),
+                            ImageId: data
+                        };
+                    $.ajax({
+                        url: '/api/Category/Create',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: jsonData,
+                        success: function (data) {
+                            GetAllCategory();
+                            document.getElementById("frmCategoryForm").reset();
+                            var image_holder = $("#image-holder");
+                            image_holder.empty();
+                            $("#frmCategoryCreate").hide();
+                        },
+                        error: function (r) {
+                            var jsonError = JSON.stringify(r);
+                            alert("error" + jsonError);
+                        }
+                    });
+
+                }
+            });
+        }
+        else {
+            alert("All field value required");
+        }
+    }
+    function ImagePreviewForEdit() {
+        $("#fileUpload").on('change', function () {
+            //Get count of selected files
+            var countFiles = $(this)[0].files.length;
+            var imgPath = $(this)[0].value;
+            var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+            var image_holder = $("#image-holderForEdit");
+            image_holder.empty();
+            if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
+                if (typeof (FileReader) != "undefined") {
+                    //loop for each file selected for uploaded.
+                    for (var i = 0; i < countFiles; i++) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $("<img />", {
+                                "src": e.target.result,
+                                "class": "thumb-image"
+                            }).appendTo(image_holder);
+                        }
+                        image_holder.show();
+                        reader.readAsDataURL($(this)[0].files[i]);
+                    }
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            } else {
+                alert("Pls select only images");
+            }
+        });
+    }
+    function EditCategory(Id) {
+        var name = $("#txtEditCategoryName").val();
+        var description = $("#txtEditDescription").val();
+        var jsonData = {
+            Name: name,
+            Description: description
+        };
+        $.ajax({
+            url: '/api/Category/ModifyCategory?id=' + Id,
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: JSON.stringify(jsonData),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $.each(data, function (k, v) {
+                    var imgId = v.ImageId;
+                    var fileUpload = $("#flEditImage").val();
+                    var data = new FormData();
+                    var files = $("#flEditImage").get(0).files;
+                    // Add the uploaded image content to the form data collection
+                    if (files.length > 0) {
+                        data.append("EditUploadedImage", files[0]);
+                    }
+                    // Make Ajax request with the contentType = false, and procesDate = false
+                    var ajaxRequest = $.ajax({
+                        type: "POST",
+                        url: '/api/Category/ModifyUploadedFile?Id=' + imgId,
+                        contentType: false,
+                        processData: false,
+                        data: data
+                    });
+                    ajaxRequest.done(function (xhr, textStatus) {
+                        window.location.reload(true);
+                        GetAllCategory();
+                    });
+                })
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function ImagePreview() {
+        $("#fileUpload").on('change', function () {
+            //Get count of selected files
+            var countFiles = $(this)[0].files.length;
+            var imgPath = $(this)[0].value;
+            var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+            var image_holder = $("#image-holder");
+            image_holder.empty();
+            if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
+                if (typeof (FileReader) != "undefined") {
+                    //loop for each file selected for uploaded.
+                    for (var i = 0; i < countFiles; i++) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $("<img />", {
+                                "src": e.target.result,
+                                "class": "thumb-image"
+                            }).appendTo(image_holder);
+                        }
+                        image_holder.show();
+                        reader.readAsDataURL($(this)[0].files[i]);
+                    }
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            } else {
+                alert("Pls select only images");
+            }
+        });
+    }
+    
+    /* Start Get all category method */
+    function GetAllCategory() {
+        $.ajax({
+            url: '/api/Category/GetAll',
+            type: 'GET',
+            cache: false,
+            async: true,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                var myData = { categories: data };
+                // Render data jtemplate
+                $("#categoriesHtml").setTemplate($("#categoriesTemp").html());
+                $("#categoriesHtml").processTemplate(myData);
+                hideLoader('lg-Loader');
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+
+        });
+    }
+    function getCategoryDetailsForEdit(Id) {
+        $.ajax({
+            url: '/api/Category/Get?id=' + Id,
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $("#categoryDetailsForEditHtml").setTemplate($("#categoryUpdateTemp").html());
+                $("#categoryDetailsForEditHtml").processTemplate(data);
+            },
+            error: function (er) {
+                var errorSycronim = JSON.stringify(er);
+                alert("eoorr" + errorSycronim);
+            }
+        });
+    }
+    /* End Get all category method */
+</script>
+        <div class="row" id="categoryCreateForm">
+            <br /><br />
+            <h3>Create Category Information</h3>
+            <p class="text-muted">Write about Product Category details</p>
+            <a href="#" id="btnCreateCategory" class="btn btn-success">Create</a>
+            <a href="~/AdminProduct/Index" class="btn btn-primary">Create Produts</a>
+            <hr />
+            <form class="form-horizontal" method="post" id="frmCategoryCreate" style="display:none">
+                <div id="div_id_name" class="form-group required">
+                    <label for="id_name" class="control-label col-md-4  requiredField"> Full name</label>
+                    <div class="controls col-md-8 ">
+                        <input class="input-md textinput textInput form-control" id="txtName" name="name" placeholder="Your name required" style="margin-bottom: 10px" type="text" />
+                    </div>
+                </div>
+
+                <div id="div_id_company" class="form-group required">
+                    <label for="id_company" class="control-label col-md-4  requiredField"> Description</label>
+                    <div class="controls col-md-8 ">
+                        <textarea id="txtDescription" class="input-md textinput textInput form-control" name="description" placeholder="Enter category description" required title="Category description required" style="margin-bottom: 10px"></textarea>
+                    </div>
+                </div>
+
+                <div id="div_id_company" class="form-group required">
+                    <label for="id_company" class="control-label col-md-4  requiredField"><span class="asteriskField">*</span> </label>
+                    <div class="controls col-md-8 ">
+                        <div class="btn btn-default btn-sm float-left">
+                            <span>Choose files</span>
+                            <input type="file" multiple="multiple" id="fileUpload" required>
+                            <div id="image-holder" class="col-md-4"></div>
+                        </div>
+                       
+                    </div>
+                </div>
+                    
+                <div class="form-group">
+                    <div class="aab controls col-md-4 "></div>
+                    <div class="controls col-md-8 ">
+                        <input type="button" name="Save" value="Submit" class="btn btn-primary btn btn-info" id="btnSaveCategory" onclick="JavaScript: CreateCategory()" />
+                       <a href="#" class="btn btn-danger" id="btnCancelForm">Cancel</a>
+                    </div>
+                </div>
+
+            </form>
+            
+            <hr />
+            <table class="table table-bordered">
+                <thead>
+
+                    <tr>
+                        <th colspan="3"></th>
+                        <th><input type="checkbox" name="checkedAll" class="input-group-sm" id="checkedAll" /></th>
+                        <th><a href="#" class="glyphicon glyphicon-trash" onclick="JavaScript: DeleteCategory()"></a></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="categoriesHtml">
+                    <tr><td colspan="4"><div id="lg-Loader"></div></td></tr>
+                </tbody>
+            </table>
+            <script type="text/html" id="categoriesTemp">
+                {#foreach $T.categories as record}
+                <tr>
+                    <td>
+                        <img src="/Content/CategoryImage/{$T.record.ImageId}.jpg" onerror="this.onerror = null; this.src = '/Content/CategoryImage/BlankProductImage.jpg';"
+                             width="100" height="100" class="img-thumbnail" id="imgChangeImage" />
+                    </td>
+                    <td>
+                        <p class="text-info"> {$T.record.Name}</p>
+                    </td>
+                    <td>
+                        <p>  {$T.record.Description}</p>
+                    </td>
+                    <td><input type="checkbox" value="{$T.record.Id}" id="chkCategory" name="category" class="checkSingle" /> </td>
+                    <td><a href="#" class="glyphicon glyphicon-trash" onclick="JavaScript: DeleteCategory()"></a></td>
+                    <td><a href="#" data-toggle="modal" data-target="#categoryEditModal" onclick="JavaScript:getCategoryDetailsForEdit('{$T.record.Id}')" class="glyphicon glyphicon-edit"></a></td>
+                </tr>
+                {#/for}
+
+
+            </script>
+        </div>
+        
+<div id="categoryEditModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Category Description</h4>
+            </div>
+            <div class="modal-body">
+                <div id="categoryDetailsForEditHtml">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script
+<script type="text/html" id="categoryUpdateTemp">
+            {#foreach $T as record}
+            <div class="modal-body">
+                <div class="form-horizontal" id="frmEditCategoryForm">
+                    <div id="msg" class="alert-warning"></div>
+                    <div class="form-group">
+                        <label for="name" class="col-md-2 control-label">Name:</label>
+                        <input type="text" id="txtEditCategoryName" value="{$T.record.Name}" placeholder="Enter Category Name" required class="form-control" title="Fill the name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-md-2 control-label">Description:</label>
+                        <textarea id="txtEditDescription" placeholder="Enter Category Name" required class="form-control" title="Fill the name">{$T.record.Description}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <span>Choose files</span>
+                        <input id="flEditImage" multiple="multiple" type="file" required><br />
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <p>Category Picture</p>
+                            </div>
+                            <div class="panel-body">
+                                <img src="/Content/CategoryImage/{$T.record.ImageId}.jpg" width="200" height="200" class="img-thumbnail" id="imgCategoryImage">
+                                <hr />
+                                <div id="image-holderForEdit" class="col-md-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="btnUpdateCategory" data-dismiss="modal" onclick="JavaScript: EditCategory('{$T.record.Id}');">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+            {#/for}
+
+
+        </script>
+
+
+
+ 

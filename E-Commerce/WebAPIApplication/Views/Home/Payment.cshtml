@@ -1,0 +1,175 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-jtemplates.js"></script>
+@using Microsoft.AspNet.Identity
+
+<script>
+    $(document).ready(function () {
+        $(document).ready(function () {
+            //$("#txtMobileBankNo").keyup(function () {
+            //    GetAllPayments();
+            //});
+
+            //$("#txtTransactionNo").keyup(function () {
+            //    GetAllPayments();
+            //});
+
+
+        });
+    });
+
+    function ConfirmPayment(Id) {
+            $.ajax({
+                url: '/api/Order/ConfirmePayment?id='+Id,
+                type: 'POST',
+                dataType: 'json',
+                success: function (data) {
+                    alert(data);
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+    }
+
+
+    function CreatePayment() {
+        var Identity = '@Html.Encode(HttpContext.Current.User.Identity.GetUserId())'
+        //var jsonUser = {
+        //    IdentityToken: Identity,
+        //    MobileBankNo: "01789109271",
+        //    MobileBankName:"Bkash",
+        //    Amount: 500,
+        //    OrderId:9029
+        //};
+
+        $.ajax({
+            url: '/api/Order/CreatePayment',
+            type: 'POST',
+            dataType: 'json',
+            //data: JSON.stringify(jsonUser),
+            success: function (data) {
+                alert("Success");
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+    function GetAllPayments() {
+        var Identity = '@Html.Encode(HttpContext.Current.User.Identity.GetUserId())'
+
+        var mobileNo = $("#txtMobileBankNo").val();
+        var transactionNo = $("#txtTransactionNo").val();
+        $.ajax({
+            url: '/api/Order/GetAllPayment',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    if ((data[i].MobileBankNo == mobileNo) && (data[i].TransactionNo == transactionNo)) {
+                        $("#tblPaymentDetails").show();
+                        $("#txtMobileBankNo").css("border-color", "green");
+                        $("#paymentDetailsHtml").setTemplate($("#PaymentSummaryTemp").html());
+                        $("#paymentDetailsHtml").processTemplate(data);
+                    }
+                    else {
+                        $("#tblPaymentDetails").hide();
+                        $("#txtMobileBankNo").css("border-color", "red");
+                        $("#txtTransactionNo").css("border-color", "red");
+                        //$("#msgmn").css("color", "red").text("Not match");
+                        //$("#msgtr").css("color", "red").text("Not match");;
+                    }
+                }
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+</script>
+
+
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+    <h2>Confirm your payment</h2>
+
+    <div id="div_id_name" class="form-group required">
+        <input class="input-md textinput textInput form-control" id="txtMobileBankNo" name="name" placeholder="Sent mobile no required" style="margin-bottom: 10px" type="text" />
+        <label id="msgmn"></label>
+    </div>
+    <div id="div_id_name" class="form-group required">
+        <input class="input-md textinput textInput form-control" id="txtTransactionNo" name="transaction" placeholder="Transaction no required" style="margin-bottom: 10px" type="text" />
+        <label id="msgtr"></label>
+    </div>
+   
+   
+
+
+        <table class="table table-bordered" id="tblPaymentDetails" style="display:none">
+            <tbody id="paymentDetailsHtml"></tbody>
+        </table>
+
+    <a href="#" onclick="GetAllPayments()" class="btn btn-danger">Create Payment</a></div>
+
+<div class="col-md-4">
+
+</div>
+
+
+
+<script type="text/html" id="PaymentSummaryTemp">
+        {#foreach $T  as record}
+        <tr>
+            <td colspan="2"><h3>Payment details</h3></td>
+        </tr>
+    <tr>
+        <td><b>Amount:</b></td>
+        <td><p id="pAmount">{$T.record.Amount} </p></td>
+    </tr>
+        <tr>
+            <td><b> Mobile bank name:</b></td>
+            <td><p id="pMobileBankName"> {$T.record.MobileBankName}</p></td>
+        </tr>
+        <tr>
+            <td><b> Sent from:</b></td>
+            <td><p id="pMobileBankNo">{$T.record.MobileBankNo} </p></td>
+        </tr>
+       
+
+    <tr>
+        <td><b>Payment sent date:</b></td>
+        <td><p id="pSentDate">{$T.record.SentAmountDate} </p></td>
+    </tr>
+
+        <tr>
+            <td><b>Ordered date:</b></td>
+            <td><p id="pSentDate">{$T.record.CreateDate} </p></td>
+        </tr>
+    <tr>
+        <td colspan="2">
+            <div class="form-group">
+                <div class="aab controls col-md-4 "></div>
+                <div class="controls col-md-8 ">
+                    <input type="button" name="Save" value="Confirm Payment" class="btn btn-primary" id="btnSaveCategory" onclick="JavaScript: ConfirmPayment('{$T.record.PaymentId}')" />
+                    <a href="#" class="btn btn-default" id="btnCancelForm">Cancel</a>
+                </div>
+            </div>
+        </td>
+    </tr>
+        {#/for}
+     
+    
+</script>
+
+
+

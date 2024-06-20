@@ -1,0 +1,36 @@
+﻿<hibernate-mapping assembly="alamapp.Model" namespace="alamapp.Model.Customers" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Customer" table="Customers" lazy="false" >
+    <id  name="Id" column="CustomerID"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    
+    <property name="IdentityToken">
+      <column name="IdentityToken" sql-type="nvarchar" not-null="false" />
+    </property>
+	  <property name="Gender">
+		  <column name="Gender" sql-type="nvarchar" not-null="false" />
+	  </property>
+	  <property name="Country">
+		  <column name="Country" sql-type="nvarchar" not-null="false" />
+	  </property>
+	  <property name="DateOfBirth">
+		  <column name="DateOfBirth" sql-type="nvarchar" not-null="false" />
+	  </property>
+	  <property name="CreatedDate">
+		  <column name="CreatedDate" sql-type="nvarchar" not-null="false" />
+	  </property>
+	  <property name="MobileNo">
+		  <column name="MobileNo" sql-type="nvarchar" not-null="false" />
+	  </property>
+	  <property name="UserName">
+		  <column name="UserName" sql-type="nvarchar" not-null="false" />
+	  </property>
+
+	  <bag name="DeliveryAddress" access="field.camelcase-underscore" table="DeliveryAddress"
+		   inverse="true" cascade="all-delete-orphan" lazy="true">
+		  <key column="DeliveryAddressID"/>
+		  <one-to-many class="alamapp.Model.Customers.DeliveryAddress"></one-to-many>
+	  </bag>
+
+  </class>
+</hibernate-mapping>

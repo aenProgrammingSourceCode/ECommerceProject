@@ -1,0 +1,123 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+<script src="~/Scripts/jquery-jtemplates.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        GetAllCategory();
+    });
+
+    function GetAllCategory() {
+        showLoader('lg-Loader')
+        var Criteria = $("#txtSearchCriteria").val();
+        $.ajax({
+            url: '/api/Category/GetAll?id=' + Criteria,
+            type: 'GET',
+            cache: false,
+            async: true,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                var myData = { categories: data };
+                // Render data jtemplate
+                $("#categoriesHtml").setTemplate($("#categoriesTemp").html());
+                $("#categoriesHtml").processTemplate(myData);
+                hideLoader('lg-Loader');
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+
+        })
+    }
+
+    //function GetAllCategory() {
+    //    showLoader('lg-Loader')
+    //    var Criteria = $("#txtSearchCriteria").val();
+    //    $.ajax({
+    //        url: '/api/Category/GetAllCategories?id=' + Criteria,
+    //        type: 'GET',
+    //        cache: false,
+    //        async: true,
+    //        dataType: 'json',
+    //        contentType: 'application/json;charset-utf-8',
+    //        success: function (data) {
+    //            var myData = { categories: data };
+    //            // Render data jtemplate
+    //            $("#categoriesHtml").setTemplate($("#categoriesTemp").html());
+    //            $("#categoriesHtml").processTemplate(myData);
+    //            hideLoader('lg-Loader');
+    //        },
+    //        error: function (r) {
+    //            var jsonError = JSON.stringify(r);
+    //            alert("error" + jsonError);
+    //        }
+
+    //    });
+    //}
+
+
+    /* End Get all category method */
+
+    /*-----Start Utility-----*/
+    function showLoader(idShowLoader) {
+        $("#" + idShowLoader).show();
+    }
+    function hideLoader(idHideLoader) {
+        $("#" + idHideLoader).hide();
+    }
+</script>
+<style>
+    .box-1{
+        background-color:#0094ff;
+        width:200px;
+        height:50px;
+        position:relative;
+    }
+
+    .box-2 {
+        background-color: #ff0000;
+        width: 150px;
+        height: 100px;
+        position:absolute;
+        z-index:-1;
+    }
+
+    .box-3 {
+        background-color: #00ffff;
+        width: 100px;
+        height: 50px;
+    }
+</style>
+ 
+
+@*<div class="box-3">
+    box-3
+</div>*@
+
+
+        <div id="lg-Loader"></div>
+        <div id="categoriesHtml" class="row"></div>
+
+<script type="text/html" id="categoriesTemp">
+    {#foreach $T.categories as record}
+    <div class="col-md-3">
+        <p> {$T.record.Name}</p>
+        <hr />
+        <div class="img-responsive">
+            <a href="/Home/Products/{$T.record.Id}"> <img src="/Content/CategoryImage/{$T.record.ImageId}.jpg" class="img-responsive" alt="Nature"></a> 
+                <div class="caption">
+                    <hr />
+                    <p class="text-muted">
+                        <a href="/Home/Products/{$T.record.Id}">  {$T.record.Description}</a> 
+                    </p>
+                </div>
+        </div>
+    </div>
+    {#/for}
+
+</script>
+
+
+ 

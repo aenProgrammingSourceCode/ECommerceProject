@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "TestProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<script src="~/Scripts/_references.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-route.js"></script>
+
+<script type="text/javascript">
+    var app = angular.module('mApp', []);
+    app.controller('myControllers', function () {
+
+        getallData();
+        function getallData() {
+            $http({
+                method: 'GET',
+                url: '/api/Category/GetAll'
+            }).then(function (result) {
+                $scope.getCategories = result.data;
+                alert(JSON.stringify(result.data));
+
+            })
+        }
+
+    })
+</script>
+
+<div ng-app="mApp" ng-controller="myControllers">
+
+</div>

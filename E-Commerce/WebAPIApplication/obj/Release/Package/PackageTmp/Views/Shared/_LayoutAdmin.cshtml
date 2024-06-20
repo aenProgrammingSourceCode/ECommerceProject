@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div class="row">
+    <div class="col-md-4 col-lg-3 col-sm-5 col-xs-12">
+        <div class="panel-group" id="accordion">
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+
+                    <h1>
+                        Deshboard
+                    </h1>
+
+                </div>
+
+            </div>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Administration</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                {
+                        <div class="panel-body">
+                            @Html.ActionLink("Category", "Index", "AdminCategory")
+                        </div>
+                        <div class="panel-body">
+                            @Html.ActionLink("RolesAdmin", "Index", "RolesAdmin")
+                        </div>
+                        <div class="panel-body">
+                            @Html.ActionLink("UsersAdmin", "Index", "UsersAdmin")
+                        </div>
+                }
+                </div>
+            </div>
+
+            @*<div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Product</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="panel-body">
+                            @Html.ActionLink("Product", "Index", "AdminProduct")
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <a href="#">Category</a>
+                    </div>
+                    <div class="panel-body">
+                        <a href="#">Category</a>
+                    </div>
+                    <div class="panel-body">
+                        <a href="#">Category</a>
+                    </div>
+                </div>
+            </div>*@
+        </div>
+    </div>
+
+    <div class="col-md-8 col-lg-9 col-sm-7 col-xs-12">
+        @RenderBody()
+    </div>
+
+</div>

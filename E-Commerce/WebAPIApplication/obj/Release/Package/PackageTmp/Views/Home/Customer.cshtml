@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    })
+</script>
+
+<h2>Customer Details</h2>
+
+<hr />
+
+<div class="form-horizontal" id="frmCustomer">
+    <h4>Customer Information</h4>
+    <hr />
+
+    <div class="form-group">
+        <label for="name" class="col-md-2 control-label">Customer name:</label>
+        <div class="col-md-10">
+            <input id="txtCustomerName" class="form-control" name="name" type="text" required>
+            <label for="name" id="customerNameHtml" style="display:none" class="col-md-5 control-label text-success"></label>
+            </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" id="btnCustomer" class="btn btn-default" onclick="JavaScript: CreateCustomerForm()" value="Create Customer" />
+        </div>
+    </div>
+</div>
+
+<div class="form-horizontal" id="frmDeliveryAddress" style="display:none">
+    <hr />
+    <h4>Delivery Address</h4>
+    <hr />
+    <div class="form-group">
+        <label for="name" class="col-md-2 control-label">Contact Person:</label>
+        <div class="col-md-10">
+            <input id="txtContactPersonName" class="form-control" name="name" type="text" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-md-2 control-label">Phone no:</label>
+        <div class="col-md-10">
+            <input id="txtPhoneNo" class="form-control" name="name" type="text" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-md-2 control-label">Address:</label>
+        <div class="col-md-10">
+            <input id="txtAddress" class="form-control" name="name" type="text" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-md-2 control-label">Relation:</label>
+        <div class="col-md-10">
+            <input id="txtRelation" class="form-control" name="name" type="text" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" id="btnDeliveryAddress" class="btn btn-default" onclick="JavaScript: CreateCustomerForm()" value="Create Delivery Address" />
+        </div>
+    </div>
+
+
+
+</div>
+<hr />
+
+<script type="text/html" id="customerTemp">
+    {$T.Name}
+</script>

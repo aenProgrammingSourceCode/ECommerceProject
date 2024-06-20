@@ -1,0 +1,527 @@
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <link href="~/Content/alamapputility.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+
+    <script src="~/Scripts/jquery-jtemplates.js"></script>
+    <style>
+        .container-fluid {
+            width: 100%;
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+    </style>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            GetBasketSummary();
+            GetAllProducts();
+            $('#myInput').keyup(function () {
+                // If value is not empty
+                if ($(this).val().length == 0) {
+                    // Hide the element
+                    $("#content").removeClass('contentposition');
+                    $('#listBlock').hide();
+                } else {
+                    // Otherwise show it
+                    $("#content").addClass('contentposition');
+                    $('#listBlock').show();
+                }
+
+            }).keyup();
+
+            $('body').trigger('click');
+            $('footer').trigger('click');
+
+        });
+
+
+        function profileDown() {
+            $("#profile").slideDown();
+        }
+
+        function profileUp() {
+            $("#profile").slideUp();
+        }
+
+        function searchresultUp() {
+            $("#content").removeClass('contentposition');
+            $('#listBlock').hide();
+        }
+        function myFunction() {
+            $("#content").addClass('contentposition');
+            $('#myUl').fadeTo(100, 0.3, function () { $(this).fadeTo(500, 1.0); });
+
+            var input = document.getElementById("myInput");
+            var filter = input.value.toLowerCase();
+            var nodes = document.getElementsByClassName('target');
+
+            for (i = 0; i < nodes.length; i++) {
+                if (nodes[i].innerText.toLowerCase().includes(filter)) {
+                    nodes[i].style.display = "block";
+                } else {
+                    nodes[i].style.display = "none";
+                }
+            }
+        }
+        function GetBasketSummary() {
+            $.ajax({
+                url: '/api/Product/GetBasketSummary',
+                type: 'GET',
+                cache: false,
+                async: true,
+                dataType: 'json',
+                contentType: 'application/json;charset-utf-8',
+                success: function (data) {
+                    $('#basketSummaryHtml').fadeTo(100, 0.3, function () { $(this).fadeTo(500, 1.0); });
+
+                    //$("#basketSummaryHtml").fadeIn("slow");
+                    $("#basketSummaryHtml").setTemplate($("#basketSummaryTemp").html());
+                    $("#basketSummaryHtml").processTemplate(data);
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+
+            });
+        }
+        function AddProductToBasket(Id) {
+            $.ajax({
+                url: '/api/Basket/AddProductItemToBasket?ProductId=' + Id,
+                type: 'POST',
+                cache: false,
+                dataType: 'json',
+                contentType: 'application/json;charset-utf-8',
+                success: function (data) {
+                    $('#basketSummaryHtml').fadeTo(100, 0.3, function () { $(this).fadeTo(500, 1.0); });
+                    GetBasketSummary();
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+        }
+        function GetAllProducts() {
+            $.ajax({
+                url: '/api/Product/GetAll',
+                type: 'GET',
+                cache: false,
+                dataType: 'json',
+                contentType: 'application/json;charset-utf-8',
+                success: function (data) {
+                    //$.each(data.Products, function (k, v) {
+                    //    var listOfProduct = '<li><a href="#" onclick="JavaScript:GetProductById(' + v.Id + ')">' + v.Name + '</a></li>'
+                    //    $("#myUL").append(listOfProduct);
+                    //})
+
+
+                    //var jData = data.Products;
+                    //var JsonDatas = JSON.stringify(jData);
+                    //alert(JsonDatas);
+                    $("#myUl").setTemplate($("#myUlTemp").html());
+                    $("#myUl").processTemplate(data);
+
+                    //$("#productsHtml").setTemplate($("#productsTemp").html());
+                    //$("#productsHtml").processTemplate(data);
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            $('body, .navbar-collapse form[role="search"] button[type="reset"]').on('click keyup', function (event) {
+                console.log(event.currentTarget);
+                if (event.which == 27 && $('.navbar-collapse form[role="search"]').hasClass('active') ||
+                    $(event.currentTarget).attr('type') == 'reset') {
+                    closeSearch();
+                }
+            });
+
+            function closeSearch() {
+                var $form = $('.navbar-collapse form[role="search"].active');
+                $form.find('input').val('');
+                $form.removeClass('active');
+            }
+
+            $(document).on('click', '.navbar-collapse form[role="search"]:not(.active) button[type="submit"]', function (event) {
+                event.preventDefault();
+                var $form = $(this).closest('form'),
+                    $input = $form.find('input');
+                $form.addClass('active');
+                $input.focus();
+
+            });
+        })
+    </script>
+
+    <style>
+        .basketsummary {
+            position: fixed;
+            z-index: 2000;
+            float: right;
+        }
+
+        .btn-nowoncare {
+            background-color: #f71863;
+            color: #ffffff;
+        }
+
+        .contentposition {
+            position: relative;
+        }
+
+        html, body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        header {
+            background-color: #db1d51;
+            width: calc(100% - 100px);
+            height: calc(80px - 20px);
+            position: relative;
+            padding: 10px 50px;
+        }
+
+        .header-center {
+            color: wheat;
+            margin: 0 auto;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .header-right {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            float: right;
+            display: flex;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .header-search-box {
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('/Content/images/Search.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 5px 5px 5px 40px;
+            width: 600px;
+        }
+
+        #listBlock {
+            background-color: #efb7b7;
+            z-index: 10;
+            position: absolute;
+            border: solid 1px #e0d6d6;
+            width: 30%;
+        }
+
+
+        .product-list {
+            display: inline-block;
+            margin: 0 auto;
+            border: solid;
+            border-width: 1px;
+            border-color: #d8c1c1;
+            padding: 4px;
+            background-color: #ffffff;
+            width: calc(100% - 8px);
+            float: left;
+            text-align: left;
+            color: #151414;
+        }
+
+            .product-list a {
+                color: #151414;
+                font-family: Lato;
+            }
+
+            .product-list .product-list-image {
+                display: inline-block;
+                margin-right: 5px;
+                border: solid 1px #ccc;
+            }
+
+            .product-list .product-list-para {
+                display: inline-block;
+                text-align: left;
+                vertical-align: top;
+                color: #342f2f;
+                font-family: Lato;
+                font-size: 12px;
+            }
+
+
+
+                .product-list .product-list-para .title {
+                    font-size: 18px;
+                    display: block;
+                }
+
+                .product-list .product-list-para .price {
+                    font-size: 18px;
+                    color: #db1d51;
+                    display: block;
+                }
+
+                .product-list .product-list-para p {
+                    font-size: 12px;
+                    color: #808080;
+                    display: block;
+                    text-align: justify;
+                }
+
+                .product-list .product-list-para a {
+                    border: 1px solid #ac173f;
+                    color: white;
+                    padding: 4px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 12px;
+                    cursor: pointer;
+                    float: left;
+                }
+
+
+        .header-right ul {
+        }
+
+            .header-right ul li {
+                display: inline-block;
+                padding: 0 5px;
+                color: white;
+            }
+
+                .header-right ul li a {
+                    color: white;
+                }
+
+        .navbar-change {
+            background-color: #d12b6d;
+            border-color: #f2e9e9;
+        }
+
+            .navbar-change .navbar-brand {
+                color: #f3e9e9;
+            }
+
+                .navbar-change .navbar-brand:hover, .navbar-change .navbar-brand:focus {
+                    color: #fff;
+                    background-color: transparent;
+                }
+
+            .navbar-change .navbar-text {
+                color: #999;
+            }
+
+            .navbar-change .navbar-nav > li > a {
+                color: #999;
+            }
+
+                .navbar-change .navbar-nav > li > a:hover, .navbar-change .navbar-nav > li > a:focus {
+                    color: #fff;
+                    background-color: transparent;
+                }
+
+            .navbar-change .navbar-nav > .active > a, .navbar-change .navbar-nav > .active > a:hover, .navbar-change .navbar-nav > .active > a:focus {
+                color: #fff;
+                background-color: #080808;
+            }
+
+            .navbar-change .navbar-nav > .disabled > a, .navbar-change .navbar-nav > .disabled > a:hover, .navbar-change .navbar-nav > .disabled > a:focus {
+                color: #444;
+                background-color: transparent;
+            }
+
+            .navbar-change .navbar-toggle {
+                border-color: #333;
+            }
+
+                .navbar-change .navbar-toggle:hover, .navbar-change .navbar-toggle:focus {
+                    background-color: #333;
+                }
+
+                .navbar-change .navbar-toggle .icon-bar {
+                    background-color: #fff;
+                }
+
+            .navbar-change .navbar-collapse, .navbar-change .navbar-form {
+                border-color: #101010;
+            }
+
+            .navbar-change .navbar-nav > .open > a, .navbar-change .navbar-nav > .open > a:hover, .navbar-change .navbar-nav > .open > a:focus {
+                color: #fff;
+                background-color: #080808;
+            }
+
+            .navbar-change .navbar-nav > .dropdown > a:hover .caret {
+                border-top-color: #fff;
+                border-bottom-color: #fff;
+            }
+
+            .navbar-change .navbar-nav > .dropdown > a .caret {
+                border-top-color: #999;
+                border-bottom-color: #999;
+            }
+
+            .navbar-change .navbar-nav > .open > a .caret, .navbar-change .navbar-nav > .open > a:hover .caret, .navbar-change .navbar-nav > .open > a:focus .caret {
+                border-top-color: #fff;
+                border-bottom-color: #fff;
+            }
+    </style>
+   
+
+</head>
+<body onclick="searchresultUp()">
+
+    <div class="navbar navbar-change navbar-fixed-top" style="position:relative">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                @Html.ActionLink("Company name", "Index", "Home", null, new { @class = "navbar-brand" })
+                <div style="width:auto; margin:10px auto; display:inline-block">
+                    <input class="header-search-box" id="myInput" onkeyup="myFunction()" placeholder="Search your product" type="text" style="margin:0px auto" />
+                    <div id="listBlock">
+                        <div id="myUl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                @*<div> <a href="/Home/Basket" id="basketSummaryHtml"></a> </div>
+                    <div> <a href="/Home/Basket" id="basketSummaryHtml">Sign in</a>   </div>*@
+
+                <ul>
+                    <li><span class="glyphicon glyphicon-shopping-cart"></span> <br /><a href="/Home/Basket" id="basketSummaryHtml"></a> </li>
+
+                </ul>
+                @if (Request.IsAuthenticated)
+                {
+                    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <ul>
+                            <li>
+                                @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                            </li>
+                            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                        </ul>
+                    }
+                }
+                else
+                {
+                    <ul>
+
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> </a><br />@Html.ActionLink("SignIn", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
+     
+    <br />
+    <div class="container-fluid" onclick="profileUp()">
+
+        @RenderBody()
+        <hr />
+        <footer onclick="searchresultUp()">
+            <p>&copy; @DateTime.Now.Year - Compy right by SBCB</p>
+        </footer>
+        @RenderSection("scripts", required: false)
+    </div>
+    <script type="text/html" id="myUlTemp">
+
+        {#foreach $T as record}
+        <div class="target product-list">
+            <div class="product-list-image">
+                <img src="/Content/ProductImage/{$T.record.ImageId}.jpg" width="100" style="float:left" />
+            </div>
+            <div class="product-list-para">
+                <div class="title"> {$T.record.Name}</div>
+                <div class="price">{$T.record.Price} ৳ </div>
+                <p>  {$T.record.Description} </p>
+                <b>Review</b>
+                <ul>
+                    <li>
+                        Brand: {$T.record.BrandName}
+                    </li>
+                    <li>
+                        Origine: {$T.record.ManufactureName}
+                    </li>
+                    <li>
+                        Model: {$T.record.ProductModelName}
+                    </li>
+                </ul>
+
+                <a href="/Home/ProductDetails/{$T.record.Id}" class="btn btn-sm btn-nowoncare">See details</a>
+            </div>
+
+        </div>
+        {#/for}
+
+    </script>
+
+    <script type="text/html" id="basketSummaryTemp">
+        ({$T.NumberOfItems})
+        <strong>Items </strong> {$T.BasketTotal} ৳,
+    </script>
+
+    <script>
+        function GetProductByTitle(Id) {
+            $.ajax({
+                url: '/api/Product/GetAllProductByTitleId?id=' + Id,
+                type: 'Get',
+                cache: false,
+                dataType: 'json',
+                contentType: 'application/json;charset-utf-8',
+                success: function (data) {
+
+                    //$.each(data, function (k, v) {
+                    //    var SizeList = '<button type="button" onclick="JavaScript:AddProductToBasket(' + v.Id + ')" value="' + v.Id + '" class="btn btn-link">' + v.SizeName + '</button>'
+                    //    $("#aBtnGroup").append(SizeList);
+                    //})
+
+                    $("#detailsSize").setTemplate($("#productSizeTemplate").html());
+                    $("#detailsSize").processTemplate(data);
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+        }
+    </script>
+
+    <script type="text/html" id="productSizeTemplate">
+        Select Size:
+        {#foreach $T as record}
+        <button type="button" data-dismiss="modal" onclick="JavaScript: AddProductToBasket('{$T.record.Id}');" id="sizeButton" class="btn btn-link">{$T.record.SizeName}</button>
+        {#/for}
+    </script>
+
+</body>
+</html>

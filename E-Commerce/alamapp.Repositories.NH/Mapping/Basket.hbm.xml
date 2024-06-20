@@ -1,0 +1,19 @@
+﻿<hibernate-mapping assembly="alamapp.Model" namespace="alamapp.Model.Baskets" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Basket" table="Baskets" lazy="false" >
+    <id  name="Id" column="BasketID" type="guid">
+      <generator class="guid" />
+    </id>
+
+    <property access="field.camelcase-underscore" name="CreatedDate">
+      <column name="CreatedDate" sql-type="datetime" not-null="true" />
+    </property>
+   
+    <bag name="BasketItems" access="field.camelcase-underscore" table="BasketItems"
+            inverse="true" cascade="all-delete-orphan" lazy="true">
+      <key column="BasketID"/>
+      <one-to-many class="BasketItem"></one-to-many>
+    </bag>
+    
+  </class>
+</hibernate-mapping>
+

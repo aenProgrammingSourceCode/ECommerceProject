@@ -1,0 +1,176 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutHomeProduct.cshtml";
+}
+
+<script src="~/Scripts/jquery-jtemplates.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(21, pt);
+        ProductDetailsById(Id);
+
+        $(document).on("click", function (e) {
+            if ($(e.target).is("#myimg") === false) {
+                $("#myimg").removeClass("lens");
+            }
+
+        });
+    });
+
+
+    function imglens()
+    {
+        $("#myimg").toggleClass("lens");
+    }
+
+    function getImagePreview() {
+        $("img").click(function () {
+            var trial = $(this).attr('src');
+            $("#myimg").attr("src", trial);
+        })
+    }
+
+
+
+
+
+        function ProductDetailsById(Id) {
+            $.ajax({
+                url: '/api/Product/GetProductDetails?id=' + Id,
+                type: 'GET',
+                cache: false,
+                dataType: 'json',
+                contentType: 'application/json;charset-utf-8',
+                success: function (data) {
+                    // var cData = JSON.stringify(data);
+                    //alert(cData);
+
+                    $("#productDetailsHtml").setTemplate($("#productDetailsTemp").html());
+                    $("#productDetailsHtml").processTemplate(data);
+
+
+
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+        }
+        function AddProductToBasket(Id) {
+
+            $.ajax({
+                url: '/api/Basket/AddProductItemToBasket?ProductId=' + Id,
+                type: 'POST',
+                cache: false,
+                dataType: 'json',
+                contentType: 'application/json;charset-utf-8',
+                success: function (data) {
+                    GetBasketSummary();
+                    window.location.href = "/Home/Basket";
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+        }
+
+        function GetProductByTitle(Id) {
+            $.ajax({
+                url: '/api/Product/GetAllProductByTitleId?id=' + Id,
+                type: 'Get',
+                cache: false,
+                dataType: 'json',
+                contentType: 'application/json;charset-utf-8',
+                success: function (data) {
+
+                    //$.each(data, function (k, v) {
+                    //    var SizeList = '<button type="button" onclick="JavaScript:AddProductToBasket(' + v.Id + ')" value="' + v.Id + '" class="btn btn-link">' + v.SizeName + '</button>'
+                    //    $("#aBtnGroup").append(SizeList);
+                    //})
+
+                    $("#detailsSize").setTemplate($("#productSizeTemplate").html());
+                    $("#detailsSize").processTemplate(data);
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+        }
+
+    </script>
+
+    <style>
+
+        .zoom {
+
+        }
+        .lens {
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(2);
+          }
+
+    </style>
+
+
+
+    <div class="container">
+        <div class="col-md-12">
+
+            <div id="productDetailsHtml">
+
+
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #sizeButton {
+            background-color: #ffffff;
+            border-radius: 40%;
+            border: solid 1px #d8cfd2;
+            margin: 2px;
+        }
+    </style>
+
+    <script type="text/html" id="productDetailsTemp">
+        <h2>  {$T.Product.Name}</h2>
+        <div class="col-md-2">
+            {#foreach $T.Product.ProductImageViews as record1}
+            <img class="img-responsive" id="imgC" src="/Content/ProductImage/{$T.record1.SampleImage}.jpg" width="400" height="420" onmouseover="getImagePreview()" style="border: solid 1px #d5c7c7; margin:2px" />
+            {#/for}
+        </div>
+        <div class="col-md-6">
+            <img id="myimg" src="/Content/ProductImage/{$T.Product.ImageId}.jpg" width="550" onclick="imglens();" style="position: relative; z-index: 1; border: solid 1px #d5c7c7" />
+        </div>
+        <div class="col-md-3">
+            <h1> {$T.Product.Price} ৳</h1>
+
+            <div id="detailsSize">
+            </div>
+            <hr />
+            <a href="#" onclick="JavaScript: GetProductByTitle('{$T.Product.Id}')" class="btn btn-info">Add To Basket</a>
+            <hr />
+            <h3>Review</h3>
+            <p>
+                <b>Brand :</b>{$T.Product.BrandName}<br />
+                <b>Origine :</b>{$T.Product.ManufactureName}<br />
+                <b>Model :</b>{$T.Product.ProductModelName}<br />
+                <br />
+                {$T.Product.Description}
+            </p>
+        </div>
+    </script>
+
+
+    <script type="text/html" id="productSizeTemplate">
+        Select Size:
+        {#foreach $T as record}
+        <button type="button" data-dismiss="modal" onclick="JavaScript: AddProductToBasket('{$T.record.Id}');" id="sizeButton" class="btn btn-link">{$T.record.SizeName}</button>
+        {#/for}
+    </script>
+

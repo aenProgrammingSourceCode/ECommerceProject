@@ -1,0 +1,52 @@
+﻿<hibernate-mapping assembly="alamapp.Model" namespace="alamapp.Model.Customers" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="DeliveryAddress" table="DeliveryAddress" lazy="false" >
+    <id  name="Id" column="DeliveryAddressID"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="CompanyName">
+      <column name="CompanyName" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="nvarchar" not-null="false" />
+    </property>
+    
+    <property name="OfficeOrHome">
+      <column name="OfficeOrHome" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="ZipCode">
+      <column name="ZipCode" sql-type="nvarchar" not-null="false" />
+    </property>
+
+	  <property name="MobileNo">
+		  <column name="MobileNo" sql-type="nvarchar" not-null="false" />
+	  </property>
+ 
+	  <property name="Address">
+		  <column name="Address" sql-type="nvarchar" not-null="false" />
+	  </property>
+
+
+	  <many-to-one name="PoliceStation"
+                      class="alamapp.Model.Customers.PoliceStation"
+                      column="PoliceStationID"
+                      not-null="true"
+					  />
+
+
+	  <many-to-one name="District"
+                      class="alamapp.Model.Customers.District"
+                      column="DistrictID"
+                      not-null="true"
+					  />
+
+
+	  <many-to-one access="field.camelcase-underscore" name="Customer"
+                       class="alamapp.Model.Customers.Customer"
+                       column="CustomerID"
+                       cascade="none"
+                       not-null="true"/>
+  </class>
+</hibernate-mapping>

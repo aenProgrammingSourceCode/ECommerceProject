@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>D:\3db Ecommerce\3dbPublished</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Areas/HelpPage/HelpPage.css">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/Api.cshtml">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ApiGroup.cshtml">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/HelpPageApiModel.cshtml">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ImageSample.cshtml">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/InvalidSample.cshtml">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Parameters.cshtml">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Samples.cshtml">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/TextSample.cshtml">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/Index.cshtml">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Shared/_Layout.cshtml">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Web.config">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/_ViewStart.cshtml">
+      <publishTime>12/25/2016 22:34:24</publishTime>
+    </File>
+    <File Include="bin/alamapp.Infrastructure.dll">
+      <publishTime>01/29/2017 15:32:28</publishTime>
+    </File>
+    <File Include="bin/alamapp.Model.dll">
+      <publishTime>01/29/2017 15:32:23</publishTime>
+    </File>
+    <File Include="bin/alamapp.Repositories.NH.dll">
+      <publishTime>01/29/2017 15:32:23</publishTime>
+    </File>
+    <File Include="bin/alamapp.ServiceImplementations.dll">
+      <publishTime>01/29/2017 15:32:30</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/12/2016 23:15:38</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>03/07/2016 00:44:18</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Iesi.Collections.dll">
+      <publishTime>02/26/2016 21:34:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.ServiceLocation.dll">
+      <publishTime>08/27/2016 01:39:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>02/12/2016 23:15:36</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/15/2016 01:08:30</publishTime>
+    </File>
+    <File Include="bin/NHibernate.dll">
+      <publishTime>02/26/2016 21:36:00</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>02/12/2016 23:15:44</publishTime>
+    </File>
+    <File Include="bin/StructureMap.dll">
+      <publishTime>08/27/2016 01:39:28</publishTime>
+    </File>
+    <File Include="bin/StructureMap.Net4.dll">
+      <publishTime>08/27/2016 01:39:28</publishTime>
+    </File>
+    <File Include="bin/StructureMap.Web.dll">
+      <publishTime>08/27/2016 01:39:28</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>07/15/2016 21:53:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>08/03/2016 03:44:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>07/15/2016 21:53:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Owin.dll">
+      <publishTime>12/05/2016 10:12:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>07/15/2016 21:53:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>08/03/2016 03:44:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/12/2016 23:17:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>08/03/2016 03:44:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>08/03/2016 03:44:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>08/03/2016 03:44:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>08/03/2016 03:44:30</publishTime>
+    </File>
+    <File Include="bin/WebActivatorEx.dll">
+      <publishTime>08/27/2016 01:39:28</publishTime>
+    </File>
+    <File Include="bin/WebAPIApplication.dll">
+      <publishTime>01/29/2017 15:33:50</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>02/12/2016 23:15:38</publishTime>
+    </File>
+    <File Include="Content/alamappBaseStyle.css">
+      <publishTime>12/26/2016 05:45:18</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>12/25/2016 22:34:32</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>12/25/2016 22:34:32</publishTime>
+    </File>
+    <File Include="Content/images/3.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/1.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/10.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/1003.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/1004.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/1005.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/11.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/2.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/2029.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/2030.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/2050.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/2064.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/2065.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/2066.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/2067.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/3.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/4.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/5.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/6.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/7.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/8.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/9.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/Thumbs - Copy.db">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbimage/Thumbs.db">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/3dbLogo.jpg">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/ajax-loader.gif">
+      <publishTime>12/26/2016 05:44:22</publishTime>
+    </File>
+    <File Include="Content/images/Service/291X112/Infrastructure.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/291X112/ip_cctv_4.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/291X112/it cons 2.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/291X112/lan_1.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/291X112/Network-Monitoring_3.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/291X112/Red_LAN.gif">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/analog_pabx_solution 1.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/Infrastructure.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/ip based 2.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/Ip CCTV Network.png">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/it cons 6.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/Network-Monitoring_1.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/organo 1.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Service/Sample Propose Network 1.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Sliding/Slide1.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Sliding/Slide2.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Sliding/Slide3.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Sliding/Slide4.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/Sliding/Slide5.jpg">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/images/sm-ajax-loader.gif">
+      <publishTime>12/26/2016 05:44:24</publishTime>
+    </File>
+    <File Include="Content/JqueryUI/jquery-ui.css">
+      <publishTime>12/31/2016 08:04:26</publishTime>
+    </File>
+    <File Include="Content/JqueryUI/jquery-ui.min.css">
+      <publishTime>12/31/2016 08:04:26</publishTime>
+    </File>
+    <File Include="Content/JqueryUI/jquery-ui.structure.css">
+      <publishTime>12/31/2016 08:04:26</publishTime>
+    </File>
+    <File Include="Content/JqueryUI/jquery-ui.structure.min.css">
+      <publishTime>12/31/2016 08:04:26</publishTime>
+    </File>
+    <File Include="Content/JqueryUI/jquery-ui.theme.css">
+      <publishTime>12/31/2016 08:04:26</publishTime>
+    </File>
+    <File Include="Content/JqueryUI/jquery-ui.theme.min.css">
+      <publishTime>12/31/2016 08:04:26</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>12/25/2016 23:11:28</publishTime>
+    </File>
+    <File Include="Content/themes/base/accordion.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/all.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/autocomplete.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/base.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/button.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/core.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/datepicker.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/dialog.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/draggable.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_222222_256x240.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_444444_256x240.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_454545_256x240.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_555555_256x240.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_777620_256x240.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_777777_256x240.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_888888_256x240.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_cc0000_256x240.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_ffffff_256x240.png">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery-ui.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery-ui.min.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/menu.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/progressbar.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/resizable.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/selectable.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/selectmenu.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/slider.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/sortable.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/spinner.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/tabs.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/theme.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Content/themes/base/tooltip.css">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>12/25/2016 22:34:24</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>12/25/2016 22:34:32</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>12/25/2016 22:34:32</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>12/25/2016 22:34:32</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>12/25/2016 22:34:32</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/25/2016 23:11:28</publishTime>
+    </File>
+    <File Include="HtmlPage1.html">
+      <publishTime>01/01/2017 02:08:14</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/25/2016 21:25:18</publishTime>
+    </File>
+    <File Include="Scripts/alamappScript/CategoryScript.js">
+      <publishTime>01/04/2017 20:58:10</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>12/25/2016 22:34:32</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>12/25/2016 22:34:32</publishTime>
+    </File>
+    <File Include="Scripts/bootstrapValidator.min.js">
+      <publishTime>12/26/2016 20:26:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.js">
+      <publishTime>12/25/2016 23:14:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.min.js">
+      <publishTime>12/25/2016 23:14:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.min.map">
+      <publishTime>12/25/2016 23:14:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.js">
+      <publishTime>12/25/2016 23:14:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.min.js">
+      <publishTime>12/25/2016 23:14:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.min.map">
+      <publishTime>12/25/2016 23:14:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-jtemplates.js">
+      <publishTime>12/25/2016 23:22:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.12.1.js">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.12.1.min.js">
+      <publishTime>12/25/2016 23:14:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>12/26/2016 21:42:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>12/25/2016 22:34:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>12/25/2016 23:10:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>12/25/2016 23:10:18</publishTime>
+    </File>
+    <File Include="Scripts/JqueryUI/jquery-ui.js">
+      <publishTime>12/31/2016 08:04:58</publishTime>
+    </File>
+    <File Include="Scripts/JqueryUI/jquery-ui.min.js">
+      <publishTime>12/31/2016 08:04:58</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>12/25/2016 22:34:46</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>12/25/2016 22:34:48</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>12/25/2016 22:34:48</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>12/31/2016 08:05:00</publishTime>
+    </File>
+    <File Include="Views/Account/ConfirmEmail.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Account/DisplayEmail.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPassword.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPassword.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Account/SendCode.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Account/VerifyCode.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/AdminCategory/CategoryDetails.cshtml">
+      <publishTime>12/31/2016 01:22:54</publishTime>
+    </File>
+    <File Include="Views/AdminCategory/ImageProcess.cshtml">
+      <publishTime>01/28/2017 06:30:36</publishTime>
+    </File>
+    <File Include="Views/AdminCategory/Index.cshtml">
+      <publishTime>01/29/2017 11:51:22</publishTime>
+    </File>
+    <File Include="Views/AdminCategory/ModifyCategory.cshtml">
+      <publishTime>01/27/2017 22:05:00</publishTime>
+    </File>
+    <File Include="Views/AdminProduct/Index.cshtml">
+      <publishTime>01/01/2017 20:53:48</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>01/21/2017 04:43:30</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>01/21/2017 04:41:44</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>01/29/2017 12:29:16</publishTime>
+    </File>
+    <File Include="Views/Home/Product.cshtml">
+      <publishTime>01/29/2017 15:19:59</publishTime>
+    </File>
+    <File Include="Views/Home/ProductDetails.cshtml">
+      <publishTime>01/18/2017 21:13:48</publishTime>
+    </File>
+    <File Include="Views/Home/Service.cshtml">
+      <publishTime>01/21/2017 04:40:12</publishTime>
+    </File>
+    <File Include="Views/Manage/AddPhoneNumber.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Manage/ChangePassword.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Manage/Index.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Manage/ManageLogins.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Manage/SetPassword.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/RolesAdmin/Create.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/RolesAdmin/Delete.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/RolesAdmin/Details.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/RolesAdmin/Edit.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/RolesAdmin/Index.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Shared/Lockout.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>01/05/2017 02:37:58</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutAdmin.cshtml">
+      <publishTime>01/04/2017 21:07:40</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutHome.cshtml">
+      <publishTime>01/21/2017 03:37:36</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutHomeProduct.cshtml">
+      <publishTime>01/21/2017 03:36:54</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/UsersAdmin/Create.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/UsersAdmin/Delete.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/UsersAdmin/Details.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/UsersAdmin/Edit.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/UsersAdmin/Index.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>12/25/2016 23:11:26</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/29/2017 15:32:45</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

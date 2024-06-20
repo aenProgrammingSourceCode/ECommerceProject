@@ -1,0 +1,121 @@
+﻿@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnSaveCustomer").click(function () {
+            ModifyUserRole();
+        })
+    })
+   
+    function CreateCustomer() {
+        var Identity = '@Html.Encode(HttpContext.Current.User.Identity.GetUserId())'
+        var Gen;
+        $.each($("input[name='Gender']:checked"), function () {
+            Gen = $(this).val();
+        });
+        var jsonUser = {
+            IdentityToken: Identity,
+            DateOfBirth:"",
+            UserName: $("#txtUserName").val(),
+            MobileNo: $("#txtMobileNo").val(),
+            Country: $("#txtCountry").val(),
+            Gender: Gen
+        };
+        $.ajax({
+            url: '/api/Customer/CreateCustomer',
+            type: 'POST',
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            data: JSON.stringify(jsonUser),
+            success: function () {
+                alert("Success");
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                //alert("error" + jsonError);
+            }
+        });
+    }
+
+    function ModifyUserRole() {
+        var Identity = '@Html.Encode(HttpContext.Current.User.Identity.GetUserId())';
+            var jsonRole =
+            {
+                RoleId: "f6cf33d6-befb-4993-9092-10de4ba7524f"
+            }
+        
+        $.ajax({
+            url: '/api/AspAuthentication/ModifyRoleByUser?UserId=' + Identity,
+            type: 'POST',
+            cache: false,
+            async: true,
+            dataType: 'json',
+            data: JSON.stringify(jsonRole),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                window.location.href = "/Home/Index";
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                //alert("error" + jsonError);
+            }
+        });
+    }
+    
+</script>
+
+<h2>Customer Details</h2>
+
+<hr />
+ 
+<div class="form-horizontal" id="frmDeliveryAddress">
+    
+    <div class="form-group">
+        <label for="name" class="col-md-2 control-label">Full Name</label>
+        <div class="col-md-10">
+            <input id="txtUserName" class="form-control" name="name" type="text" required>
+        </div>
+    </div>
+    @*<div class="form-group">
+        <label for="name" class="col-md-2 control-label">Date of birth</label>
+        <div class="col-md-10">
+            <input id="txtDateOfBirth" class="form-control" name="name" type="text" required>
+        </div>
+    </div>*@
+    <div class="form-group">
+        <label for="name" class="col-md-2 control-label">Mobile No:</label>
+        <div class="col-md-10">
+            <input id="txtMobileNo" class="form-control" name="name" type="text" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-md-2 control-label">Country</label>
+        <div class="col-md-10">
+            <input id="txtCountry" class="form-control" name="name" type="text" disabled value="Bangladesh" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-md-2 control-label">Gender</label>
+        <div class="col-md-10">
+            <input type="radio" name="Gender" value="Man"> Man
+            <input type="radio" name="Gender" value="Women"> Women
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" id="btnSaveCustomer" class="btn btn-default" onclick="JavaScript: CreateCustomer()" value="Save" />
+        </div>
+    </div>
+
+
+
+</div>
+<hr />
+
+<script type="text/html" id="customerTemp">
+    {$T.Name}
+</script>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2253B5A2-C317-4DF6-BF04-7E4A196933BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>alamapp.Model</RootNamespace>
+    <AssemblyName>alamapp.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="alamapp.Infrastructure">
+      <HintPath>..\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Http.SelfHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Baskets\Basket.cs" />
+    <Compile Include="Baskets\BasketItem.cs" />
+    <Compile Include="Baskets\BasketItemFactory.cs" />
+    <Compile Include="Baskets\BasketItemFactoryForProduct.cs" />
+    <Compile Include="Categories\Category.cs" />
+    <Compile Include="Categories\CategoryBusinessRule.cs" />
+    <Compile Include="Customers\Customer.cs" />
+    <Compile Include="Customers\DeliveryAddress.cs" />
+    <Compile Include="Customers\District.cs" />
+    <Compile Include="Customers\PoliceStation.cs" />
+    <Compile Include="Orders\Order.cs" />
+    <Compile Include="Orders\OrderItem.cs" />
+    <Compile Include="Orders\OrderItemFactory.cs" />
+    <Compile Include="Orders\Payment.cs" />
+    <Compile Include="Orders\PaymentTerm.cs" />
+    <Compile Include="Orders\PaymentTermFactory.cs" />
+    <Compile Include="Packages\Package.cs" />
+    <Compile Include="Packages\PackageItem.cs" />
+    <Compile Include="Products\Brand.cs" />
+    <Compile Include="Products\Color.cs" />
+    <Compile Include="Products\Fabric.cs" />
+    <Compile Include="Products\ProductImage.cs" />
+    <Compile Include="Products\ProductImageFactory.cs" />
+    <Compile Include="Products\Size.cs" />
+    <Compile Include="Products\SubCategory.cs" />
+    <Compile Include="Products\Unit.cs" />
+    <Compile Include="RepositoryInterface\Auth\IAspRoleRepository.cs" />
+    <Compile Include="RepositoryInterface\Auth\IAspUserRepository.cs" />
+    <Compile Include="RepositoryInterface\Auth\IAspUserRoleRepository.cs" />
+    <Compile Include="RepositoryInterface\Baskets\IBasketItemRepository.cs" />
+    <Compile Include="RepositoryInterface\Baskets\IBasketRepository.cs" />
+    <Compile Include="RepositoryInterface\Customers\ICustomerRepository.cs" />
+    <Compile Include="RepositoryInterface\Customers\IDeliveryAddressRepository.cs" />
+    <Compile Include="RepositoryInterface\Customers\IDistrictRepository.cs" />
+    <Compile Include="RepositoryInterface\Customers\IPoliceStationRepository.cs" />
+    <Compile Include="RepositoryInterface\Orders\IOrderItemRepository.cs" />
+    <Compile Include="RepositoryInterface\Orders\IOrderRepository.cs" />
+    <Compile Include="RepositoryInterface\Orders\IPaymentRepository.cs" />
+    <Compile Include="RepositoryInterface\Packages\IPackageRepository.cs" />
+    <Compile Include="RepositoryInterface\Products\IColorRepository.cs" />
+    <Compile Include="RepositoryInterface\Products\IFabricRepository.cs" />
+    <Compile Include="RepositoryInterface\Products\IProductAttribute.cs" />
+    <Compile Include="Products\Manufacture.cs" />
+    <Compile Include="Products\Product.cs" />
+    <Compile Include="Products\ProductModel.cs" />
+    <Compile Include="Products\ProductTitle.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryInterface\Products\IBrandRepository.cs" />
+    <Compile Include="RepositoryInterface\Products\ICategoryRepository.cs" />
+    <Compile Include="RepositoryInterface\Products\IManufactureRepository.cs" />
+    <Compile Include="RepositoryInterface\Products\IProductImageRepository.cs" />
+    <Compile Include="RepositoryInterface\Products\IProductModelRepository.cs" />
+    <Compile Include="RepositoryInterface\Products\IProductRepository.cs" />
+    <Compile Include="RepositoryInterface\Products\IProductTitleRepository.cs" />
+    <Compile Include="RepositoryInterface\Products\ISizeRepository.cs" />
+    <Compile Include="RepositoryInterface\Products\ISubCategoryRepository.cs" />
+    <Compile Include="UserAuthentication\AspRole.cs" />
+    <Compile Include="UserAuthentication\AspUser.cs" />
+    <Compile Include="UserAuthentication\AspUserRole.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

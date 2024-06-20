@@ -1,0 +1,103 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RefinementProduct</title>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var paths = window.location.pathname;
+            var pt = paths.length;
+            var Id = paths.substring(24, pt);
+            displayPage(1, Id);
+        })
+
+        function displayPage(index,Id) {
+
+            //if (disallowUpdates == false) {
+                var sortBy = 1;
+                    //$("#ddlSortBy").val();
+                GetProductByCategory(index,1,Id);
+            //}
+        }
+
+        function GetProductByCategory(index, sortBy,Id) {
+
+            var categoryId = Id;
+            //if (disallowUpdates == false) {
+            //    disallowUpdates = true;
+
+
+                var jsonData = {
+                    CategoryId: categoryId,
+                    SortBy: sortBy,
+                    Index: index,
+                    RefinementGroups:[] 
+                };
+                $.ajax({
+                    url: '/api/Product/GetProductsByAjax',
+                    type: 'POST',
+                    cache: false,
+                    dataType: 'json',
+                    data: JSON.stringify(jsonData),
+                    contentType: 'application/json;charset-utf-8',
+                    success: function (data) {
+
+                        var mydata = { items: data.Products };
+
+                        alert(JSON.stringify(mydata));
+                        ////$.each(data.Products, function (k,v) {
+                        ////    alert(JSON.stringify(v.Products));
+                        ////})
+
+                        //if (data.Products.length == 0) {
+
+                        //    showNoProductsFoundDialogBoxAndRevertSelection();
+                        //}
+                        //else {
+
+                        //    $("#items").setTemplate($("#productItemTemplate").html());
+                        //    $("#items").processTemplate(mydata);
+
+
+
+                        //    $('#numberOfProductsFound').text("Products found: " + data.NumberOfTitlesFound);
+
+                        //    //buildPageLinksFor("#pageLinksTop",
+                        //    //                      data.CurrentPage, data.TotalNumberOfPages);
+                        //    //buildPageLinksFor("#pageLinksBottom",
+                        //    //                      data.CurrentPage, data.TotalNumberOfPages);
+
+                        //    for (var i = data.RefinementGroups.length - 1; i >= 0; --i) {
+                        //        filterOutRefinements(data.RefinementGroups[i].GroupId,
+                        //                               data.RefinementGroups[i].Refinements);
+                        //    }
+
+                        //    disallowUpdates = false;
+                        //}
+
+                        //hideOverlay("overlay");
+
+                        //disallowUpdates = false;
+
+                    },
+                    error: function (r) {
+                        var jsonError = JSON.stringify(r);
+                        alert("error" + jsonError);
+                    }
+                });
+            }
+        //}
+    </script>
+</head>
+<body>
+    <div> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+F:\NowOnCare49\3db\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+F:\NowOnCare49\3db\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+F:\NowOnCare49\3db\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+F:\NowOnCare49\3db\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+F:\NowOnCare49\3db\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+F:\NowOnCare49\3db\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

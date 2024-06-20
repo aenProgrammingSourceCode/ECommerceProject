@@ -1,0 +1,272 @@
+﻿<script src="~/Scripts/jquery-jtemplates.js"></script>
+
+
+
+
+
+
+@{
+    Layout = "~/Views/Shared/_LayoutHomeProduct.cshtml";
+}
+
+<script src="~/Scripts/jquery-jtemplates.js"></script>
+
+
+
+
+<style>
+     
+</style>
+<script>
+
+    
+</script>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @*<script>
+             $(document).ready(function () {
+
+
+             })
+
+             function zoomIn(event) {
+                 var element = document.getElementById("overlay");
+                 element.style.display = "inline-block";
+                 var img = document.getElementById("imgZoom");
+                 var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
+                 var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
+                 element.style.backgroundPosition = (-posX * 2) + "px " + (-posY * 4) + "px";
+
+             }
+
+             function zoomOut() {
+                 var element = document.getElementById("overlay");
+                 element.style.display = "none";
+             }
+         </script>
+
+        <style>
+            #overlay {
+                border: 1px solid black;
+                width: 350px;
+                height: 200px;
+                display: inline-block;
+                background-image: url('http://ginger-mum.com/wp-content/uploads/2015/10/3633-1269758855-0da5042c33400a811a5d766be4579cb8.jpg');
+                background-repeat: no-repeat;
+            }
+        </style>
+        <img id="imgZoom" width="300px" height="200px" onmousemove="zoomIn(event)" onmouseout="zoomOut()" src="http://ginger-mum.com/wp-content/uploads/2015/10/3633-1269758855-0da5042c33400a811a5d766be4579cb8.jpg">
+        <div id="overlay" onmousemove="zoomIn(event)"></div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".filter div").click(function (e) {
+                $('.holder').addClass('invisible').removeClass('visible')
+                            .filter(':contains(' + $(this).text() + ')')
+                            .removeClass('invisible').addClass('visible')
+                e.preventDefault();
+            });
+        })
+
+
+    </script>
+
+    <style>
+        .visible {
+        }
+
+        .invisible {
+            display: none;
+            z-index: 1;
+            left: 0px;
+        }
+    </style>
+
+    <div class="page">
+        <div class="filter">
+            <div class="manchester">Manchester</div>
+            <div class="london">London</div>
+            <div class="Paris">Paris</div>
+
+        </div>
+        <div class="container">
+            <div class="holder">
+                <div class="name">Joe</div>
+                <div class="address">London</div>
+            </div>
+            <div class="holder">
+                <div class="name">Jack</div>
+                <div class="address">Manchester</div>
+            </div>
+            <div class="holder">
+                <div class="name">Sarah</div>
+                <div class="address">paris</div>
+            </div>
+            <div class="holder">
+                <div class="name">Ken</div>
+                <div class="address">Paris</div>
+            </div>
+            <div class="holder">
+                <div class="name">Andrew</div>
+                <div class="address">Manchester</div>
+            </div>
+            <div class="holder">
+                <div class="name">Jane</div>
+                <div class="address">London</div>
+            </div>
+            <div class="holder">
+                <div class="name">Andrea</div>
+                <div class="address">London</div>
+            </div>
+            <div class="holder">
+                <div class="name">David</div>
+                <div class="address">Paris</div>
+            </div>
+
+            <div class="holder">
+                <div class="name">Simon</div>
+                <div class="address">Paris</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        $(document).ready(function () {
+            // Run our swapImages() function every 5secs
+            //setInterval('swapImages()', 5000);
+            GetAllProducts();
+            //$('#myInput').keyup(function () {
+            //    // If value is not empty
+            //    if ($(this).val().length == 0) {
+            //        // Hide the element
+            //        $('#listBlock').hide();
+            //    } else {
+            //        // Otherwise show it
+            //        $('#listBlock').show();
+            //    }
+            //}).keyup();
+
+        });
+
+
+        function GetAllProducts() {
+            $.ajax({
+                url: '/api/Product/GetAll',
+                type: 'GET',
+                cache: false,
+                dataType: 'json',
+                contentType: 'application/json;charset-utf-8',
+                success: function (data) {
+                    //$.each(data.Products, function (k, v) {
+                    //    var listOfProduct = '<li><a href="#" onclick="JavaScript:GetProductById(' + v.Id + ')">' + v.Name + '</a></li>'
+                    //    $("#myUL").append(listOfProduct);
+                    //})
+
+
+                    //var jData = data.Products;
+                    //var JsonDatas = JSON.stringify(jData);
+                    //alert(JsonDatas);
+                    $("#myUl").setTemplate($("#myUlTemp").html());
+                    $("#myUl").processTemplate(data);
+
+                    //$("#productsHtml").setTemplate($("#productsTemp").html());
+                    //$("#productsHtml").processTemplate(data);
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+        }
+        //function myFunction() {
+
+        //    $('#myUL').fadeTo(100, 0.3, function () { $(this).fadeTo(500, 1.0); });
+
+        //    var input = document.getElementById("myInput");
+        //    var filter = input.value.toLowerCase();
+        //    var nodes = document.getElementsByClassName('target');
+
+        //    for (i = 0; i < nodes.length; i++) {
+        //        if (nodes[i].innerText.toLowerCase().includes(filter)) {
+        //            nodes[i].style.display = "inline-block";
+        //        } else {
+        //            nodes[i].style.display = "none";
+        //        }
+        //    }
+        //}
+    </script>
+
+    @*<div style="width:100%; margin:0 auto;">
+            <div class="controls">
+                <input class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Your name required" type="text" />
+                <div id="listBlock" style="display:none; border:solid 1px; padding:4px; width:280px; border-color:#d8c1c1; margin:0 auto;z-index:1; position:absolute; background-color:#faf3f3">
+                    <div id="myUl">
+
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+
+    <div id="myUl">
+
+    </div>
+    <script type="text/html" id="myUlTemp">
+        {#foreach $T.Products as record}
+        <div style="display: inline-block; margin: auto;  padding-right: 2px; border:dashed; border-width:1px; border-color:#4a2d2d; padding: 4px">
+            <img src="/Content/ProductImage/{$T.record.ImageId}.jpg" width="200" height="250" />
+            <div>
+                <p>
+                    {$T.record.Name}<br /> {$T.record.BrandName}  {$T.record.ManufactureName}<br /> {$T.record.ProductModel}
+                    <h4>{$T.record.Price} ৳ </h4>
+                </p>
+                <a href="#" class="btn btn-success" onclick="JavaScript: AddProductToBasket('{$T.record.Id}')">Buy now</a>
+            </div>
+        </div>
+        {#/for}
+    </script>
+
+

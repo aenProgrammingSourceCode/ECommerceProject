@@ -1,0 +1,176 @@
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\WebAPIApplication.dll.config
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\WebAPIApplication.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\WebAPIApplication.pdb
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\alamapp.Model.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\alamapp.Repositories.NH.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\alamapp.ServiceImplementations.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Antlr3.Runtime.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\EntityFramework.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\EntityFramework.SqlServer.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.AspNet.Identity.Core.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Cookies.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Facebook.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Google.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.OAuth.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Twitter.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Practices.ServiceLocation.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Web.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Owin.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\StructureMap.Net4.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\StructureMap.Web.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Helpers.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Http.Owin.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Http.WebHost.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Mvc.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Optimization.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Razor.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.WebPages.Deployment.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.WebPages.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.WebPages.Razor.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\WebActivatorEx.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\WebGrease.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\NHibernate.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\AutoMapper.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Iesi.Collections.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\alamapp.Model.pdb
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\alamapp.Repositories.NH.pdb
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\alamapp.ServiceImplementations.pdb
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\EntityFramework.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\EntityFramework.SqlServer.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.AspNet.Identity.Core.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Cookies.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Facebook.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Google.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.OAuth.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Twitter.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Microsoft.Practices.ServiceLocation.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\StructureMap.pdb
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\StructureMap.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\StructureMap.Net4.pdb
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\StructureMap.Web.pdb
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Helpers.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Mvc.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Optimization.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Razor.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.WebPages.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.WebPages.Deployment.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.WebPages.Razor.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Newtonsoft.Json.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Http.WebHost.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Antlr3.Runtime.pdb
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\System.Web.Http.Owin.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\NHibernate.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\AutoMapper.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\bin\Iesi.Collections.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\obj\Release\WebAPIApplication.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\obj\Release\WebAPIApplication.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\WebAPIApplication\obj\Release\WebAPIApplication.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\WebAPIApplication.dll.config
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\WebAPIApplication.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\WebAPIApplication.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\alamapp.Infrastructure.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\alamapp.Model.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\alamapp.Repositories.NH.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\alamapp.ServiceImplementations.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Antlr3.Runtime.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\EntityFramework.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\EntityFramework.SqlServer.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.AspNet.Identity.Core.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Cookies.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Facebook.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Google.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.OAuth.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Twitter.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Practices.ServiceLocation.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Web.Infrastructure.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Newtonsoft.Json.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Owin.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\StructureMap.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\StructureMap.Net4.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\StructureMap.Web.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Net.Http.Formatting.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Helpers.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Http.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Http.Owin.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Http.WebHost.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Mvc.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Optimization.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Razor.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.WebPages.Deployment.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.WebPages.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.WebPages.Razor.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\WebActivatorEx.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\WebGrease.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\NHibernate.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\AutoMapper.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Iesi.Collections.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\alamapp.Infrastructure.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\alamapp.Model.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\alamapp.Repositories.NH.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\alamapp.ServiceImplementations.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\EntityFramework.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\EntityFramework.SqlServer.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.AspNet.Identity.Core.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Cookies.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Facebook.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Google.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.OAuth.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Owin.Security.Twitter.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Microsoft.Practices.ServiceLocation.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\StructureMap.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\StructureMap.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\StructureMap.Net4.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\StructureMap.Web.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Helpers.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Mvc.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Optimization.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Razor.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.WebPages.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.WebPages.Deployment.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.WebPages.Razor.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Newtonsoft.Json.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Net.Http.Formatting.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Http.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Http.WebHost.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Antlr3.Runtime.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\System.Web.Http.Owin.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\NHibernate.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\AutoMapper.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\bin\Iesi.Collections.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\obj\Release\WebAPIApplication.csprojResolveAssemblyReference.cache
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\obj\Release\WebAPIApplication.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\WebAPIApplication\obj\Release\WebAPIApplication.pdb

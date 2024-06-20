@@ -1,0 +1,37 @@
+﻿<hibernate-mapping assembly="alamapp.Model" namespace="alamapp.Model.Packages" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Package" table="Packages" lazy="false" >
+    <id  name="Id" column="PackageID"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="Name">
+      <column name="PackageName" sql-type="nvarchar" not-null="false" />
+    </property>
+
+   
+    <property name="ImageId">
+      <column name="ImageID" sql-type="int" not-null="false" />
+    </property> 
+    
+    <property name="CreatedDate">
+      <column name="CreatedDate" sql-type="date" not-null="false" />
+    </property>
+
+    <property name="Description">
+      <column name="Descriptions" sql-type="date" not-null="false" />
+    </property>
+
+    <many-to-one access="field.camelcase-underscore" name="Category"
+                 class="alamapp.Model.Categories.Category" 
+                 column="CategoryID"
+                 cascade="none"
+                 not-null="true">
+      
+    </many-to-one>
+    <bag name="PackageItems" access="field.camelcase-underscore" inverse="true"
+        cascade="all-delete-orphan" lazy="true" >
+      <key column="PackageID"/>
+      <one-to-many class="PackageItem"></one-to-many>
+    </bag>
+  </class>
+</hibernate-mapping>

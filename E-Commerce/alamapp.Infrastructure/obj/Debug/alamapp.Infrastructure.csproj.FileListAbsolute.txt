@@ -1,0 +1,841 @@
+D:\Deve16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\Deve16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\Deve16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Deve16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\Deve16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\Deve16\02.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\Deve16\02.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\Deve16\02.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\Deve16\02.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\Deve16\02.03.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\Deve16\02.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\Deve16\02.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\Deve16\02.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\Deve16\02.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+C:\06.03.16\05.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+C:\06.03.16\05.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+C:\06.03.16\05.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+C:\06.03.16\05.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+C:\06.03.16\05.03.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\06.03.16\05.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+C:\06.03.16\05.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+C:\06.03.16\05.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+C:\06.03.16\05.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+C:\06.03.16\05.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\Deve16\06.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\Deve16\06.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\Deve16\06.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\Deve16\06.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\Deve16\06.03.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\Deve16\06.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\Deve16\06.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\Deve16\06.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Deve16\06.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\Deve16\06.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+C:\10.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+C:\10.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+C:\10.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+C:\10.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+C:\10.03.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\10.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+C:\10.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+C:\10.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+C:\10.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\Deve16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\Deve16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\Deve16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\Deve16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\Deve16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\Deve16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\Deve16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\Deve16\13.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Deve16\13.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\Deve16\13.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+C:\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+C:\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+C:\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+C:\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+C:\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+C:\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+C:\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+C:\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+C:\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\Deve16\14.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\Deve16\14.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\Deve16\14.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\Deve16\14.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\Deve16\14.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\Deve16\14.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\Deve16\14.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\Deve16\14.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Deve16\14.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\Deve16\14.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\Dev\18.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\Dev\18.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\Dev\18.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+E:\Dev\18.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+E:\Dev\18.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\Dev\18.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+E:\Dev\18.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+E:\Dev\18.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+E:\Dev\18.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\Dev\18.03.16\12.03.16\13.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\Dev\23.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\Dev\23.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\Dev\23.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+E:\Dev\23.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+E:\Dev\23.03.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\Dev\23.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+E:\Dev\23.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+E:\Dev\23.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+E:\Dev\23.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\Dev\23.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+C:\28.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+C:\28.03.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+C:\28.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+C:\28.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+C:\28.03.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\28.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+C:\28.03.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+C:\28.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+C:\28.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+C:\28.03.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+C:\19.05.16\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+C:\19.05.16\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+C:\19.05.16\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+C:\19.05.16\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+C:\19.05.16\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\19.05.16\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+C:\19.05.16\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+C:\19.05.16\NonHosted\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+C:\19.05.16\NonHosted\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+C:\19.05.16\NonHosted\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\MyApplication2016\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\MyApplication2016\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\MyApplication2016\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\MyApplication2016\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\MyApplication2016\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\MyApplication2016\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\MyApplication2016\NonHosted\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\MyApplication2016\NonHosted\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\MyApplication2016\NonHosted\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\MyApplication2016\NonHosted\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\mscorlib.dll
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.dll
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.xml
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\normidna.nlp
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\normnfc.nlp
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\normnfd.nlp
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\normnfkc.nlp
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\bin\Debug\normnfkd.nlp
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\3db\11.08.16\10.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\mscorlib.dll
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.dll
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.xml
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\normidna.nlp
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\normnfc.nlp
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\normnfd.nlp
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\normnfkc.nlp
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\normnfkd.nlp
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\3db\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\3db\30.08.16\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\3db\30.08.16\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\3db\30.08.16\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+E:\3db\30.08.16\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+E:\3db\30.08.16\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\3db\30.08.16\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+E:\3db\30.08.16\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+E:\3db\30.08.16\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+E:\3db\30.08.16\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\3db\30.08.16\23.08.16\22.08.16\20.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\03.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\03.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\03.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\03.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\03.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\03.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\03.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\03.09.16\31.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\03.09.16\31.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\03.09.16\31.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\3db Update\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\3db Update\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\3db Update\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+E:\3db Update\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+E:\3db Update\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\3db Update\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+E:\3db Update\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+E:\3db Update\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+E:\3db Update\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\3db Update\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\3db Update\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\19.11.16\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\19.11.16\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\19.11.16\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\19.11.16\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\19.11.16\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\19.11.16\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\19.11.16\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\19.11.16\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\19.11.16\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\19.11.16\16.09.2016\08.09.16\07.09.16\31.08.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\22.12.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\22.12.16\alamapp\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\22.12.16\alamapp\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Software Engineering\22.12.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Software Engineering\22.12.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Software Engineering\22.12.16\alamapp\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Software Engineering\22.12.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Software Engineering\22.12.16\alamapp\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Software Engineering\22.12.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\22.12.16\alamapp\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Software Engineering\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Software Engineering\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Software Engineering\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Software Engineering\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Software Engineering\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Software Engineering\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\3dbApplication\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\27.12.16\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\27.12.16\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\27.12.16\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Software Engineering\3db Application\27.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Software Engineering\3db Application\27.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Software Engineering\3db Application\27.12.16\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Software Engineering\3db Application\27.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Software Engineering\3db Application\27.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Software Engineering\3db Application\27.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\Software Engineering\3db Application\27.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\27.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\28.12.16\27.12.16\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\28.12.16\27.12.16\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\28.12.16\27.12.16\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\28.12.16\27.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\28.12.16\27.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\28.12.16\27.12.16\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\28.12.16\27.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\28.12.16\27.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\28.12.16\27.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\28.12.16\27.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Software Engineering\3db Application\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Software Engineering\3db Application\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Software Engineering\3db Application\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Software Engineering\3db Application\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Software Engineering\3db Application\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Software Engineering\3db Application\31.12.16\30.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\Software Engineering\3db Application\31.12.16\30.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\31.12.16\30.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\34.12.16\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\34.12.16\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\34.12.16\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\34.12.16\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\34.12.16\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\34.12.16\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\34.12.16\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\34.12.16\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\34.12.16\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\3dbApplication\34.12.16\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\34.12.16\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\38.01.17\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\38.01.17\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\38.01.17\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\38.01.17\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\38.01.17\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\38.01.17\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\38.01.17\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\38.01.17\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\38.01.17\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\3dbApplication\38.01.17\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\38.01.17\33.12.16\31.12.16\30.12.16\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\3dbApplication\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Software Engineering\3db Application\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Software Engineering\3db Application\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Software Engineering\3db Application\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Software Engineering\3db Application\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Software Engineering\3db Application\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Software Engineering\3db Application\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\3dbApplication\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\3dbApplication\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Software Engineering\3db Application\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Software Engineering\3db Application\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Software Engineering\3db Application\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Software Engineering\3db Application\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Software Engineering\3db Application\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Software Engineering\3db Application\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\52.1.17\52.01.17\48.01.17\47.01.17\46.01.17\45.01.17\43.01.17\42.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\56.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\56.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\56.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\56.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\56.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\56.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\56.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\56.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\56.01.17\56.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\3dbApplication\56.01.17\56.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\56.01.17\56.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\59.01.17\58.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\59.01.17\58.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\59.01.17\58.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\59.01.17\58.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\59.01.17\58.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\59.01.17\58.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\59.01.17\58.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\59.01.17\58.01.17\56.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\59.01.17\58.01.17\56.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\3dbApplication\59.01.17\58.01.17\56.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\59.01.17\58.01.17\56.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\60.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Software Engineering\3db Application\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Software Engineering\3db Application\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Software Engineering\3db Application\60.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Software Engineering\3db Application\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Software Engineering\3db Application\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Software Engineering\3db Application\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\Software Engineering\3db Application\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\59.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\59.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\59.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\59.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\59.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\59.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\59.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\59.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\59.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\59.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Software Engineering\3db Application\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Software Engineering\3db Application\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Software Engineering\3db Application\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Software Engineering\3db Application\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Software Engineering\3db Application\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Software Engineering\3db Application\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\3dbApplication\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\3db Ecommerce\3dbApplication\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\3db Ecommerce\3dbApplication\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\3db Ecommerce\3dbApplication\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\3db Ecommerce\3dbApplication\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\3db Ecommerce\3dbApplication\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\3db Ecommerce\3dbApplication\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\3db Ecommerce\3dbApplication\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\3db Ecommerce\3dbApplication\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\3db Ecommerce\3dbApplication\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Software Engineering\3db Application\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Software Engineering\3db Application\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Software Engineering\3db Application\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Software Engineering\3db Application\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Software Engineering\3db Application\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Software Engineering\3db Application\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\Software Engineering\3db Application\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\aDev\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\aDev\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\aDev\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+E:\aDev\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+E:\aDev\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+E:\aDev\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\aDev\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+E:\aDev\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+E:\aDev\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+E:\aDev\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\aDev\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db Application\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Software Engineering\3db Application\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Software Engineering\3db Application\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Software Engineering\3db Application\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Software Engineering\3db Application\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Software Engineering\3db Application\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Software Engineering\3db Application\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\Software Engineering\3db Application\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db Application\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\aDev\86.01.17\85.01.17\83.01.17\81.01.17\80.01.17\75.01.17\74.01.17\73.01.17\71.01.17\68.01.17\61.01.17\60.01.17\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\aDev\3db\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\aDev\3db\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\aDev\3db\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+E:\aDev\3db\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+E:\aDev\3db\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+E:\aDev\3db\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\aDev\3db\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+E:\aDev\3db\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+E:\aDev\3db\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\aDev\3db\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\aDev\3db\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\Software Engineering\3db\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\3db\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Software Engineering\3db\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Software Engineering\3db\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Software Engineering\3db\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Software Engineering\3db\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Software Engineering\3db\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Software Engineering\3db\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\3db\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\Hotel\Medicine\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\Hotel\Medicine\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Software Engineering\Hotel\Medicine\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Software Engineering\Hotel\Medicine\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Software Engineering\Hotel\Medicine\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Software Engineering\Hotel\Medicine\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Software Engineering\Hotel\Medicine\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Software Engineering\Hotel\Medicine\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Software Engineering\Hotel\Medicine\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\Software Engineering\Hotel\Medicine\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Software Engineering\Hotel\Medicine\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+E:\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+E:\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\3db2\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\3db2\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\3db2\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\3db2\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\3db2\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\3db2\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\3db2\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\3db2\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\3db2\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\3db2\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+L:\3bd3\3db2\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+L:\3bd3\3db2\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+L:\3bd3\3db2\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+L:\3bd3\3db2\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+L:\3bd3\3db2\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+L:\3bd3\3db2\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+L:\3bd3\3db2\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\3bd3\3db2\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\3bd3\3db2\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\3bd3\3db2\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\3bd3\3db2\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\3bd3\3db2\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\3bd3\3db2\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\3bd3\3db2\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\3bd3\3db2\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\3bd3\3db2\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\3bd3\3db2\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\3db5\3db4\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\3db5\3db4\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\3db5\3db4\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+E:\3db5\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+E:\3db5\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+E:\3db5\3db4\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\3db5\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+E:\3db5\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+E:\3db5\3db4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+E:\3db5\3db4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\3db5\3db4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\nowoncare\3db4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\nowoncare\3db4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\nowoncare\3db4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\aDev\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\aDev\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\aDev\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\aDev\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\aDev\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\aDev\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\aDev\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\aDev\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\aDev\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\aDev\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\aDev\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare3\NowOnCare2\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare3\NowOnCare2\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare3\NowOnCare2\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare3\NowOnCare2\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare3\NowOnCare2\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare3\NowOnCare2\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare3\NowOnCare2\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare3\NowOnCare2\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare3\NowOnCare2\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare3\NowOnCare2\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare3\NowOnCare2\NowOnCare1\nowoncare\3db4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare6\NowOnCare5\NowOnCare4\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare6\NowOnCare5\NowOnCare4\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare6\NowOnCare5\NowOnCare4\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare6\NowOnCare5\NowOnCare4\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare6\NowOnCare5\NowOnCare4\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare6\NowOnCare5\NowOnCare4\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare6\NowOnCare5\NowOnCare4\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare6\NowOnCare5\NowOnCare4\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare6\NowOnCare5\NowOnCare4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare6\NowOnCare5\NowOnCare4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare6\NowOnCare5\NowOnCare4\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\NowOnCare20\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\NowOnCare20\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\NowOnCare20\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\NowOnCare20\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\NowOnCare20\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\NowOnCare20\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\NowOnCare20\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\NowOnCare20\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\NowOnCare20\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\NowOnCare20\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\NowOnCare20\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare23\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare23\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare23\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare23\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare23\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare23\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare23\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare23\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare23\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare23\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare23\NowOnCare22\NowOnCare21\NowOnCare 17\NowOnCare18\NowOnCare16\NowOnCare15\NowOnCare14\NowOnCare13\NowOnCare11\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare34\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare34\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare34\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare34\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare34\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare34\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare34\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare34\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare34\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare34\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare34\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\NowOnCare37\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\NowOnCare37\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare41\NowOnCare40\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare41\NowOnCare40\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare41\NowOnCare40\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare41\NowOnCare40\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare41\NowOnCare40\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare41\NowOnCare40\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare41\NowOnCare40\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare41\NowOnCare40\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare41\NowOnCare40\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare41\NowOnCare40\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare41\NowOnCare40\NowOnCare38\NowOnCare37\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare43\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare43\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare43\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare43\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare43\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare43\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare43\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare43\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare43\NowOnCare42\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare43\NowOnCare42\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare43\NowOnCare42\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\NowOnCare48\NowOnCare47\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\NowOnCare48\NowOnCare47\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\NowOnCare48\NowOnCare47\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+E:\NowOnCare48\NowOnCare47\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+E:\NowOnCare48\NowOnCare47\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+E:\NowOnCare48\NowOnCare47\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\NowOnCare48\NowOnCare47\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+E:\NowOnCare48\NowOnCare47\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+E:\NowOnCare48\NowOnCare47\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+E:\NowOnCare48\NowOnCare47\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\NowOnCare48\NowOnCare47\NowOnCare46\NowOnCare42\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare49\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare49\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\NowOnCare49\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\NowOnCare49\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\NowOnCare49\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\NowOnCare49\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\NowOnCare49\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\NowOnCare49\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\NowOnCare49\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\NowOnCare49\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\NowOnCare49\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+E:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+E:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+E:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+E:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+E:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+E:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+E:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+E:\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+E:\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+E:\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+H:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+H:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+H:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+H:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+H:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+H:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+H:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+H:\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+H:\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+H:\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+H:\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+I:\Media\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+I:\Media\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+I:\Media\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+I:\Media\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+I:\Media\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+I:\Media\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+I:\Media\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+I:\Media\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+I:\Media\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+I:\Media\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+I:\Media\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+D:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+F:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+F:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+F:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+F:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csprojResolveAssemblyReference.cache
+F:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+F:\Visual studio tools\All My Software Zipped\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.pdb
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\StructureMap.dll
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.dll
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Web.Http.xml
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csproj.AssemblyReference.cache
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csproj.CoreCompileInputs.cache
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.csproj.CopyComplete
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.dll
+D:\NowOnCare52\NowOnCare52\3db\alamapp.Infrastructure\obj\Debug\alamapp.Infrastructure.pdb

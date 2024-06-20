@@ -1,0 +1,72 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutHomeProduct.cshtml";
+}
+<script src="~/Scripts/jquery-jtemplates.js"></script>
+
+@using Microsoft.AspNet.Identity
+<h1> Thank you</h1>
+
+<h2 class="text-success"> Your order successfully submited, We will contact very soon with you.</h2>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        OrderDetailsById();
+    })
+
+    function OrderDetailsById() {
+        var Identity = '@Html.Encode(HttpContext.Current.User.Identity.GetUserId())'
+        $.ajax({
+            url: '/api/Order/GetOrderByIdentityToken?identityToken=' + Identity,
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $("#orderDetailsHtml").setTemplate($("#OrderSummaryTemp").html());
+                $("#orderDetailsHtml").processTemplate(data);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+</script>
+
+<div id="orderDetailsHtml">
+
+</div>
+<script type="text/html" id="OrderSummaryTemp">
+
+    
+
+    <table class="table table-responsive">
+        <h3>NowOnCare.Com</h3>
+        <h3>NowOnCare.Com</h3>
+        <thead>
+            <tr>
+                <td><b> Invoice No:</b>{$T.Order.Id}</td>
+                <td></td>
+                <td></td>
+                <td><b>Invoice date:</b> {$T.Order.OrderDate}</td>
+            </tr>
+            <tr>
+                <td><b>#</b></td>
+                <td><b>Item name</b></td>
+                <td><b>Charge</b></td>
+                <td><b>Quantity</b>/td>
+            </tr>
+        </thead>
+        <tbody>
+            {#foreach $T.Order.OrderItem  as record}
+            <tr>
+                <td>{$T.record.Id}</td>
+                <td> {$T.record.ProductName}</td>
+                <td>{$T.record.Price}</td>
+                <td>{$T.record.Qty}</td>
+            </tr>
+            {#/for}
+        </tbody>
+    </table>
+</script>

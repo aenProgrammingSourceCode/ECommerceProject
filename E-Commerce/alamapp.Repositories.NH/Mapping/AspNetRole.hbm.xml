@@ -1,0 +1,13 @@
+﻿<hibernate-mapping assembly="alamapp.Model" namespace="alamapp.Model.UserAuthentication" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="AspRole" table="AspNetRoles" lazy="false" >
+    <id  name="Id" column="Id" unsaved-value="0">
+      <generator class="uuid.hex" />
+    </id>
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>
+
+<!--for nvarchar string primary key -->
+<!--<generator class="uuid.hex" />-->

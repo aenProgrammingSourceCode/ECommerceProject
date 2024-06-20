@@ -1,0 +1,223 @@
+﻿body{
+    
+}
+*{
+    text-decoration:none;
+}
+.top-header {
+    background-color: #108286;
+    width:100%;
+    height: calc(80px - 20px);
+    position: relative;
+    padding:10px 50px;
+    color:white;
+}
+
+.top-header .header-left{
+    float:left;
+    margin-right:100px;
+}
+
+.top-header .header-left a{
+    font-size:28px;
+    font-family:Arial;
+    color:white;
+    text-decoration:none;
+}
+
+.top-header .header-center{
+    margin:0 auto;
+    text-align:center;
+    display:inline-block;
+}
+
+.top-header .header-right{
+    display: -webkit-box;  
+  display: -ms-flexbox;  
+  display: -webkit-flex; 
+    float:right;
+    display:flex;
+    text-align:center;
+}
+ 
+.top-header .header-search-box {
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('/Content/images/Search.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 5px 5px 5px 40px;
+            width:600px;
+           
+        }
+ .header-center #listBlock {
+    background-color: #efb7b7;
+    z-index: 10;
+    position: absolute;
+    border: solid 1px #e0d6d6;
+    width:30%;
+}
+
+ 
+.top-header .cart-items {
+    display:block;
+    text-align:center;
+    
+    align-content:center;
+      margin:5px auto;
+}
+
+.top-header .cart-items img{
+    border: solid 1px #db1d51;
+    width: 30px;
+    height: 30px;
+}
+
+header .login{
+    margin:10px auto;
+    align-items:center;
+    width:100px;
+}
+.top-header .login a{
+    display:block;
+     color:white;
+     padding:5px 0;
+}
+.top-header .login img{
+    width: 20px;
+    height: 20px;
+}
+
+.top-header .product-list {
+    display: inline-block;
+    margin: 0 auto;
+    border: solid;
+    border-width: 1px;
+    border-color: #d8c1c1;
+    padding: 4px;
+    background-color: #ffffff;
+    width: calc(100% - 8px);
+    float:left;
+     text-align:left;
+     color:#151414;
+}
+
+.top-header .product-list a{
+     color:#151414;
+     font-family:Lato;
+}
+
+.top-header .product-list .product-list-image {
+        display: inline-block;
+        margin-right:5px;
+        border:solid 1px #ccc;
+    }
+
+.top-header .product-list .product-list-para {
+        display: inline-block;
+        text-align: left;
+        vertical-align:top;
+        color:#342f2f;
+        font-family:Lato;
+         font-size:12px;
+    }
+
+ 
+
+.top-header .product-list .product-list-para .title {
+        font-size:18px;
+        display:block;
+    }
+
+.top-header .product-list .product-list-para .price {
+        font-size:18px;
+        color:#db1d51;
+        display:block;
+    }
+
+.top-header .product-list .product-list-para p {
+        font-size:12px;
+        color:#808080;
+        display:block;
+        text-align:justify;
+    }
+    .top-header .product-list .product-list-para a {
+        border: 1px solid #ac173f;
+        color: white;
+        padding: 4px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        float: left;
+    }
+.top-header .box-1 {
+    position: absolute;
+   color:#ffd800;
+    font-size:larger;
+}
+
+.top-header .box-2 {
+    z-index: -1;
+} 
+.top-header .top-header-right div{
+    flex:1;
+}
+
+       
+.top-header .box-4 {
+    position: absolute;
+    font-size:larger;
+}
+
+.top-header .box-5 {
+    z-index: -50;
+}
+
+.top-header ul{
+  
+}
+.top-header ul li{
+     display:inline-block;
+     padding:0 5px;
+}
+
+.top-header ul li a{
+    color:white;
+}
+
+ 
+
+.top-header .header-left{
+    float:left;
+    margin-right:100px;
+    display:block;
+}
+
+.top-header .header-left a{
+    font-size:28px;
+    font-family:Arial;
+    color:white;
+    text-decoration:none;
+}
+
+.top-header .header-center{
+    margin:0 auto;
+    text-align:center;
+    display:block;
+}
+
+.top-header .header-right{
+    
+      display:block;
+}
+ 
+.top-header .header-search-box {
+              display:block;   
+
+        }
+ 

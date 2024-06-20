@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title 3dB Communication Technology</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+  
+    <link href="~/Content/alamapputility.css" rel="stylesheet" />
+    
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+
+
+    <script src="~/Scripts/jquery-jtemplates.js"></script>
+
+    @*Controller script*@
+    <script src="~/Scripts/ControllerScript/basketScript.js"></script>
+    <script src="~/Scripts/ControllerScript/customerScript.js"></script>
+    <script src="~/Scripts/ControllerScript/customScript.js"></script>
+    <script src="~/Scripts/alamapputility.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            GetBasketSummary();
+        });
+
+    </script>
+
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="logo-fixed">
+                    <div class="img-responsive">
+                        <img src="~/Content/images/3dbLogo.jpg" class="img-thumbnail" />
+                    </div>
+                </div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("3db", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Service", "Service", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                        <li>@Html.ActionLink("Deshboard", "Index", "AdminCategory")</li>
+                        }
+                </ul>
+
+                @Html.Partial("_LoginPartial")
+            </div>
+
+            <div class="navbar-header">
+
+                <div style="width: 500px; margin: 0px 0px 0px 130px; z-index:-1">
+                    <a href="/Home/Basket" id="basketSummaryHtml"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <div class="container" style="margin:20px">
+            @RenderBody()
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Copy right alamapp.com</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+
+    <script type="text/html" id="basketSummaryTemp">
+        <strong>Basket Total</strong>: {$T.BasketTotal} BDT,
+        <strong>Number of Items </strong> : {$T.NumberOfItems}
+    </script>
+
+</body>
+</html>

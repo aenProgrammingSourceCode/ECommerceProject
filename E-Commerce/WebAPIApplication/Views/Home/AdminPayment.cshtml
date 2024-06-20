@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "AdminPayment";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using Microsoft.AspNet.Identity
+
+<h2>AdminPayment</h2>
+
+<script>
+    function SavePayment() {
+        var Identity = '@Html.Encode(HttpContext.Current.User.Identity.GetUserId())'
+        var jsonData =
+            {
+                MobileBankNo: $("#txtMobileBankNo").val(),
+                IdentityToken: Identity
+            };
+        $.ajax({
+            url: '/api/Order/CreatePayment',
+            type: 'POST',
+            dataType: 'json',
+            data: jsonData,
+            success: function (data) {
+                alert("Payment paid successfully");
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+</script>
+
+
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+    <h2>Confirm your payment</h2>
+
+    <div id="mobileBankNo" class="form-group required">
+        <input class="input-md textinput textInput form-control" id="txtMobileBankNo" name="name" placeholder="Your name required" style="margin-bottom: 10px" type="text" />
+        <label id="msg"></label>
+    </div>
+
+    <table class="table table-bordered" id="tblPaymentDetails" style="display:none">
+        <tbody id="paymentDetailsHtml"></tbody>
+    </table>
+
+
+</div>
+
+<div class="col-md-4">
+
+</div>

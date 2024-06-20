@@ -1,0 +1,53 @@
+﻿<hibernate-mapping assembly="alamapp.Model" namespace="alamapp.Model.Orders" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="PaymentTerm" table="PaymentTerms" lazy="false" >
+
+    <id  name="Id" column="PaymentTermID" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property access="field.camelcase-underscore" name="Amount">
+      <column name="Amount" sql-type="decimal" not-null="true" />
+    </property>
+ 
+
+    <property name="SentAmountDate">
+      <column name="SentAmountDate" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="MobileBankName">
+      <column name="MobileBankName" sql-type="nvarchar" not-null="false" />
+    </property>
+
+    <property name="MobileBankNo">
+      <column name="MobileBankNo" sql-type="nvarchar" not-null="false" />
+    </property>
+    
+    <property name="CreateDate">
+      <column name="CreatedDate" sql-type="nvarchar" not-null="false" />
+    </property>
+    
+    <property name="IsFinished">
+      <column name="isFinished" sql-type="bit" not-null="false" />
+    </property>
+    
+    <property name="TransactionNo">
+      <column name="TransactionNo" sql-type="nvarchar" not-null="false" />
+    </property>
+    
+    <many-to-one name="Order" access="field.camelcase-underscore"
+                class="alamapp.Model.Orders.Order"
+                column="OrderID"
+                not-null="true"
+					  />
+    
+    
+    
+    <many-to-one name="Payment" access="field.camelcase-underscore"
+                  class="alamapp.Model.Orders.Payment"
+                  column="PaymentID"
+                  not-null="true"
+					  />
+    
+
+  </class>
+</hibernate-mapping>

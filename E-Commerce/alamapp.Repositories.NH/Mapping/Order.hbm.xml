@@ -1,0 +1,36 @@
+﻿<hibernate-mapping assembly="alamapp.Model" namespace="alamapp.Model.Orders" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Order" table="Orders" lazy="false" >
+    <id  name="Id" column="OrderID" type="int">
+      <generator class="native" />
+    </id>
+
+    <property access="field.camelcase-underscore" name="OrderDate">
+      <column name="OrderDate" sql-type="datetime" not-null="true" />
+    </property>
+    
+     <property access="field.camelcase-underscore" name="IdentityToken">
+      <column name="IdentityToken" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property access="field.camelcase-underscore" name="UserName">
+      <column name="UserName" sql-type="nvarchar" not-null="true" />
+    </property>
+
+    <!--<component access="field.camelcase-underscore" name="Payment" class="Payment">
+      <property access="field.camelcase-underscore"
+                column="PaymentDate" name="PaymentDate"/>
+      <property access="field.camelcase-underscore"
+                column="PaymentTransactionId" name="TransactionId"/>
+      <property access="field.camelcase-underscore"
+                column="PaymentMarchant" name="PaymentMerchant"/>
+      <property access="field.camelcase-underscore"
+                column="PaymentAmount" name="Amount"/>
+    </component>-->
+    
+    <bag name="OrderItems" access="field.camelcase-underscore" table="OrderItems"
+            inverse="true" cascade="all-delete-orphan" lazy="true" fetch="join" >
+      <key column="OrderID"/>
+      <one-to-many class="OrderItem"></one-to-many>
+    </bag>
+
+  </class>
+</hibernate-mapping>

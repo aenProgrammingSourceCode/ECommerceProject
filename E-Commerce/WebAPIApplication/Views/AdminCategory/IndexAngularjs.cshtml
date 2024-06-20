@@ -1,0 +1,154 @@
+﻿
+@{
+    ViewBag.Title = "IndexAngularjs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.0/ui-bootstrap-tpls.js"></script>
+@*<script src="~/Scripts/jquery-3.1.1.js"></script>
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>*@
+
+    <script type="text/javascript">
+        var app = angular.module('myApp', ['ngRoute', 'ui.bootstrap']);
+        app.controller('myCtrl', function ($scope, $http) {
+
+            
+        getallData();
+        function getallData() {
+            $http({
+                method: 'GET',
+                url: '/api/Category/GetAll'
+            }).then(function (result) {
+                $scope.getCategories = result.data;
+               
+      
+            })
+        }
+
+        
+
+        $scope.catModel = {
+            Name: $scope.Name,
+            Description:$scope.Description
+        }
+
+        $scope.saveCategory = function () {
+            $http({
+                method: 'POST',
+                url: '/api/Category/Save',
+                data: $scope.catModel
+            }).success(function () {
+                $scope.message = 'Form saved'
+
+            });
+        }
+
+        $scope.getCategoryById = function (catModel) {
+            $http({
+                method: 'GET',
+                url: '/api/Category/Get?id=' + catModel.Id,
+            }).then(function (result) {
+                $scope.id = result.data.Category.Id;
+                $scope.name = result.data.Category.Name;
+                $scope.description = result.data.Category.Description;
+
+                alert(JSON.stringify(result));
+            })
+        }
+
+        $scope.updateCategory = function (catModel) {
+            $http({
+                method: 'POST',
+                url: '/api/Category/ModifyCategory?id=' + catModel.Id,
+                //data: $scope.catModelsave
+            }).success(function () {
+                $scope.message = 'Form saved'
+
+            });
+        }
+
+        //$http.get("/api/Category/GetAll").then(function (response) {
+        //    $scope.categories = respose.data;
+        //})
+    })
+        //    $http.get('/api/Category/GetAll')
+
+    app.config(function ($routeProvider) {
+        $routeProvider
+
+        .when('/', {
+            templateUrl: '/AdminCategory/HtmlPage1.html',
+            controller: 'HomeController'
+        })
+
+        .when('/blog', {
+            templateUrl: '/AdminCategory/HtmlPage2.html',
+            controller: 'BlogController'
+        })
+
+        .otherwise({ redirectTo: '/' });
+    });
+
+        //This filte use for pagination
+    app.filter("startFrom", function () {
+        return function (data, start) {
+
+            return data.slice(start);
+        }
+    });
+
+      
+
+
+</script>
+
+<h2>IndexAngularjs</h2>
+ 
+<div ng-app="myApp" ng-controller="myCtrl">
+
+    <form name="frmCustomer" novalidate>
+        <table class="table table-bordered">
+            <tr>
+                <td><input id="Text2" ng-model="catModel.Name" type="text" /></td>
+                <td><input id="Text3" type="text" ng-model="catModel.Description" /></td>
+                <input id="Submit1" type="submit" value="submit" ng-click="saveCategory()" />
+
+
+            </tr>
+        </table>
+    </form>
+    {{message}}
+
+
+    <table class="table table-bordered">
+        <tr>
+            <td colspan="3">
+                <input id="Text2" ng-model="Search" type="text" class="input-group-sm" />
+            </td>
+        </tr>
+
+        <tr ng-repeat="catModel in getCategories | startFrom:(currentPage-1)*pageSize | limitTo:pageSize">
+            <td>{{catModel.Id}}</td>
+            <td>{{catModel.Name}}</td>
+            <td>{{catModel.Description}}</td>
+            <td>
+                <a href="#" ng-click="getCategoryById(catModel)" title="Edit Record">
+                    <img src="~/Content/images/edit.png" />
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <table class="table table-bordered">
+        <tr>
+            <td>{{Id}}</td>
+            <td>{{Name}}</td>
+            <td>{{Description}}</td>
+        </tr>
+        <tr>
+            <td colspan="3"> <pagination total-items="getCategories.length" items-per-page="pageSize" ng-model="currentPage" ng-change="pageChanged()"></pagination></td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+   
+
+<script>
+    function swapImages() {
+        var $active = $('#myGallery .active');
+        var $next = ($('#myGallery .active').next().length > 0) ? $('#myGallery .active').next() : $('#myGallery img:first');
+        $active.fadeOut(function () {
+            $active.removeClass('active');
+            $next.fadeIn().addClass('active');
+        });
+    }
+
+    $(document).ready(function () {
+        // Run our swapImages() function every 5secs
+        setInterval('swapImages()', 5000);
+    });
+</script>
+<style>
+    #myGallery {
+        position: relative;
+        margin-bottom: 450px;
+    }
+    #myGallery img{
+        position:absolute;
+       
+    }
+</style>
+
+@*<div class="row" id="myGallery">
+    <img src="~/Content/images/Sliding/SareeTimeline.jpg" class="active"/>
+    <img src="~/Content/images/Sliding/3pcTimeLine.jpg" />
+    <img src="~/Content/images/Sliding/SareeTimeline.jpg" />
+</div>*@
+
+ 
+
+@*<div style="width:100%; margin:0px auto;">
+    <div style="display:inline-block; width:40%">
+        <div class="controls">
+            <h2 style="color:#f71863">Help-01887634913</h2> <h4 style="color:#198b26">বিক্রিত মাল পছন্দ না হলে সাথে সাথে ফেরত দেওয়া যাবে তবে ডেলিভারী চার্জ কেটে নেওয়া হবে</h4>
+        </div>
+    </div>
+    
+    <div style="display:inline-block; color:#198b26; float:initial; padding-bottom:20px">
+        <input class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Your name required" type="text" />
+        <div id="listBlock" style="display:none; border:solid 1px; padding:4px; width:50%; border-color:#d8c1c1; margin:0 auto;z-index:1; position:absolute; background-color:#ffffff">
+            <div id="myUl">
+            </div>
+        </div>
+    </div>
+
+
+</div>*@  
+<hr />
+@RenderBody();
+
+
+

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B530F45E-1C9B-42FB-94FD-2292C3AECA76}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>alamapp.ServiceImplementations</RootNamespace>
+    <AssemblyName>alamapp.ServiceImplementations</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="alamapp.Infrastructure">
+      <HintPath>..\alamapp.Infrastructure\bin\Debug\alamapp.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="alamapp.Model">
+      <HintPath>..\alamapp.Model\bin\Debug\alamapp.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="alamapp.Repositories.NH">
+      <HintPath>..\alamapp.Repositories.NH\bin\Debug\alamapp.Repositories.NH.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\OldLib\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapperBootStrapper.cs" />
+    <Compile Include="Implementation\AspAuthenticationService.cs" />
+    <Compile Include="Implementation\BasketService.cs" />
+    <Compile Include="Implementation\BrandService.cs" />
+    <Compile Include="Implementation\CategoryService.cs" />
+    <Compile Include="Implementation\CustomerService.cs" />
+    <Compile Include="Implementation\GetAllProductTitleResponse.cs" />
+    <Compile Include="Implementation\ManufactureService.cs" />
+    <Compile Include="Implementation\OrderService.cs" />
+    <Compile Include="Implementation\PaymentGenerateQueryRequest.cs" />
+    <Compile Include="Implementation\ProductModelService.cs" />
+    <Compile Include="Implementation\ProductSearchGenerateQueryfromReuquest.cs" />
+    <Compile Include="Implementation\ProductSearchRequestQueryGenerator.cs" />
+    <Compile Include="Implementation\ProductService.cs" />
+    <Compile Include="Interface\IAspAuthenticationService.cs" />
+    <Compile Include="Interface\IBasketService.cs" />
+    <Compile Include="Interface\IBrandService.cs" />
+    <Compile Include="Interface\ICategoryService.cs" />
+    <Compile Include="Interface\ICustomerService.cs" />
+    <Compile Include="Interface\IManufactureService.cs" />
+    <Compile Include="Interface\IOrderService.cs" />
+    <Compile Include="Interface\IProductModelService.cs" />
+    <Compile Include="Interface\IProductService.cs" />
+    <Compile Include="Mapping\AspAuthMapping.cs" />
+    <Compile Include="Mapping\BasketItemMapping.cs" />
+    <Compile Include="Mapping\BasketMapping.cs" />
+    <Compile Include="Mapping\BrandMapping.cs" />
+    <Compile Include="Mapping\CategoryMapping.cs" />
+    <Compile Include="Mapping\CustomerMapping.cs" />
+    <Compile Include="Mapping\IProductAttributeMapping.cs" />
+    <Compile Include="Mapping\ManufactureMapping.cs" />
+    <Compile Include="Mapping\OrderMapping.cs" />
+    <Compile Include="Mapping\PackageItemMapping.cs" />
+    <Compile Include="Mapping\PackageMapping.cs" />
+    <Compile Include="Mapping\ProductMapping.cs" />
+    <Compile Include="Mapping\ProductModelMapping.cs" />
+    <Compile Include="Mapping\ProductTitleMapping.cs" />
+    <Compile Include="Messaging\Authentications\GetAllAspRoleResponse.cs" />
+    <Compile Include="Messaging\Authentications\GetAspRoleRequest.cs" />
+    <Compile Include="Messaging\Authentications\GetAspRoleResponse.cs" />
+    <Compile Include="Messaging\Authentications\GetAspUserRoleRequest.cs" />
+    <Compile Include="Messaging\Authentications\GetAspUserRoleResponse.cs" />
+    <Compile Include="Messaging\Authentications\ModifyAspUserRoleRequest.cs" />
+    <Compile Include="Messaging\Baskets\CreateBasketRequest.cs" />
+    <Compile Include="Messaging\Baskets\CreateBasketResponse.cs" />
+    <Compile Include="Messaging\Baskets\CreateProductBasketRequest.cs" />
+    <Compile Include="Messaging\Baskets\CreateProductBasketResponse.cs" />
+    <Compile Include="Messaging\Baskets\CreateProductPackageRequest.cs" />
+    <Compile Include="Messaging\Baskets\DeleteBasketRequest.cs" />
+    <Compile Include="Messaging\Baskets\DeleteBasketResponse.cs" />
+    <Compile Include="Messaging\Baskets\DeleteProductFromBasketItemRequest.cs" />
+    <Compile Include="Messaging\Baskets\GetBasketItemRequest.cs" />
+    <Compile Include="Messaging\Baskets\GetBasketItemResponse.cs" />
+    <Compile Include="Messaging\Baskets\GetBasketRequest.cs" />
+    <Compile Include="Messaging\Baskets\GetBasketResponse.cs" />
+    <Compile Include="Messaging\Baskets\ModifyProductBasketRequest.cs" />
+    <Compile Include="Messaging\Baskets\ModifyProductBasketResponse.cs" />
+    <Compile Include="Messaging\Baskets\UpdateProductQtyRequest.cs" />
+    <Compile Include="Messaging\Brands\GetAllBrandResponse.cs" />
+    <Compile Include="Messaging\Category\CreateCategoryRequest.cs" />
+    <Compile Include="Messaging\Category\CreateCategoryResponse.cs" />
+    <Compile Include="Messaging\Category\DeleteCategoryRequest.cs" />
+    <Compile Include="Messaging\Category\DeleteCategoryRequestId.cs" />
+    <Compile Include="Messaging\Category\GetAllCategoryResponse.cs" />
+    <Compile Include="Messaging\Category\GetCategoryRequest.cs" />
+    <Compile Include="Messaging\Category\GetCategoryResponse.cs" />
+    <Compile Include="Messaging\Category\ModifyCategoryRequest.cs" />
+    <Compile Include="Messaging\Category\ModifyCategoryResponse.cs" />
+    <Compile Include="Messaging\Customer\CreateCustomerRequest.cs" />
+    <Compile Include="Messaging\Customer\CreateCustomerResponse.cs" />
+    <Compile Include="Messaging\Customer\CreateDeliveryAddressRequest.cs" />
+    <Compile Include="Messaging\Customer\GetAllDistrictResponse.cs" />
+    <Compile Include="Messaging\Customer\GetAllPoliceStationResponse.cs" />
+    <Compile Include="Messaging\Customer\GetCustomerByIdentityTokenRequest.cs" />
+    <Compile Include="Messaging\Customer\GetCustomerByIdentityTokenResponse.cs" />
+    <Compile Include="Messaging\Manufactures\GetAllManufactureResponse.cs" />
+    <Compile Include="Messaging\Orders\CreateConfirmPaymentRequest.cs" />
+    <Compile Include="Messaging\Orders\CreateOrderRequest.cs" />
+    <Compile Include="Messaging\Orders\CreateOrderResponse.cs" />
+    <Compile Include="Messaging\Orders\CreatePaymentRequest.cs" />
+    <Compile Include="Messaging\Orders\GetAllPaymentResponse.cs" />
+    <Compile Include="Messaging\Orders\GetOrderItemByTokenResponse.cs" />
+    <Compile Include="Messaging\Orders\GetOrderItemByTokenRequest.cs" />
+    <Compile Include="Messaging\Orders\GetOrdersByTokenRequest.cs" />
+    <Compile Include="Messaging\Orders\GetOrdersByTokenResponse.cs" />
+    <Compile Include="Messaging\Orders\GetPaymentByIdentityToken.cs" />
+    <Compile Include="Messaging\Orders\PaymentSearchQueryGenerator.cs" />
+    <Compile Include="Messaging\ProductModels\GetAllProductModelResponse.cs" />
+    <Compile Include="Messaging\Product\CreateProductImageRequest.cs" />
+    <Compile Include="Messaging\Product\CreateProductRequest.cs" />
+    <Compile Include="Messaging\Product\CreateProductTitleRequest.cs" />
+    <Compile Include="Messaging\Product\CreateProductTitleResponse.cs" />
+    <Compile Include="Messaging\Product\DeleteProductIdRequest.cs" />
+    <Compile Include="Messaging\Product\DeleteProductRequest.cs" />
+    <Compile Include="Messaging\Product\DeleteProductResponse.cs" />
+    <Compile Include="Messaging\Product\DeleteProductTitleRequest.cs" />
+    <Compile Include="Messaging\Product\DeleteProductTitleResponse.cs" />
+    <Compile Include="Messaging\Product\DeleteProductTitlesRequest.cs" />
+    <Compile Include="Messaging\Product\GetAllColorResponse.cs" />
+    <Compile Include="Messaging\Product\GetAllFabricsResponse.cs" />
+    <Compile Include="Messaging\Product\GetAllProductResponse.cs" />
+    <Compile Include="Messaging\Product\GetAllProductTitleResponse.cs" />
+    <Compile Include="Messaging\Product\GetAllSizeResponse.cs" />
+    <Compile Include="Messaging\Product\GetAllSubCategoryResponse.cs" />
+    <Compile Include="Messaging\Product\GetPackageByCategoryRequest.cs" />
+    <Compile Include="Messaging\Product\GetPackageByCategoryResponse.cs" />
+    <Compile Include="Messaging\Product\GetPackageDetailsRequest.cs" />
+    <Compile Include="Messaging\Product\GetPackageDetailsResponse.cs" />
+    <Compile Include="Messaging\Product\GetProductByCategoryRequest.cs" />
+    <Compile Include="Messaging\Product\GetProductsByCategoryResponse.cs" />
+    <Compile Include="Messaging\Product\GetProductRequest.cs" />
+    <Compile Include="Messaging\Product\GetProductResponse.cs" />
+    <Compile Include="Messaging\Product\GetProductDetailsRequest.cs" />
+    <Compile Include="Messaging\Product\GetProductDetailsResponse.cs" />
+    <Compile Include="Messaging\Product\GetProductTitleDetailsRequest.cs" />
+    <Compile Include="Messaging\Product\GetProductTitleDetailsResponse.cs" />
+    <Compile Include="Messaging\Product\GetProductTitleRequest.cs" />
+    <Compile Include="Messaging\Product\GetProductTitleResponse.cs" />
+    <Compile Include="Messaging\Product\ModifyProductTitleImageRequest.cs" />
+    <Compile Include="Messaging\Product\ProductSort.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\AspRoleView.cs" />
+    <Compile Include="ViewModel\AspUserRoleView.cs" />
+    <Compile Include="ViewModel\Baskets\BasketItemView.cs" />
+    <Compile Include="ViewModel\Baskets\BasketView.cs" />
+    <Compile Include="ViewModel\Brands\BrandView.cs" />
+    <Compile Include="ViewModel\CategoryImageView.cs" />
+    <Compile Include="ViewModel\CategoryView.cs" />
+    <Compile Include="ViewModel\Customers\CustomerView.cs" />
+    <Compile Include="ViewModel\Customers\DeliveryAddressView.cs" />
+    <Compile Include="ViewModel\Customers\DistrictView.cs" />
+    <Compile Include="ViewModel\Customers\PoliceStationView.cs" />
+    <Compile Include="ViewModel\Manufactures\ManufactureView.cs" />
+    <Compile Include="ViewModel\Orders\OrderItemView.cs" />
+    <Compile Include="ViewModel\Orders\OrderView.cs" />
+    <Compile Include="ViewModel\Orders\PaymentTermView.cs" />
+    <Compile Include="ViewModel\Orders\PaymentView.cs" />
+    <Compile Include="ViewModel\Packages\PackageItemView.cs" />
+    <Compile Include="ViewModel\Packages\PackageView.cs" />
+    <Compile Include="Messaging\Product\ModifyProductTitleRequest.cs" />
+    <Compile Include="Messaging\Product\ModifyProductTitleResponse.cs" />
+    <Compile Include="ViewModel\ProductModels\ProductModelView.cs" />
+    <Compile Include="ViewModel\Product\ColorView.cs" />
+    <Compile Include="ViewModel\Product\FabricView.cs" />
+    <Compile Include="ViewModel\Product\ProductImageView.cs" />
+    <Compile Include="ViewModel\Product\ProductTitleView.cs" />
+    <Compile Include="ViewModel\Product\ProductView.cs" />
+    <Compile Include="ViewModel\Product\Refinement.cs" />
+    <Compile Include="ViewModel\Product\RefinementGroup.cs" />
+    <Compile Include="ViewModel\Product\RefinementGrouping.cs" />
+    <Compile Include="ViewModel\Product\SizeView.cs" />
+    <Compile Include="ViewModel\SubCategoryView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

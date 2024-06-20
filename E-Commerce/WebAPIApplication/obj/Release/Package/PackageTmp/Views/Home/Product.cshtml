@@ -1,0 +1,357 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutHomeProduct.cshtml";
+}
+
+
+<script type="text/javascript">
+    $().ready(function () {
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(14, pt);
+        ProductByCategoryAjax(Id);
+        PackageByCategoryAjax(Id);
+        GetAllProductBrands();
+        GetAllProductManufature();
+        GetAllProductModels();
+    });
+
+    function GetAllProductModels() {
+        $.ajax({
+            url: '/api/ProductModel/GetAllProductModel',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+
+                $("#productModels").setTemplate($("#ProductModelsTemp").html());
+                $("#productModels").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function GetAllProductBrands() {
+        $.ajax({
+            url: '/api/Brand/GetAllBrands',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+
+                $("#productBrands").setTemplate($("#brandsTemp").html());
+                $("#productBrands").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function GetAllProductManufature() {
+        $.ajax({
+            url: '/api/Manufacture/GetAllManufacture',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+
+                $("#productManufacture").setTemplate($("#ManufacturesTemp").html());
+                $("#productManufacture").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function AddPackageToBasket(Id) {
+        $.ajax({
+            url: '/api/Basket/AddPackageToBasket?packageId='+Id,
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                alert("Add to basket success");
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function PackageByCategoryAjax(Id) {
+        $.ajax({
+            url: '/api/Product/GetPackage?CategoryId=' + Id,
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $("#packagesHtml").setTemplate($("#packagesTemp").html());
+                $("#packagesHtml").processTemplate(data);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function ProductByCategoryAjax(Id) {
+        $.ajax({
+            url: '/api/Product/GetProductByCategory?CategoryId=' + Id,
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                //var jData = data.Products;
+                //var JsonDatas = JSON.stringify(jData);
+                //alert(JsonDatas);
+                $("#productsHtml").setTemplate($("#productsTemp").html());
+                $("#productsHtml").processTemplate(data);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function GetProductByItem() {
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(14, pt);
+
+        var Productmodels = $("#ddlProductModel").val();
+        var Manufactures = $("#ddlManufacture").val();
+        var Brands = $("#ddlBrand").val();
+        var Categorys = Id;
+
+        ProductByItemAjax(Productmodels, Manufactures, Brands, Categorys);
+    }
+    function ProductByItemAjax(productModel, manufacture, brand, category) {
+        var jsonData =
+            {
+                ProductModelId: productModel,
+                ManufactureId: manufacture,
+                BrandId: brand,
+                CategoryId: category
+            }
+        $.ajax({
+            url: '/api/Product/GetProductByProductItems',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: JSON.stringify(jsonData),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $("#productsHtml").setTemplate($("#productsTemp").html());
+                $("#productsHtml").processTemplate(data);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+   
+</script>
+
+@*<div class="col-md-3">
+     <h3>  Package Offer</h3>    
+    <hr />
+    
+        <div id="packagesHtml">
+
+        </div>
+
+    </div>*@
+    
+<div class="col-md-12">
+    <h3> Products</h3>
+    <hr />
+        <div class="panel panel-default filterable">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="filters">
+                        <th id="productModels">
+                        </th>
+                      
+                        <th id="productManufacture">
+
+                        </th>
+                        <th id="productBrands">
+
+                        </th>
+
+                        <th><a href="#" class="btn btn-info" onclick="JavaScript: GetProductByItem();" id="btnSubmit">Submit</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">
+
+                            <div id="productsHtml">
+
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+   
+</div>
+<!----Start Get All Category Script--->
+<script type="text/html" id="productsTemp">
+    <table class="table">
+        <tbody>
+            {#foreach $T.Products as record}
+            <tr>
+                <td colspan="2">
+                    <h3> {$T.record.Name}</h3>
+                </td>
+            </tr>
+            <tr>
+                {#foreach $T.record.ProductImageViews as record1}
+                <td>
+                    <img class="img-thumbnail"
+                         src="/Content/ProductImage/{$T.record1.Id}.jpg" width="200" height="200" />
+                </td>
+                {#/for}
+
+                <td>
+
+                    <ul>
+                        <li class="list-group-item-text">
+                            <a href="#"> {$T.record.CategoryName}</a><br />
+                        </li>
+                        <li class="list-group-item-text">
+                            {$T.record.BrandName }
+                        </li>
+                        <li class="list-group-item-text">
+                            {$T.record.ProductModelName}
+                        </li>
+                        <li class="list-group-item-text">
+                            {$T.record.ManufactureName}
+                        </li>
+                        <li class="list-group-item-text">
+                            {$T.record.Description}
+                        </li>
+                    </ul>
+
+                  
+
+            <!-- Trigger the modal with a button -->
+            </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="/Home/ProductDetails/{$T.record.Id}" class="btn btn-info">Show Details</a>
+                </td>
+                <td>
+                    <a href="#" onclick="JavaScript:AddProductToBasket('{$T.record.Id}')" class="btn btn-success">Add To Cart</a>
+                </td>
+            </tr>
+            {#/for}
+        </tbody>
+    </table>
+
+</script>
+
+<script type="text/html" id="packagesTemp">
+
+    {#foreach $T as record}
+    <ul class="list-group">
+
+        <li class="list-group-item">
+            <h2>  {$T.record.Name}</h2>
+        </li>
+        <li class="list-group-item">
+            <h3>Price - <strong> 50120</strong> Tk</h3>
+        </li>
+        <li class="list-group-item">
+            <img src="/Content/images/3dbimage/1003.jpg" class="img-responsive" />
+        </li>
+        <li class="list-group-item">
+            {#foreach $T.record.PackageItems as record1}
+            <ul>
+                <li class="list-group-item-text">
+                    {$T.record1.ProductName} - <strong>{$T.record1.Quantity}</strong> {$T.record1.UnitName}
+                </li>
+            </ul>
+            {#/for}
+        </li>
+        <li class="list-group-item">
+            <a href="#" onclick="JavaScript: AddPackageToBasket('{$T.Packages.Id}')" class="btn btn-success btn-lg">ADD TO CART</a>
+
+        </li>
+    </ul>
+
+
+    @*{$T.record.ImageId}*@
+
+
+
+    {#/for}
+
+
+</script>
+
+
+<script type="text/html" id="ProductModelsTemp">
+   
+    <div class='col-sm-4 form-group'>
+       Model
+        <select id="ddlProductModel" class="dropdown dropdown-header">
+            <option value="0">Select Model</option>
+            {#foreach $T.ProductModels as record}
+            <option value="{$T.record.Id}">{$T.record.Name}</option>
+            {#/for}
+        </select>
+    </div>
+  
+</script>
+
+<script type="text/html" id="ManufacturesTemp">
+   
+    <div class='col-sm-4 form-group'>
+       Origine
+        <select id="ddlManufacture" class="dropdown dropdown-header">
+            <option value="0">Select Origine</option>
+            {#foreach $T.Manufactures as record}
+            <option value="{$T.record.Id}">{$T.record.Name}</option>
+            {#/for}
+        </select>
+    </div>
+   
+</script>
+
+   <script type="text/html" id="brandsTemp">
+   
+    <div class='col-sm-4 form-group'>
+        Brands
+        <select id="ddlBrand" class="dropdown dropdown-header">
+            <option value="0">Select Brand</option>
+            {#foreach $T.Brands as record}
+            <option value="{$T.record.Id}">{$T.record.Name}</option>
+            {#/for}
+        </select>
+    </div>
+   
+</script>
+    <!----End Get All Category Script--->

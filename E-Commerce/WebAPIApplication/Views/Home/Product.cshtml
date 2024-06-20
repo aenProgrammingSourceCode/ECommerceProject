@@ -1,0 +1,536 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/alamapputility.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-jtemplates.js"></script>
+<script>
+    //$(document).ready(function () {
+    //    //$('#myInput').keyup(function () {
+    //    //    // If value is not empty
+    //    //    if ($(this).val().length == 0) {
+    //    //        // Hide the element
+    //    //        $('#listBlock').hide();
+    //    //    } else {
+    //    //        // Otherwise show it
+    //    //        $('#listBlock').show();
+    //    //    }
+    //    //}).keyup();
+
+    //    //$(".filter div").click(function (e) {
+    //    //    $('.holder').addClass('invisible').removeClass('visible')
+    //    //                .filter(':contains(' + $(this).text() + ')')
+    //    //                .removeClass('invisible').addClass('visible')
+    //    //    e.preventDefault();
+    //    //});
+
+        
+    //    //<div class="filter">
+    //    //    <div class="Jamdani">Jamdani</div>
+    //    //    <div class="Katan">Katan</div>
+    //    //    <div class="Half">Half</div>
+    //    //</div>
+    //});
+
+  
+
+
+
+    //function myFunction() {
+    //    var input, filter, ul, li, a, i, txtValue;
+    //    input = document.getElementById("myInput");
+    //    filter = input.value.toUpperCase();
+    //    ul = document.getElementById("myUL");
+    //    li = ul.getElementsByTagName("li");
+    //    for (i = 0; i < li.length; i++) {
+    //        a = li[i].getElementsByTagName("a")[0];
+    //        txtValue = a.textContent || a.innerText;
+    //        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    //            li[i].style.display = "";
+    //        } else {
+    //            li[i].style.display = "none";
+    //        }
+    //    }
+    //}
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(14, pt);
+     
+        ////GetProductByCategory(1);
+        //$("#ddlSortBy").change(function () {
+        //    //GetProductByCategory(1);
+        //})
+
+
+        //$("#ddlBrand").change(function () {
+        //    GetProductByCategory(1);
+        //})
+
+        //GetAllProductManufature();
+        //GetAllProductModels();
+    });
+    //function myFunction() {
+    //    $('#productsHtml').fadeTo(100, 0.3, function () { $(this).fadeTo(500, 1.0); });
+    //    var input = document.getElementById("myInput");
+    //    var filter = input.value.toLowerCase();
+    //    var nodes = document.getElementsByClassName('target');
+    //    for (i = 0; i < nodes.length; i++) {
+    //        if (nodes[i].innerText.toLowerCase().includes(filter)) {
+    //            nodes[i].style.display = "inline-block";
+    //        } else {
+    //            nodes[i].style.display = "none";
+    //        }
+    //    }
+    //}
+
+    function showLoader(idShowLoader) {
+        $("#" + idShowLoader).show();
+    }
+    function hideLoader(idHideLoader) {
+        $("#" + idHideLoader).hide();
+    }
+
+
+    function GetProductById(Id) {
+        $.ajax({
+            url: '/api/Product/GetProduct?id=' + Id,
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+                
+                $("#productsHtml").setTemplate($("#productsTemp").html());
+                $("#productsHtml").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function GetAllProductModels() {
+        $.ajax({
+            url: '/api/ProductModel/GetAllProductModel',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+
+                $("#productModels").setTemplate($("#ProductModelsTemp").html());
+                $("#productModels").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    //function GetAllProductBrands() {
+    //    $.ajax({
+    //        url: '/api/Brand/GetAllBrands',
+    //        type: 'GET',
+    //        cache: false,
+    //        dataType: 'json',
+    //        contentType: 'application/json;charset-utf-8',
+    //        success: function (data) {
+    //            // var cData = JSON.stringify(data);
+    //            //alert(cData);
+
+    //            $("#productBrands").setTemplate($("#brandsTemp").html());
+    //            $("#productBrands").processTemplate(data);
+
+    //        },
+    //        error: function (r) {
+    //            var jsonError = JSON.stringify(r);
+    //            alert("error" + jsonError);
+    //        }
+    //    });
+    //}
+   
+
+    function GetAllProductManufature() {
+        $.ajax({
+            url: '/api/Manufacture/GetAllManufacture',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+
+                $("#productManufacture").setTemplate($("#ManufacturesTemp").html());
+                $("#productManufacture").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+    function GetProductByCategoryByColor(brandId) {
+
+    }
+
+    function GetProductByCategory(ColorId) {
+        showLoader('lg-Loader')
+        var brandId=[];
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(14, pt);
+        var jsonData = {
+            SortBy: $("#ddlSortBy").val(),
+            CategoryId: Id,
+            BrandId: brandId,
+            ColorId: ColorId
+        };
+        $.ajax({
+            url: '/api/Product/GetProductByCategory',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data:JSON.stringify(jsonData),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+              
+                for (var i = 0; i <data.length; i++) {
+                    brandId.push(data[i].BrandId);
+                    alert(JSON.stringify(brandId));
+
+                }
+
+                //$.each(data.Products, function (k, v) {
+                //    var listOfProduct = '<li><a href="#" onclick="JavaScript:GetProductById(' + v.Id + ')">' + v.Name + '</a></li>'
+                //    $("#myUL").append(listOfProduct);
+                //})
+                
+
+                //var jData = data.Products;
+                //var JsonDatas = JSON.stringify(jData);
+                //alert(JsonDatas);
+                //$("#myUL").setTemplate($("#myUlTemp").html());
+                //$("#myUL").processTemplate(data);
+
+                $("#productsHtml").setTemplate($("#productsTemp").html());
+                $("#productsHtml").processTemplate(data);
+                hideLoader('lg-Loader');
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+
+
+
+    function GetProductByItem() {
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(14, pt);
+
+        var Productmodels = $("#ddlProductModel").val();
+        var Manufactures = $("#ddlManufacture").val();
+        var Brands = $("#ddlBrand").val();
+        var Categorys = Id;
+
+        ProductByItemAjax(Productmodels, Manufactures, Brands, Categorys);
+    }
+    function ProductByItemAjax(productModel, manufacture, brand, category) {
+        var jsonData =
+            {
+                ProductModelId: productModel,
+                ManufactureId: manufacture,
+                BrandId: brand,
+                CategoryId: category
+            }
+        $.ajax({
+            url: '/api/Product/GetProductByProductItems',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: JSON.stringify(jsonData),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $("#productsHtml").setTemplate($("#productsTemp").html());
+                $("#productsHtml").processTemplate(data);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+
+    function showLoader(idShowLoader) {
+        $("#" + idShowLoader).show();
+    }
+    function hideLoader(idHideLoader) {
+        $("#" + idHideLoader).hide();
+    }
+
+    </script>
+  <style>
+      .holder{
+          
+      }
+      .visible {
+           display:inline-block;
+      }
+
+      .invisible {
+          display: none;
+          z-index:-1;
+          float:right;
+      }
+      .detailsCart {
+          display:none
+      }
+      .active, #pl:hover .detailsCart{
+          display: block;
+      }
+
+      .active, #pl:hover{
+          border:solid 1px #d8cfd2;
+      }
+
+      #ddlSortBy {
+          background-color: #ffffff;
+          border:solid 1px #e4bbbb;
+          width:150px
+          
+      }
+
+  </style>
+ 
+<div class="col-lg-2">
+    <div class="panel-group">
+        <div class="panel panel-heading"><h4> FILTER</h4></div>
+        <div class="panel-body">
+            <script>
+                $(document).ready(function () {
+                    GetAllProductsByBrandWithStock();
+                });
+                function GetAllProductsByBrandWithStock() {
+                    $.ajax({
+                        url: '/api/Product/GetProductByBrandWithStock',
+                        type: 'GET',
+                        cache: false,
+                        dataType: 'json',
+                        contentType: 'application/json;charset-utf-8',
+                        success: function (data) {
+                            // var cData = JSON.stringify(data);
+                            //alert(cData);
+                            
+                            $("#productBrandMenu").setTemplate($("#brandsMenuTemp").html());
+                            $("#productBrandMenu").processTemplate(data);
+
+                        },
+                        error: function (r) {
+                            var jsonError = JSON.stringify(r);
+                            alert("error" + jsonError);
+                        }
+                    });
+                }
+            </script>
+            <div class='list-group' id="productBrandMenu" style="border:solid 1px #d0c6c6">
+
+            </div>
+
+
+
+
+            <script>
+                $(document).ready(function () {
+                    GetProductByColorWithStock();
+                });
+
+                function GetProductByColorWithStock() {
+                    showLoader('lg-Loader')
+                    var brandId = [];
+                    var paths = window.location.pathname;
+                    var pt = paths.length;
+                    var Id = paths.substring(14, pt);
+                    var jsonData = {
+                        SortBy: $("#ddlSortBy").val(),
+                        CategoryId: Id,
+                        BrandId: brandId,
+                        ColorId: ColorId
+                    };
+                    $.ajax({
+                        url: '/api/Product/GetProductByCategory',
+                        type: 'POST',
+                        cache: false,
+                        dataType: 'json',
+                        data: JSON.stringify(jsonData),
+                        contentType: 'application/json;charset-utf-8',
+                        success: function (data) {
+
+                            for (var i = 0; i < data.length; i++) {
+                                alert(JSON.stringify(data[i].BrandId));
+                            }
+
+                            //$.each(data.Products, function (k, v) {
+                            //    var listOfProduct = '<li><a href="#" onclick="JavaScript:GetProductById(' + v.Id + ')">' + v.Name + '</a></li>'
+                            //    $("#myUL").append(listOfProduct);
+                            //})
+
+
+                            //var jData = data.Products;
+                            //var JsonDatas = JSON.stringify(jData);
+                            //alert(JsonDatas);
+                            //$("#myUL").setTemplate($("#myUlTemp").html());
+                            //$("#myUL").processTemplate(data);
+
+                            $("#productsHtml").setTemplate($("#productsTemp").html());
+                            $("#productsHtml").processTemplate(data);
+                            hideLoader('lg-Loader');
+                        },
+                        error: function (r) {
+                            var jsonError = JSON.stringify(r);
+                            alert("error" + jsonError);
+                        }
+                    });
+                }
+                //function GetProductByColorWithStock() {
+                //    $.ajax({
+                //        url: '/api/Product/GetProductByColorWithStock',
+                //        type: 'GET',
+                //        cache: false,
+                //        dataType: 'json',
+                //        contentType: 'application/json;charset-utf-8',
+                //        success: function (data) {
+                //             var cData = JSON.stringify(data);
+                //            alert(cData);
+
+                //            $("#productColorMenu").setTemplate($("#colorsMenuTemp").html());
+                //            $("#productColorMenu").processTemplate(data);
+
+                //        },
+                //        error: function (r) {
+                //            var jsonError = JSON.stringify(r);
+                //            alert("error" + jsonError);
+                //        }
+                //    });
+                //}
+            </script>
+            <div class='list-group' id="productColorMenu" style="border:solid 1px #d0c6c6">
+            </div>
+            <script type="text/html" id="colorsMenuTemp">
+                <h4 style="padding-left:15px">Color</h4>
+                {#foreach $T as record}
+                <a class='list-group-item' id="colorElement" onclick='JavaScript: GetProductByCategory("{$T.record.ColorId}")'>{$T.record.ColorName}<span class="badge" style="background-color:#ffffff; border:solid 1px #d0c6c6; color:#808080; font-size:small; font-style:normal; font-weight:200">{$T.record.TotalProductByColor}</span></a>
+                {#/for}
+            </script>
+
+            <script type="text/html" id="brandsMenuTemp">
+                <h4 style="padding-left:15px">Brand</h4>
+                {#foreach $T as record}
+                <a class='list-group-item' onclick='JavaScript: GetProductByCategory("{$T.record.BrandId}")'>{$T.record.BrandName} <span class="badge" style="background-color:#ffffff; border:solid 1px #d0c6c6; color:#808080; font-size:small; font-style:normal; font-weight:200">{$T.record.TotalProductByBrand}</span></a>
+                {#/for}
+            </script>
+
+        </div>
+    </div>
+</div>
+<div class="col-lg-10">
+    <select id="ddlSortBy">
+        <option value="1">Price Heigh to low</option>
+        <option value="2">Price Heigh to low</option>
+    </select>
+    
+    <hr />
+    <div id="productsHtml">
+        <div id="lg-Loader" style="width:60px; height:60px"></div>
+    </div>
+</div>
+
+
+
+    <script type="text/html" id="productsTemp">
+        <div id="productList">
+            {#foreach $T as record}
+            <div style="display: inline-block; margin: auto; padding-right: 2px; padding: 4px" id="pl">
+                <a href="/Home/ProductDetails/{$T.record.Id}">
+                    <img src="/Content/ProductImage/{$T.record.ImageId}.jpg" width="200" height="250" />
+                </a>
+                <div style="color: #f71863">
+                   
+                        {$T.record.Name}<br /> {$T.record.BrandName}  {$T.record.ManufactureName}<br /> {$T.record.ProductModel}
+                        <h4>{$T.record.Price} ৳ </h4>
+                   
+                </div>
+                        <div class="detailsCart">
+                            <a href="/Home/ProductDetails/{$T.record.Id}" class="btn btn-sm btn-nowoncare">See details</a> <a href="#" class="btn btn-sm btn-default" onclick="JavaScript: AddProductToBasket('{$T.record.Id}')">Add To Basket</a>
+                        </div>
+              
+            </div>
+            {#/for}
+        </div>
+    </script>
+
+@*<script type="text/html" id="myUlTemp">
+    <div class="filter">
+        {#foreach $T.Products as record}
+        <div class="target" style="display: inline-block; margin: auto;  padding-right: 2px; border:dashed; border-width:1px; border-color:#4a2d2d; padding: 4px">
+            <img src="/Content/ProductImage/{$T.record.ImageId}.jpg" width="80" height="110" />
+            <div class="{$T.record.Name}">{$T.record.Name}</div>
+        </div>
+         {#/for}
+    </div>
+</script>*@
+  
+    <script type="text/html" id="ProductModelsTemp">
+        <div class='col-sm-4 form-group'>
+            Model
+            <select id="ddlProductModel" class="dropdown dropdown-header">
+                <option value="0">Select Model</option>
+                {#foreach $T.ProductModels as record}
+                <option value="{$T.record.Id}">{$T.record.Name}</option>
+                {#/for}
+            </select>
+        </div>
+
+    </script>
+    <script type="text/html" id="ManufacturesTemp">
+
+        <div class='col-sm-4 form-group'>
+            Origine
+            <select id="ddlManufacture" class="dropdown dropdown-header">
+                <option value="0">Select Origine</option>
+                {#foreach $T.Manufactures as record}
+                <option value="{$T.record.Id}">{$T.record.Name}</option>
+                {#/for}
+            </select>
+        </div>
+
+    </script>
+    <script type="text/html" id="brandsTemp">
+
+        <div class='col-sm-4 form-group'>
+            Brands
+            <select id="ddlBrand" class="dropdown dropdown-header">
+                <option value="0">Select Brand</option>
+                {#foreach $T.Brands as record}
+                <option value="{$T.record.Id}">{$T.record.Name}</option>
+                {#/for}
+            </select>
+        </div>
+
+    </script>
+    <!----End Get All Category Script--->
+

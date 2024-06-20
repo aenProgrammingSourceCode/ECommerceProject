@@ -1,0 +1,126 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutHomeProduct.cshtml";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        var paths = window.location.pathname;
+        var pt = paths.length;
+        var Id = paths.substring(21, pt);
+        ProductDetailsById(Id);
+    });
+
+    function ProductDetailsById(Id) {
+        $.ajax({
+            url: '/api/Product/GetProductDetails?id=' + Id,
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                // var cData = JSON.stringify(data);
+                //alert(cData);
+                $("#productDetailsHtml").setTemplate($("#productDetailsTemp").html());
+                $("#productDetailsHtml").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+    function AddProductToBasket(Id) {
+
+        $.ajax({
+            url: '/api/Basket/AddProductItemToBasket?ProductId=' + Id,
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                GetBasketSummary();
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+</script>
+<div class="row">
+    <div class="col-md-12">
+        <h2>
+            Product details
+        </h2>
+        <hr />
+        <div id="productDetailsHtml">
+
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="productDetailsTemp">
+
+    {#foreach $T as record}
+    <div class="panel panel-info">
+        <div class="panel panel-heading">
+            <h4> {$T.record.Name} details</h4>
+        </div>
+
+        <div class="panel-body">
+
+
+            <div class="col-md-6">
+                <div class="row">
+                    <img class="img-responsive"
+                         src="/Content/images/3dbimage/1004.jpg" />
+
+                </div>
+                <div class="row">
+                    <div class="col-md-2 img-thumbnail">
+                        <img class="img-responsive"
+                             src="/Content/images/3dbimage/1004.jpg" />
+                    </div>
+                    <div class="col-md-2 img-thumbnail">
+                        <img class="img-responsive"
+                             src="/Content/images/3dbimage/1004.jpg" />
+                    </div>
+                    <div class="col-md-2 img-thumbnail">
+                        <img class="img-responsive"
+                             src="/Content/images/3dbimage/1004.jpg" />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="row">
+
+                    <h3> {$T.record.Name}</h3>
+
+                    <ul>
+                        <li>
+                            {$T.record.CategoryName}
+                        </li>
+                        <li>
+                            {$T.record.ProductModelName}
+                        </li>
+                        <li>
+                            {$T.record.ManufactureName}
+                        </li>
+                    </ul>
+                    <hr />
+                    {$T.record.Description}
+                    <hr />
+                    <h2>Price - <strong>45000</strong><small> BDT</small></h2>
+                    <a href="#" onclick="JavaScript: AddProductToBasket('{$T.record.Id}')" class="btn btn-info">Add To Cart</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    {#/for}
+
+</script>

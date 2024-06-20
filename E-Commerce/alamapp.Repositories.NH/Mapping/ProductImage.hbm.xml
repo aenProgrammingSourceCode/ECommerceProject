@@ -1,0 +1,20 @@
+﻿<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="alamapp.Model.Products"
+        assembly="alamapp.Model">
+
+  <class name="ProductImage" table="ProductImages" lazy="false" >
+    <id  name="Id" column="ImageID"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="SampleImage">
+      <column name="SampleImage" sql-type="uniqueidentifier" not-null="false" />
+    </property>
+
+    <many-to-one name="ProductTitle"
+                       class="ProductTitle"
+                       column="ProductTitleID"
+                       not-null="true"
+                       lazy="false"/>
+  </class>
+</hibernate-mapping>

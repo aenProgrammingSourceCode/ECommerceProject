@@ -1,0 +1,512 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<script type="text/javascript">
+    $().ready(function () {
+        GetAllCategory();
+        ImagePreview();
+        $("#frmCategoryForm").submit(function (e) {
+            e.preventDefault();
+            UploadCategoryImage();
+        });
+
+        $("#checkedAll").change(function () {
+            if (this.checked) {
+                $(".checkSingle").each(function () {
+                    this.checked = true;
+                })
+            } else {
+                $(".checkSingle").each(function () {
+                    this.checked = false;
+                })
+            }
+        });
+
+        $(".checkSingle").click(function () {
+            if ($(this).is(":checked")) {
+                var isAllChecked = 0;
+                $(".checkSingle").each(function () {
+                    if (!this.checked)
+                        isAllChecked = 1;
+                })
+                if (isAllChecked == 0) { $("#checkedAll").prop("checked", true); }
+            }
+            else {
+                $("#checkedAll").prop("checked", false);
+            }
+        });
+
+        $("#btnToggle").click(function () {
+            $("#pToggle").toggle();
+        });
+
+        window.onclick("#pToggle").hide;
+    });
+
+
+
+    function RemoveCategory() {
+        var chkChecked = $("input[name='category']:checked").length;
+
+        if (chkChecked >= 1) {
+            var postArr = [];
+            var index = 0;
+            var deleteData;
+
+            $.each($("input[name='category']:checked"), function () {
+                postArr[index] = { CategoryId: $(this).val() }
+                index++;
+            });
+            deleteData = { Categories: postArr };
+            var jsonData = JSON.stringify(deleteData);
+            $.ajax({
+                url: '/api/Category/DeleteCategory',
+                type: 'POST',
+                cache: false,
+                dataType: 'json',
+                data: jsonData,
+                contentType: 'application/json;charset-utf-8',
+                success: function (data) {
+                    GetAllCategory();
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+        }
+        else {
+            alert("Please select category to remove!");
+        }
+    }
+    function UploadCategoryImage() {
+        $('#btnCreateCategory').removeClass('btn btn-info').addClass('btn btn-default disabled');
+        showLoader('sm-Loader');
+
+        var fileUpload = $("#fileUpload").val();
+
+        var data = new FormData();
+        var files = $("#fileUpload").get(0).files;
+        // Add the uploaded image content to the form data collection
+        if (files.length > 0) {
+            data.append("UploadImage", files[0]);
+        }
+        // Make Ajax request with the contentType = false, and procesDate = false
+        var ajaxRequest = $.ajax({
+            type: "POST",
+            url: "/api/Category/UploadCategoryNewImage",
+            contentType: false,
+            processData: false,
+            data: data
+        });
+        ajaxRequest.done(function (xhr, textStatus) {
+            CreateNewCategory();
+        });
+    }
+    function CreateNewCategory() {
+      
+        var apiUrl = '/api/Category/CreateCategory';
+        var jsonData =
+            {
+                Name: $("#txtCategoryName").val(),
+                Description: $("#txtDescription").val()
+            };
+        $.ajax({
+            url: apiUrl,
+            type: 'POST',
+            dataType: 'json',
+            data: jsonData,
+            success: function () {
+                GetAllCategory();
+                document.getElementById("frmCategoryForm").reset();
+                var image_holder = $("#image-holder");
+                image_holder.empty();
+                hideLoader('sm-Loader');
+                $('#btnCreateCategory').removeClass('btn btn-info disabled').addClass('btn btn-info');
+                hideCategoryForm();
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function EditCategoryImage(Id) {
+
+        var fileUpload = $("#flEditImage").val();
+
+        var data = new FormData();
+        var files = $("#flEditImage").get(0).files;
+        // Add the uploaded image content to the form data collection
+        if (files.length > 0) {
+            data.append("EditUploadedImage", files[0]);
+        }
+        // Make Ajax request with the contentType = false, and procesDate = false
+        var ajaxRequest = $.ajax({
+            type: "POST",
+            url: '/api/Category/ModifyUploadedFile?Id=' + Id,
+            contentType: false,
+            processData: false,
+            data: data
+        });
+        ajaxRequest.done(function (xhr, textStatus) {
+            window.location.reload(true);
+            EditCategory(Id);
+            GetAllCategory();
+        });
+    }
+    function EditCategory(Id) {
+
+        var name = $("#txtEditCategoryName").val();
+        var description = $("#txtEditDescription").val();
+
+        var jsonData = {
+            Name: name,
+            Description: description
+        };
+
+        $.ajax({
+            url: '/api/Category/ModifyCategory?id=' + Id,
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: JSON.stringify(jsonData),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                alert("Edit Success");
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function ImagePreview() {
+        $("#fileUpload").on('change', function () {
+            //Get count of selected files
+            var countFiles = $(this)[0].files.length;
+            var imgPath = $(this)[0].value;
+            var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+            var image_holder = $("#image-holder");
+            image_holder.empty();
+            if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
+                if (typeof (FileReader) != "undefined") {
+                    //loop for each file selected for uploaded.
+                    for (var i = 0; i < countFiles; i++) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $("<img />", {
+                                "src": e.target.result,
+                                "class": "thumb-image"
+                            }).appendTo(image_holder);
+                        }
+                        image_holder.show();
+                        reader.readAsDataURL($(this)[0].files[i]);
+                    }
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            } else {
+                alert("Pls select only images");
+            }
+        });
+    }
+    function showCategoryForm() {
+        $("#divCategory").show();
+        $("#btnforPopulateCategoryForm").hide();
+    }
+    function hideCategoryForm() {
+        document.getElementById("frmCategoryForm").reset();
+        $("#divCategory").hide();
+        $("#btnforPopulateCategoryForm").show();
+    }
+    function getAjaxImg() {
+        $.ajax({
+            url: '/api/Category/GetLastCategory',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                var dta = JSON.stringify(data);
+                alert(dta);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    // input category method
+    function getCategoryDetails(Id) {
+        $.ajax({
+            url: '/api/Category/GetCategory?id=' + Id,
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $("#categoryDetailsHtml").setTemplate($("#categoryDetailsTemp").html());
+                $("#categoryDetailsHtml").processTemplate(data);
+            },
+            error: function (er) {
+                var errorSycronim = JSON.stringify(er);
+                alert("eoorr" + errorSycronim);
+            }
+        });
+    }
+    function getCategoryDetailsForEdit(Id) {
+        $.ajax({
+            url: '/api/Category/GetCategory?id=' + Id,
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $("#categoryDetailsForEditHtml").setTemplate($("#categoryUpdateTemp").html());
+                $("#categoryDetailsForEditHtml").processTemplate(data);
+            },
+            error: function (er) {
+                var errorSycronim = JSON.stringify(er);
+                alert("eoorr" + errorSycronim);
+            }
+        });
+    }
+    /* Start Get all category method */
+    function GetAllCategory() {
+        var Criteria = "";
+        $.ajax({
+            url: '/api/Category/GetAllCategories?id=' + Criteria,
+            type: 'GET',
+            cache: false,
+            async: true,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                var myData = { categories: data };
+                // Render data jtemplate
+                $("#categoriesHtml").setTemplate($("#categoriesTemp").html());
+                $("#categoriesHtml").processTemplate(myData);
+                hideLoader('lg-Loader');
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+
+        });
+    }
+    /* End Get all category method */
+ 
+
+
+</script>
+
+
+
+<div class="row" id="divCategory" style="display:none">
+    <h4>Create New Category</h4>
+    <hr />
+    <form class="form-horizontal" id="frmCategoryForm">
+        <div id="msg" class="alert-warning"></div>
+
+        <div class="form-group">
+            <label for="name" class="col-md-2 control-label">Category Name:</label>
+            <div class="col-md-10">
+                <input type="text" id="txtCategoryName" name="txtCategoryName" placeholder="Enter Category Name" required class="form-control" title="Fill the name" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-md-2 control-label">Description:</label>
+            <div class="col-md-10">
+                <textarea id="txtDescription" class="form-control" name="txtDescription" placeholder="Enter Category Name" required title="Fill the description"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            
+            <div class="col-md-10">
+                <label for="name" class="col-md-2 control-label">Address:</label> <input id="fileUpload" multiple="multiple" type="file" required><br />
+                <div id="image-holder"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label id="sm-Loader" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                <input type="submit" id="btnCreateCategory" class="btn btn-info" value="Create Category" />
+                <input type="submit" id="btnCancelCategory" class="btn btn-default" value="Cancel" onclick="JavaScript:hideCategoryForm()" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="row">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th colspan="4"><a href="#" class="btn btn-link" onclick="JavaScript: RemoveCategory()">Remove</a></th>
+                </tr>
+                <tr>
+                    <th><input type="checkbox" name="checkedAll" id="checkedAll" />  Select all</th>
+                    <th><input type="submit" id="btnforPopulateCategoryForm" class="btn btn-default" onclick="JavaScript:showCategoryForm()" value="New Category" /></th>
+                    <th><input type="text" id="txtSearchCriteria" class="form-control" size="50" placeholder="Search for..."></th>
+                    <th><a href="#" class="btn-toolbar" onclick="JavaScript:GetAllCategory()">Search</a></th>
+                </tr>
+            </thead>
+            <tbody id="categoriesHtml">
+                <tr><td colspan="4"><div id="lg-Loader"></div></td></tr>
+            </tbody>
+        </table>
+        <script type="text/html" id="categoriesTemp">
+            {#foreach $T.categories as record}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="dropdownMenu1"
+                                data-toggle="dropdown">
+                            Action
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation" class="dropdown-header">Choose action from the list</li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#categoryDetailsModal" onclick="JavaScript: getCategoryDetails('{$T.record.Id}')">Details</a>
+
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#categoryEditModal" onclick="JavaScript:getCategoryDetailsForEdit('{$T.record.Id}')">Edit</a>
+
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="/AdminProduct/Index/{$T.record.Id}">Products</a>
+                            </li>
+
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation" class="dropdown-header">Choose action from the list</li>
+
+                        </ul>
+                    </div>
+                </td>
+
+            </tr>
+
+
+            <tr>
+                <td>
+                    <input type="checkbox" value="{$T.record.Id}" id="chkCategory" name="category" class="checkSingle" />
+                </td>
+                <td>
+                    <img src="/Content/CategoryImage/{$T.record.ImageId}.jpg" onerror="this.onerror = null; this.src = '/Content/CategoryImage/BlankProductImage.jpg';"
+                         width="100" height="100" class="img-thumbnail" id="imgChangeImage" />
+                </td>
+                <td>
+                    <h4> {$T.record.Name}</h4>
+                </td>
+                <td>
+                    {$T.record.Description}</p>
+                </td>
+            </tr>
+
+
+
+            {#/for}
+
+            <tr>
+
+                <td colspan="3">
+                    <a href="#" class="btn btn-link" onclick="JavaScript: RemoveCategory()">Remove</a>
+                </td>
+            </tr>
+
+        </script>
+    </div>
+
+
+<div id="categoryDetailsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Category Description</h4>
+            </div>
+            <div class="modal-body">
+                <div id="categoryDetailsHtml">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="categoryEditModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Category Description</h4>
+            </div>
+            <div id="categoryDetailsForEditHtml">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/html" id="categoryDetailsTemp">
+    {#foreach $T as record}
+    <h3> {$T.record.Name}</h3>
+    <hr />
+    <img src="/Content/CategoryImage/{$T.record.ImageId}.jpg" width="300" height="300" class="img-thumbnail">
+    <div class="divider"></div>
+    <p class="text-info"> {$T.record.Description}</p>
+    {#/for}
+</script>
+
+
+
+<script type="text/html" id="categoryUpdateTemp">
+    {#foreach $T as record}
+    <div class="modal-body">
+        <div class="form-horizontal" id="frmEditCategoryForm">
+            <div id="msg" class="alert-warning"></div>
+
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">Category Name:</label>
+                <div class="col-md-10">
+                    <input type="text" id="txtEditCategoryName" value="{$T.record.Name}" placeholder="Enter Category Name" required class="form-control" title="Fill the name" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">Description:</label>
+                <div class="col-md-10">
+                    <textarea  id="txtEditDescription" class="form-control" name="txtDescription" value="{$T.record.Description}" placeholder="Enter category description" required title="Fill the description"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10">
+                    <input id="flEditImage" multiple="multiple" type="file" required><br />
+                    <img src="/Content/CategoryImage/{$T.record.ImageId}.jpg" width="300" height="300" class="img-thumbnail" id="imgCategoryImage">
+                    <div id="image-holder"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="btnUpdateCategory" data-dismiss="modal" onclick="JavaScript:EditCategoryImage('{$T.record.Id}');">Update</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+    {#/for}
+
+
+</script>

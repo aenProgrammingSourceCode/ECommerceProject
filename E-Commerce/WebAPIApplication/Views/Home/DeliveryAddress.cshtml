@@ -1,0 +1,643 @@
+﻿@using Microsoft.AspNet.Identity
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Microsoft.AspNet.Identity
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        BasketItemDetailsById();
+        $(document).on("click", function (e) {
+            if ($(e.target).is("img") === false) {
+                $("img").removeClass("lens");
+            }
+
+        });
+    });
+    function imglens() {
+        $("#myimg").toggleClass("lens");
+    }
+    function PlaceCustomerOrder()
+    {
+        CallOrderProcess();
+    }
+    function CallOrderProcess() {
+        var userName = '@Html.Encode(HttpContext.Current.User.Identity.GetUserName())'
+        var Identity = '@Html.Encode(HttpContext.Current.User.Identity.GetUserId())'
+        var jsonUser = {
+            IdentityToken: Identity,
+            UserName: userName
+        };
+        $.ajax({
+            url: '/api/Order/PlaceOrder',
+            type: 'POST',
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            data: JSON.stringify(jsonUser),
+            success: function () {
+                alert("Order Submitted Successfully");
+                //window.location.href = '/Home/Orders';
+                $("#orderDetailsHtml").setTemplate($("#orderDetailsTemp").html());
+                $("#orderDetailsHtml").processTemplate(data);
+
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                //alert("error" + jsonError);
+            }
+        });
+    }
+    function BasketItemDetailsById()
+    {
+        $.ajax({
+            url: '/api/Basket/GetBasketItemDetails',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+
+                $("#orderTotalQty").empty();
+                $("#orderTotalAmount").empty();
+                $("#orderTotalItems").empty();
+                $("#orderTotalItems2").empty();
+                $("#basketItemDetailsHtml").setTemplate($("#basketItemDetailsTemp").html());
+                $("#basketItemDetailsHtml").processTemplate(data);
+
+                var totalQty = 0;
+                var totalAmt = 0;
+                var items = 0;
+                for (var i = 0; i < data.length; i++) {
+                    totalQty += data[i].Qty;
+                    totalAmt += data[i].LineTotal;
+                    items = data[i].ProductId;
+                }
+
+                items = $("[id^='Qty-']").length;
+
+                $("#orderTotalItems2").append(items + " Items");
+                $("#orderTotalItems").append(items+" Items");
+                $("#orderTotalQty").append(totalQty);
+                $("#orderTotalAmount").append(totalAmt + "৳");
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    function UpdateItems() {
+        $('#basketItemDetailsHtml').fadeTo(100, 0.3, function () { $(this).fadeTo(500, 1.0); });
+        var postArr = [];
+        var index = 0;
+        var postData;
+
+        $("[id^='Qty-']").each(function () {
+            itemElementId = $(this).attr('id');
+            var productId = 0;
+            productId = itemElementId.replace("Qty-", "");
+
+            postArr[index] = { ProductId: productId, Qty: $(this).val() };
+            index++;
+        });
+
+        postData = { Items: postArr };
+
+        var jsonData = JSON.stringify(postData);
+
+        $.ajax({
+            url: '/api/Basket/UpdateBasketItem',
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: jsonData,
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                GetBasketSummary();
+                BasketItemDetailsById();
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+    //function DeleteItems() {
+    //    $('#basketItemDetailsHtml').fadeTo(100, 0.3, function () { $(this).fadeTo(500, 1.0); });
+    //    var postArr = [];
+    //    var index = 0;
+    //    var deleteData;
+
+    //    $.each($("input[name='product']:checked"), function () {
+    //        postArr[index] = { ProductId: $(this).val() }
+    //        index++;
+    //    });
+
+
+    //    deleteData = { Products: postArr };
+
+    //    var jsonData = JSON.stringify(deleteData);
+
+    //    $.ajax({
+    //        url: '/api/Basket/DeleteBasketItem',
+    //        type: 'POST',
+    //        cache: false,
+    //        dataType: 'json',
+    //        data: jsonData,
+    //        contentType: 'application/json;charset-utf-8',
+    //        success: function (data) {
+    //            GetBasketSummary();
+    //            BasketItemDetailsById();
+    //        },
+    //        error: function (r) {
+    //            var jsonError = JSON.stringify(r);
+    //            alert("error" + jsonError);
+    //        }
+    //    });
+    //}
+
+    function DeleteBasketItemById(Id)
+    {
+        $.ajax({
+            url: '/api/Basket/Delete?id='+Id,
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                GetBasketSummary();
+                BasketItemDetailsById();
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+</script>
+<style>
+    .zoom {
+    }
+
+    .lens {
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(5);
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        GetAllPoliceStations();
+        GetAllDistricts();
+    })
+
+    function CreateDeliveryAddress() {
+        var Identity = '@Html.Encode(HttpContext.Current.User.Identity.GetUserId())'
+        var HomeOffice;
+        $.each($("input[name='Destination']:checked"), function () {
+            HomeOffice = $(this).val();
+        });
+        var jsonUser = {
+            Address: $("#txtAddress").val(),
+            CompanyName: $("#txtCompanyName").val(),
+            OfficeOrHome: HomeOffice,
+            ZipCode: $("#txtZipCode").val(),
+            MobileNo: $("#txtMobileNo").val(),
+            PoliceStationId: $("#ddlPoliceStation").val(),
+            DistrictId: $("#ddlDistrict").val(),
+        };
+        $.ajax({
+            url: '/api/Customer/CreateDeliveryAddress',
+            type: 'POST',
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            data: JSON.stringify(jsonUser),
+            success: function () {
+                alert("Success");
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                //alert("error" + jsonError);
+            }
+        });
+    }
+
+    function GetAllDistricts() {
+        $.ajax({
+            url: '/api/Customer/GetAllDistricts',
+            type: 'GET',
+            cache: false,
+            async: true,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $("#ddlDistrict").setTemplate($("#districtTemp").html());
+                $("#ddlDistrict").processTemplate(data.Districts);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+    function GetAllPoliceStations() {
+        $.ajax({
+            url: '/api/Customer/GetAllPoliceStations',
+            type: 'GET',
+            cache: false,
+            async: true,
+            dataType: 'json',
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                $("#ddlPoliceStation").setTemplate($("#policeStationTemp").html());
+                $("#ddlPoliceStation").processTemplate(data.PoliceStations);
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+
+</script>
+<script>
+    $(document).ready(function () {
+        $(document).ready(function () {
+            //$("#txtMobileBankNo").keyup(function () {
+            //    GetAllPayments();
+            //});
+            //$("#txtTransactionNo").keyup(function () {
+            //    GetAllPayments();
+            //});
+        });
+    });
+
+    function ConfirmPayment(Id) {
+            $.ajax({
+                url: '/api/Order/ConfirmePayment?id='+Id,
+                type: 'POST',
+                dataType: 'json',
+                success: function (data) {
+                    alert(data);
+                },
+                error: function (r) {
+                    var jsonError = JSON.stringify(r);
+                    alert("error" + jsonError);
+                }
+            });
+    }
+
+    function GetAllPayments() {
+        var Identity = '@Html.Encode(HttpContext.Current.User.Identity.GetUserId())'
+
+        var mobileNo = $("#txtMobileBankNo").val().trim();
+       
+        var transactionNo = $("#txtTransactionNo").val();
+        $.ajax({
+            url: '/api/Order/GetAllPayment',
+            type: 'GET',
+            cache: false,
+            dataType: 'json',
+            data: JSON.stringify(MobileBankNo=mobileNo),
+            contentType: 'application/json;charset-utf-8',
+            success: function (data) {
+                
+                for (var i = 0; i < data.length; i++) {
+                    //alert(JSON.stringify(data[i].MobileBankNo));
+                    
+                    if((data[i].TransactionNo == transactionNo) && (data[i].MobileBankNo == mobileNo))
+                    {
+                        $("#resultMsg").append("নাম্বার এবং ট্রানজেকশন আইডি দুইটাই আছে");
+                        //$("#tblPaymentDetails").show();
+                        //$("#paymentDetailsHtml").setTemplate($("#PaymentSummaryTemp").html());
+                        //$("#paymentDetailsHtml").processTemplate(data[i]);
+                    }
+                    
+                    else if ((data[i].TransactionNo != transactionNo) && (data[i].MobileBankNo != mobileNo)) {
+                        $("#txtMobileBankNo").css("border", "2px solid red");
+                        $("#txtTransactionNo").css("border", "2px solid red");
+                    }
+                    else
+                    {
+                        alert("Konotai nai");
+                    }
+
+                }
+            },
+            error: function (r) {
+                var jsonError = JSON.stringify(r);
+                alert("error" + jsonError);
+            }
+        });
+    }
+</script>
+<div class="container">
+    <div class="col-md-6">
+        <h4>Shipping Address</h4>
+        <hr />
+        <div class="form-horizontal">
+
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">Address</label>
+                <div class="col-md-10">
+                    <input id="txtAddress" class="form-control" name="name" type="text" required>
+                </div>
+            </div>
+            @*<div class="form-group">
+                    <label for="name" class="col-md-2 control-label">Date of birth</label>
+                    <div class="col-md-10">
+                        <input id="txtDateOfBirth" class="form-control" name="name" type="text" required>
+                    </div>
+                </div>*@
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">Mobile No:</label>
+                <div class="col-md-10">
+                    <input id="txtMobileNo" class="form-control" name="name" type="text" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">Destination</label>
+                <div class="col-md-10">
+                    <input type="radio" name="Destination" value="Office"> Office
+                    <input type="radio" name="Destination" value="Home"> Home
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">Company name</label>
+                <div class="col-md-10">
+                    <input id="txtCompanyName" class="form-control" name="name" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">Zip Code</label>
+                <div class="col-md-10">
+                    <input id="txtZipCode" class="form-control" name="name" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">District</label>
+                <div class="col-md-10">
+                    <select id="ddlDistrict" class="form-control"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="col-md-2 control-label">Police Station</label>
+                <div class="col-md-10">
+                    <select id="ddlPoliceStation" class="form-control"></select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+        <div id="resultMsg"> </div>
+        <script>
+            $(document).ready(function () {
+                   $("#ddlPaymentMethod").change(function () {
+                       $("#PaymentMethod").show();
+                   })
+            })
+        </script>
+        <h4>Confirm your payment</h4>
+        <hr />
+        
+               
+                  <div class="form-group">
+                        <label for="exampleFormControlSelect1">Payment Method</label>
+                        <select id="ddlPaymentMethod" class="form-control" id="exampleFormControlSelect1">
+                            <option value="0" selected>Payment method</option>
+                            <option value="1">Bkash no</option>
+                            <option value="2">Transaction Id</option>
+                        </select>
+                    </div>
+               
+        
+
+        <div id="PaymentMethod" style="display:none">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">BKash Mobile No</label>
+                <input class="input-md textinput textInput form-control" id="txtMobileBankNo" name="name" placeholder="Sent mobile no required" style="margin-bottom: 10px" type="text" />
+            </div>
+           
+           
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Transaction Id</label>
+                <input class="input-md textinput textInput form-control" id="txtTransactionNo" name="transaction" placeholder="Transaction no required" style="margin-bottom: 10px" type="text" />
+            </div>
+
+             
+            <div class="col-md-5">
+                <table class="table table-bordered" id="tblPaymentDetails" style="display:none">
+                    <tbody id="paymentDetailsHtml"></tbody>
+                </table>
+            </div>
+        </div>
+
+      
+        <hr />
+        <table class="table table-hover">
+            <tbody>
+                <tr>
+                    <td style="color:#494343"><span>Total Items :</span> </td>
+                    <td style="color:#494343"><span id="orderTotalItems2"></span> </td>
+                </tr>
+                <tr>
+                    <td style="color:#494343"><span>Total Quantity :</span> </td>
+                    <td style="color:#494343"> <span id="orderTotalQty"></span></td>
+                </tr>
+                <tr>
+                    <td style="color:#494343"><span>Total Amount :</span> </td>
+                    <td style="color:#494343"><span id="orderTotalAmount"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><a href="#" onclick="GetAllPayments()" class="btn btn-lg btn-nowoncare">Confirm Order</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    <div class="container">
+        <hr />
+        <div class="col-lg-6">
+            <table>
+                <tfoot id="basketDetailsHtml">
+
+                </tfoot>
+            </table>
+            <h4 style="color:#454040">My Shopping Bag (<span id="orderTotalItems"></span>)</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Item Total</th>
+
+                    </tr>
+                </thead>
+                <tbody id="basketItemDetailsHtml">
+                    @*<h3 class="text-warning" id="noBasketMsg"></h3>*@
+                </tbody>
+
+            </table>
+        </div>
+        <div class="col-lg-6">
+
+        </div>
+  </div>
+
+
+ 
+<script type="text/html" id="basketItemDetailsTemp">
+    {#foreach $T as record}
+    <tr>
+        @*<td> <input id="chkDelete" value="{$T.record.ProductId}" name="product" type="checkbox" /></td>*@
+        <td><a href="#" onclick="JavaScript: DeleteBasketItemById('{$T.record.Id}')"><span class="glyphicon glyphicon-remove-sign"></span> </a> </td>
+        <td>
+            <img style="display:inline-block; border:solid 1px; border-color:#ebd6d6" id="myimg" src="/Content/ProductImage/{$T.record.ProductImageId}.jpg" width="70" class="zoom" onclick="imglens();" />
+        </td>
+        <td> {$T.record.ProductName}-{$T.record.ProductSizeName}</td>
+        <td>
+            {$T.record.ProductPrice}৳
+        </td>
+        <td>
+            <select id="Qty-{$T.record.ProductId}" name="pQuantity" onkeyup="JavaScript:UpdateItems()" onchange="UpdateItems();">
+                <option selected value="{$T.record.Qty}">{$T.record.Qty}</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            @*<input  name="pQuantity" class="form-control"" type="text" onkeyup="JavaScript:UpdateItems()" />*@
+        </td>
+        <td>
+            {$T.record.LineTotal}৳
+        </td>
+
+    </tr>
+
+    {#/for}
+
+    <tr>
+        <td colspan="6"><a href="#" class="btn btn-default" onclick="JavaScript: history.back()">Edit Items</a></td>
+    </tr>
+
+</script>
+
+
+<div id="orderDetailsHtml">
+
+</div>
+
+<script type="text/html" id="orderDetailsTemp">
+    <table>
+        <thead>
+            {#foreach $T as record}
+            <tr>
+                <td>{$T.record.Id}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            {#/for}
+        </thead>
+    </table>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/html" id="policeStationTemp">
+        <option value="0" selected>Select P.S</option>
+        {#foreach $T as record}
+        <option value="{$T.record.Id}">{$T.record.Name}</option>
+        {#/for}
+    </script>
+
+
+    <script type="text/html" id="districtTemp">
+        <option value="0" selected>Select District</option>
+        {#foreach $T as record}
+        <option value="{$T.record.Id}">{$T.record.Name}</option>
+        {#/for}
+    </script>
+
+
+
+<script type="text/html" id="PaymentSummaryTemp">
+    {#foreach $T  as record}
+    <tr>
+        <td colspan="2"><h3>Payment details</h3></td>
+    </tr>
+    <tr>
+        <td><b>Amount:</b></td>
+        <td><p id="pAmount">{$T.record.Amount} </p></td>
+    </tr>
+    <tr>
+        <td><b> Mobile bank name:</b></td>
+        <td><p id="pMobileBankName"> {$T.record.MobileBankName}</p></td>
+    </tr>
+    <tr>
+        <td><b> Sent from:</b></td>
+        <td><p id="pMobileBankNo">{$T.record.MobileBankNo} </p></td>
+    </tr>
+
+
+    <tr>
+        <td><b>Payment sent date:</b></td>
+        <td><p id="pSentDate">{$T.record.SentAmountDate} </p></td>
+    </tr>
+
+    <tr>
+        <td><b>Ordered date:</b></td>
+        <td><p id="pSentDate">{$T.record.CreateDate} </p></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div class="form-group">
+                <div class="aab controls col-md-4 "></div>
+                <div class="controls col-md-8 ">
+                    <input type="button" name="Save" value="Confirm Payment" class="btn btn-primary" id="btnSaveCategory" onclick="JavaScript: ConfirmPayment('{$T.record.PaymentId}')" />
+                    <a href="#" class="btn btn-default" id="btnCancelForm">Cancel</a>
+                </div>
+            </div>
+        </td>
+    </tr>
+    {#/for}
+
+
+</script>
+

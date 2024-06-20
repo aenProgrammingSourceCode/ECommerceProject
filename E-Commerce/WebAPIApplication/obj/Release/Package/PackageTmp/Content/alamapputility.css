@@ -1,0 +1,31 @@
+﻿#sm-Loader {
+    background-position: center top;
+    margin: 2px;
+    padding: 2px;
+    background-image: url('images/sm-ajax-loader.gif');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    display:none;
+}
+
+#lg-Loader {
+    background-position: center top;
+    margin: 150px;
+    padding: 150px;
+    background-image: url('images/ajax-loader.gif');
+    background-repeat: no-repeat;
+}
+
+
+.logo-fixed {
+    position: fixed;
+    z-index: 2000;
+}
+
+ 
+.basket-summary-fixed {
+     position: fixed;
+    z-index: 2000;
+    float: right;
+}

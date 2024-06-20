@@ -1,0 +1,31 @@
+﻿<hibernate-mapping assembly="alamapp.Model" namespace="alamapp.Model.Orders" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="OrderItem" table="OrderItems" lazy="false" >
+    <id  name="Id" column="OrderItemID" type="int">
+      <generator class="native" />
+    </id>
+    
+    <property access="field.camelcase-underscore" name="Price">
+      <column name="Price" sql-type="decimal" not-null="true" />
+    </property>
+    <property access="field.camelcase-underscore" name="Qty">
+      <column name="Qty" sql-type="int" not-null="true" />
+    </property>
+	<property access="field.camelcase-underscore" name="IdentityToken">
+	 <column name="IdentityToken" sql-type="nvarchar" not-null="true" />
+	</property>
+	  
+    <many-to-one name="Order" access="field.camelcase-underscore"
+                   class="alamapp.Model.Orders.Order"
+                    cascade="none"
+                   column="OrderID"
+                   not-null="true"
+					  />
+    <many-to-one name="Product" access="field.camelcase-underscore"
+               class="alamapp.Model.Products.Product"
+                cascade="none"
+               column="ProductID"
+               not-null="true"
+					  />
+
+  </class>
+</hibernate-mapping>
